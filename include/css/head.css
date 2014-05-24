@@ -55,7 +55,7 @@ ul.meun div a span{padding-left: 10px; padding-right: 10px; height: auto; font-s
 ul.meun div a:hover{color: RGB(19, 133, 178); background: #FFF;}
 ul.meun div a.last span{border-right: none;}
 ul.meun div a.reg{color: #F00;}
-ul.meun div a img{width: 38px; height: 38px; margin-bottom: 2px; border-radius: 3px;}
+ul.meun div a img{width: 30px; height: 30px; margin-bottom: 8px; border-radius: 3px;}
 
 ul.meun div.login a span{}
 ul.meun div.login a.last span{width: 30px;}
