@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{background: #EBEBEB;}
+
+ul, ol{list-style: none;}
+a{color: #4e8fd2; text-decoration: none;}
+
+/*  div.top  */
+div.top{background: #F1F1F1; position: relative; padding-top: 24px; padding-bottom: 24px; padding-left: 44px; padding-right: 44px;}
+div.top div.avatar{float: right; font-size: 12px; text-align: right; color: #777; font-weight: bold;}
+div.top div.avatar img{width: 30px; height: 30px; float: right; margin-left: 8px;}
+div.top div.avatar a{display: block; color: #777; font-weight: normal; font-size: 12px; padding-top: 1px;}
+div.top div.avatar a:hover{text-decoration: underline;}
+
+
+/*  div.m   */
+div.m{background: #000; padding-left: 10px; zoom: 1; line-height: 40px; height: 40px;}
+div.m h1{width: 190px; float: left; font-size: 14px; font-weight: bold; color: #4898F8; font-family: "微软雅黑";}
+divm ul{display: inline;}
+div.m ul li{display: inline; float: left; height: 40px;}
+div.m ul li.active{background: #EBEBEB;}
+/*background: url("data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABgAAAAKCAYAAACuaZ5oAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAH1JREFUeNpi/P//PwORgBmIJ0DZBUD8lyhdIAuIwEJAvP0/AmyHihHUS4zhKkB8+z8muA2Vo8gCeyB++x83eAtVQ5YFOUD88z9h8AeqlmgLmIF48n/SwWSoXrwWoEcmqQAj8omJTFIBSuQTG5mkAnjkwyLzz3/qA3DkAwQYABEvANn67PzPAAAAAElFTkSuQmCC") no-repeat scroll center 33px transparent;*/
+div.m ul li a{font-size: 12px; color: #FFF; line-height: 40px; height: 40px; display: block; padding-left: 17px; padding-right: 17px;}
+div.m ul li.active a{color: #333;}
+div.m ul li a:hover, div.m ul li:hover{background: #444; color: #FFF; cursor: pointer;}
+div.m ul li.active a:hover, div.m ul li.active:hover{background: #EBEBEB; color: #333; cursor: pointer;}
+
+
+div.mian{padding: 0; overflow: hidden; position: relative;}
+div.mian ol{margin-left: 200px; background: #EBEBEB; padding: 10px;}
+div.mian ol h1{font-size: 14px; color: #000; border-bottom: 1px #CCC solid; height: 40px; line-height: 40px; padding-top: 30px;}
+div.mian ol h1 span{color: #AAA; font-weight: normal; margin-left: 10px; font-size: 12px;}
+div.mian ol h1 span b{color: #F00;}
+
+div.mian ol span.h2, div.mian ol h2{margin-bottom: 5px; color: #CCC; font-size: 12px; display: block; height: 40px; line-height: 40px; font-weight: normal;}
+
+
+/*  mian myself    */
+div.myself{float: left; width: 200px; background: #333;}
+div.myself ul.own a{display: block; color: #CCC; padding-left: 20px; line-height: 30px; font-size: 12px; position: relative; border-left: 5px #333 solid;}
+div.myself ul.own a img{margin-right: 4px;}
+div.myself ul.own a b{color: red; margin-left: 10px; font-weight: normal;}
+div.myself ul.own h4{background: #222; color: #FFF; line-height: 30px; font-size: 12px; padding-left: 25px;}
+div.myself ul a:hover{background: #CCC; border-left-color: #CCC; color: #000;}
+div.myself ul a.on{color: #4898F8; border-left-color: #4898F8; background: #EBEBEB;}
+
+
+div.myself ul.own a i{width: 15px; height: 15px; padding: 0; display: inline-block; margin-right: 5px; background: url(../include/images/i_quanquan.png) no-repeat -3px -3px; float: left;}
+
+
+div.foot{background: #333; padding-left: 44px; padding-right: 44px;}
+div.foot ul li{display: inline; margin-right: 30px; padding-right: 4px; line-height: 44px;}
+div.foot ul li a{font-size: 12px; color: RGBA(255, 255, 255, 0.8);}
+div.foot ul li a:hover{text-decoration: underline;}

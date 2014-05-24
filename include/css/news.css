@@ -1,0 +1,12 @@
+div.mian{max-width: 1200px; margin: auto; padding-top: 100px; padding-bottom: 100px;}
+div.mian div.list{float: left; max-width: 280px; padding: 10px; background: #EBEBEB; border-radius: 5px;}
+div.mian div.show{float: right; max-width: 880px; padding: 10px;}
+
+div.mian div.list ul{list-style: none; overflow-y: scroll; height: 600px;}
+div.mian div.list ul li a{color: #333; font-size: 12px; text-decoration: none; padding: 5px; display: block;}
+div.mian div.list ul li a:hover{text-decoration: none; color: red;}
+
+div.mian div.show h1{text-align: center;}
+div.mian div.show div.author{max-width: 700px; margin: auto; text-align: right;}
+
+div.mian div.show p{margin-top: 16px; font-size: 14px; line-height: 24px; text-indent: 8px; color: #444;}

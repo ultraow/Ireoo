@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+/*body{background: #E9EAED;}*/
+
+a.link1{font-size: 12px; text-decoration: none; color: #4898F8;}
+a.link1:hover{text-decoration: underline;}
+
+span.dot{font-family: Arial, Helvetica, sans-serif; font-size: 12px; height: 2px; width: 2px; overflow: hidden; display: inline-block; margin-left: 5px; margin-right: 5px; color: #D4D9DB; line-height: 2px;}
+
+ul, ol{list-style: none;}
+.clear{clear: both;}
+
+/*   mian   */
+div.mian{width: 100%; border-top: none;}
+
+/*   shead   */
+div.shead{position: relative; margin-bottom: 15px; border-bottom: 1px #CCC solid; border-top: none; background: #FFF;}
+
+div.shead div.avatar{background: #FFF; position: absolute; padding: 1px; border: 1px #999 solid; box-shadow: 0 0 3px RGBA(0, 0, 0, 0.6); overflow: auto; bottom: 50px; left: 20px;}
+div.shead div.avatar span.img{display: inline-block;}
+div.shead div.avatar span.img img{width: 60px;}
+
+div.shead div.name{position: absolute; bottom: 50px; left: 90px;}
+div.shead div.name h1{color: #FFF; font-size: 25px; font-family: 'microsoft yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; display: block;}
+div.shead div.name span{display: block; padding-top: 5px; padding-bottom: 10px;}
+div.shead div.name span, div.shead div.avatar div.name span a{font-size: 12px; color: #FFF;}
+
+div.shead div.name ul{padding: 5px; width: 288px; border: 1px RGB(232, 232, 232) solid; background: RGB(248, 248, 248);}
+div.shead div.name ul li{font-size: 12px; display: inline-block; line-height: 20px; width: 140px;}
+div.shead div.name ul li span{margin-right: 5px; display: inline-block; height: auto; padding: 0;}
+
+div.shead div.b{overflow: hidden; border-bottom: 1px #CCC solid;}
+div.shead div.b img{width: 100%;}
+
+div.shead ul.m{}
+div.shead ul.m a{display: inline-block; text-decoration: none; border-right: 1px #CCC solid; padding: 0 15px 0 15px; font-weight: bold; color: #4898F8; font-size: 13px; height: 43px; line-height: 46px;}
+div.shead ul.m a:hover{background: #EBEBEB;}
+div.shead ul.m a span{color: #CCC; font-size: 12px; margin-left: 5px;}
+
+/*   tab    */
+div.tab{margin-bottom: 10px; position: relative;}
+div.tab ul{}
+div.tab ul li.index, div.tab ul li.data{border-bottom: 1px #CCC dashed;}
+div.tab ul li a{font-size: 14px; background: RGB(247, 247, 247); padding: 20px; display: block; color: #333; text-decoration: none; padding-left: 100px;}
+div.tab ul li a span{display: block; color: #CCC; font-size: 12px;}
+div.tab ul li a:hover{ background: #999;}
+div.tab ul li.on{border-bottom: none;}
+div.tab ul li.on a, div.tab ul li.on a:hover{background: #4898F8; color: #FFF; font-weight: bold;}
+div.tab ul li.on a span{color: #0CF; font-weight: normal;}
+
+/*   tags */
+ul.tag li{padding: 5px; padding-left: 62px;}
+ul.tag li a{background: #333; padding: 3px; padding-left: 10px; padding-right: 10px; display: inline-block; line-height: normal; height: auto; color: #4898F8; cursor: pointer;}
+ul.tag li a:hover{background: #000;}
+ul.tag li span{padding: 3px; padding-left: 10px; padding-right: 10px; background: green; display: inline-block; line-height: normal; height: auto; color: #FFF;}
+
+
+/*   a.edit  */
+a.edit{color: #333; cursor: pointer; text-decoration: none; padding: 1px; padding-left: 3px; padding-right: 3px; display: inline-block; line-height: normal; height: auto;}
+a.edit:hover{color: #FFF; background: #F00;}
+
+form.add{margin: 10px; border: 1px #CCC solid; padding: 10px; background: #EBEBEB;}
+form.add button{width: 60px; height: 24px; background: #4898F8; border: 1px #06F solid; cursor: pointer; margin-right: 10px;}
+
+
+/*    uploader      */
+div.uploader{position: absolute; bottom: 2px; right: 2px; background: #000; display: inline-block; font-size: 12px; color: #FFF; padding: 3px; padding-left: 10px; padding-right: 10px;}
+div.uploader.hover, div.uploader:hover{background: #4898F8;}
+div.drag{position: absolute; bottom: 2px; right: 2px; background: #000; display: inline-block; font-size: 12px; color: #FFF; padding: 3px; padding-left: 10px; padding-right: 10px; cursor: pointer;}
+div.drag.on{background: #4898F8;}
+div.avatarBar, div.bgBar{position: absolute; bottom: 0; left: 0; width: 100%; height: auto; font-size: 0;}
+div.avatarBar span, div.bgBar span{height: 2px; display: inline-block; width: 100%; background: #4898F8;}
+div.uploader a{padding: 3px; padding-left: 10px; padding-right: 10px; color: #FFF; text-decoration: none; display: inline-block;}
+div.uploader a:hover{background: #4898F8;}
+
+
+/*     div.sider      */
+div.sider{float: right; width: 190px;}
+div.sider ul h1{border-bottom: 1px #CCC solid; padding-bottom: 2px; font-size: 12px; padding-top: 10px; color: #333;}
+div.sider ul li{font-size: 12px;}
+div.sider ul li#GPS{height: 150px;}
+
+div.sider ul li.goods{border-bottom: 1px #CCC dashed;}
+div.sider ul li.goods a{display: block; overflow: auto; font-size: 12px; padding: 5px; text-decoration: none; color: #666;}
+div.sider ul li.goods a:hover{background: RGB(216, 222, 234); color: #333;}
+div.sider ul li.goods a img{width: 80px; height: 80px; float: left; margin-right: 5px;}
+
+div.sider ul li.phone{border-top: 1px RGB(242, 242, 242) solid; padding: 5px;}
+div.sider ul li.phone.first{border: none;}
+div.sider ul li.phone span.type{color: #999;}
+div.sider ul li.phone span.member{margin-right: 5px; font-size: 12px;}
+
+div.sider ul li.pro, div.sider ul li.tip{padding: 5px;}
+div.sider ul li.pro a, div.sider ul li.tip a{display: inline-block; padding: 3px; margin-right: 5px; background: RGB(242, 242, 242); color: #4898F8; text-decoration: none;}
+div.sider ul li.pro a:hover, div.sider ul li.tip a:hover{background: #4898F8; color: RGB(242, 242, 242);}

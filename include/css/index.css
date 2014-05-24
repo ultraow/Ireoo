@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+
+div.mian{width: 1200px; min-width: 1200px; margin: auto;}
+
+div.left{float: left; width: 1000px;}
+div.right{float: right; width: 190px; padding-left: 9px; border-left: 1px #EBEBEB solid; height: 885px;}
+
+.h500{height: 400px;}
+.red{color: red;}
+
+
+div.indextop{width: 1200px; height: 100px; padding: 100px 0 0 0; margin: auto;}
+div.indextop h1{font-size: 50px; color: #4898F8; display: inline-block;}
+div.indextop h1 span{font-size: 14px; font-weight: normal; color: #333;}
+
+div.show{max-width: 100%; border-top: 3px #4898F8 solid;}
+div.show div.index{position: relative;}
+div.show div.index ul.caidan{position: absolute; left: 0; top: -43px; width: 200px; background: #4898F8; height: 443px; list-style: none;}
+div.show div.index ul.caidan h1{background: #000; color: #CCC; font-size: 14px; padding: 0 5px; text-align: center; line-height: 40px; height: 43px; border: none;}
+div.show div.index ul.caidan li{line-height: 21px; padding: 0 5px; height: auto; width: auto; border: none; font-size: 12px; color: #FFF;}
+div.show div.index ul.caidan li:hover{background: #333; color: #FFF;}
+
+div.show div.index ul.fox{list-style: none; padding-left: 200px; height: 400px; background: #EBEBEB; overflow: hidden;}
+div.show div.index ul.fox li{width: 800px; height: 400px;}
+div.show div.index ul.fox li img{width: 800px; height: 400px;}
+
+div.index{max-width: 100%; margin-bottom: 50px;}
+div.index h1{font-size: 14px; line-height: 35px; height: 35px; color: #333; border-bottom: 3px #4898F8 solid;}
+div.index ul{list-style: none;}
+div.index ul li{display: inline-block; vertical-align: top; float: left; width: 200px; height: 200px; border-bottom: 1px #EBEBEB solid;}
+div.index ul li h1{font-size: 14px; color: #333; margin: 0; padding: 5px; border: none; text-align: center; height: 14px; line-height: 18px;}
+div.index ul li a{display: inline-block;}
+div.index ul li a img{width: 200px; height: 200px;}
+
+.f0 a{}
+.f1 a{border-left: 1px #EBEBEB solid;}
+.f2 a{border-left: 1px #EBEBEB solid;}
+.f3 a{border-left: 1px #EBEBEB solid;}
+.f4 a{border-left: 1px #EBEBEB solid;}
+.f5 a{border-left: 1px #EBEBEB solid;}
+.f6 a{}
+.f7 a{border-left: 1px #EBEBEB solid;}
+.f8 a{border-left: 1px #EBEBEB solid;}
+.f9 a{border-left: 1px #EBEBEB solid;}
+.f10 a{border-left: 1px #EBEBEB solid;}
+.f11 a{border-left: 1px #EBEBEB solid;}
+
+.t0 a{}
+.t1 a{border-left: 1px #EBEBEB solid;}
+.t2 a{border-left: 1px #EBEBEB solid;}
+.t3 a{border-left: 1px #EBEBEB solid;}
+.t4 a{border-left: 1px #EBEBEB solid;}
+.t5 a{}
+.t6 a{border-left: 1px #EBEBEB solid;}
+.t7 a{border-left: 1px #EBEBEB solid;}
+.t8 a{border-left: 1px #EBEBEB solid;}
+.t9 a{border-left: 1px #EBEBEB solid;}
+
+
+ul.m{padding-left: 220px; width: 980px; margin: auto;}
+ul.m li{display: inline-block; margin-right: 20px;}
+ul.m li a{color: #333; font-size: 14px; text-decoration: none; line-height: 40px; display: inline-block;}
+ul.m li a:hover{color: #4898F8;}
+ul.m li a.b{font-weight: bold;}
+
+
+div.right ul li{list-style: none;}
+div.right ul li.login{margin-bottom: 10px;}
+div.right ul li.login h1{font-size: 16px; padding-top: 20px; padding-bottom: 5px; text-align: center;}
+div.right ul li.login span{font-size: 12px; display: block; padding-bottom: 20px; text-align: center;}
+div.right ul li.login a{float: left; width: 90px; text-align: center; line-height: 30px; background: RGB(196, 0, 0); color: #FFF; font-size: 12px; text-decoration: none; font-weight: 700;}
+
+div.right ul li.qr{background: #EBEBEB; padding: 5px; font-size: 12px; text-align: center;}
+div.right ul li.qr img{width: 100%;}
+div.right ul li.qr span{color: red; font-weight: 700;}

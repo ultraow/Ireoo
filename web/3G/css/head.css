@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+/*
+    -webkit-transition: font-size 0.3s ease, background-color 0.5s ease, color 0.5s ease;
+    -moz-transition: font-size 0.3s ease, background-color 0.5s ease, color 0.5s ease;
+    -o-transition: font-size 0.3s ease, background-color 0.5s ease, color 0.5s ease;
+    -ms-transition: font-size 0.3s ease, background-color 0.5s ease, color 0.5s ease;
+    transition: font-size 0.3s ease, background-color 0.5s ease, color 0.5s ease;
+*/
+}
+
+body{padding-bottom: 40px;}
+
+img, textarea, div, object{vertical-align: bottom; border: none;}
+input, textarea, select{outline: none; border: 1px #CCC solid; background: #FFF;}
+
+.clear{clear:both; height: 0; line-height: 0px; font-size: 0;}
+
+h1{font-family: Arial, Helvetica, sans-serif;}
+
+/*   导航css   */
+div.meun{width: 100%; margin: auto; height: 42px; position: fixed; background: #FFF; background-image: -webkit-linear-gradient(top, #FFF 0px, #EBEBEB 100%); bottom: 0; z-index: 10000; border-top: 1px #CCC solid;}
+/*  background-image: -webkit-linear-gradient(top, #333 0px, #000 100%); */
+div.meun *{text-decoration: none; list-style: none;}
+div.meun img{float: left; margin: 5px; width: 30px;}
+div.meun div.button{margin-left: 40px;}
+div.meun a{display: inline-block; width: 33%; height: 42px; line-height: 42px; text-decoration: none; color: #000; border-left: 1px rgb(225, 225, 225) solid; border-color: -webkit-linear-gradient(top, #CCC 0px, RGB(189, 189, 189) 100%); text-align: center;}
+div.meun a.on{color: #000;}

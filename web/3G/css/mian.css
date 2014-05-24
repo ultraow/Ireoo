@@ -1,0 +1,40 @@
+*{margin: 0; padding: 0;}
+
+body{position: relative;}
+
+/**
+* background
+*
+*/
+div.background{width: 100%; overflow: hidden; position: relative;}
+div.background div.one{width: 100%; overflow: hidden;}
+div.background div.one img{width: 100%;}
+
+/**
+* meun
+*
+*/
+ul.meun{list-style: none;}
+ul.meun li{}
+ul.meun li a{text-decoration: none; padding: 3px; display: inline-block; font-family: consolas, "Courier New", "lucida console", monospace;}
+
+
+/**
+* foot
+*/
+div.foot{text-align: center; font-size: 12px; position: absolute; bottom: 0; width: 100%; z-index: 1000;}
+
+
+
+/**
+* style1
+*/
+div.background.style0{}
+div.background.style0 div.one{position: absolute; top: 0; left: 0; z-index: 2; background: #000;}
+div.background.style0 div.one img{position: absolute; width: 100%;}
+
+ul.meun.style0{position: absolute; bottom: 30px; left: 10px; z-index: 10; width: 30%;}
+ul.meun.style0 li{margin: 2px; border-radius: 5px; overflow: hidden;}
+ul.meun.style0 li a{font-size: 14px; color: #FFF; width: 100%; background: rgba(0, 0, 0, 0.6); padding: 10px;}
+ul.meun.style0 li a:hover{background: rgba(0, 0, 0, 0.77);}
+ul.meun.style0 li a img{display: none;}
