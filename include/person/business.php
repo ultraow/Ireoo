@@ -24,6 +24,7 @@ if($o['show'] == 3 or $o['show'] == 10000){}else{header("Location: /i?s=person")
         <h4>用户管理</h4>
         <a class="li<?php if($page == 'follow') {echo ' on';} ?>" href="?s=business&i=follow">用户管理</a>
         <a class="li<?php if($page == 'wcVIPManagement') {echo ' on';} ?>" href="?s=business&i=wcVIPManagement">微信用户</a>
+        <a class="li<?php if($page == 'type') {echo ' on';} ?>" href="?s=business&i=type">分类信息</a>
     </ul>
 
 </div>
