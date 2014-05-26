@@ -78,7 +78,7 @@ if($token != '') {
                 <form action="?s=business&i=type&m=edit&token=<?php echo md5(rand(0, 10000000000000)); ?>" method="post">
                 <td><input type="text" name="xian" value="<?php echo $key + 1; ?>" /></td>
                 <td><input type="text" name="value" value="<?php echo $v['value']; ?>" /></td>
-                <td><input type="text" name="index" value="<?php echo $v['index']; ?>" /></td>
+                <td><input type="text" name="i" value="<?php echo $v['i']; ?>" /></td>
                 <td>
                     <input type="hidden" name="id" value="<?php echo $v['id']; ?>" />
                     <button>修改</button>

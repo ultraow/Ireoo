@@ -83,7 +83,7 @@ $s['condition'] = "sname like '%{$k}%'";
 <div class="mian">
     <div class="news">
         <div class="logo">
-            <h1>琦益<span>打造全球最大企业社交平台</span></h1>
+            <h1>琦益<span>产品直销平台</span></h1>
             <form action="<?php echo HOST_URL; ?>store" method="get">
                 <input type="text" name="k" value="<?php echo $k; ?>" />
                 <button>搜索</button>

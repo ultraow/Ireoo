@@ -20,7 +20,7 @@ $mysql = new mysql;
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title><?php echo HOST_NAME; ?></title>
+    <title><?php echo HOST_NAME; ?> - 产品直销平台</title>
     <meta name="keywords" content="<?php echo KEYWORDS; ?>" />
     <meta name="description" content="<?php echo DESCRIPTION; ?>" />
     <link href="include/css/head.css" rel="stylesheet" type="text/css">
@@ -37,12 +37,12 @@ $mysql = new mysql;
 
 <div class="indextop">
 
-    <h1>琦益<span>打造全球最大企业社交平台</span></h1>
+    <h1>琦益<span>产品直销平台</span></h1>
 
 </div>
 
 <ul class="m">
-    <li><a class="b" href="#">采购指南</a></li>
+    <li><a class="b" href="#">购物指南</a></li>
     <li><a class="b" href="#">企业服务</a></li>
 </ul>
 
@@ -85,11 +85,11 @@ $mysql = new mysql;
                     );
                     $f = $mysql->select($s);
                     //print_r($f);
-                    for($i = 0; $i < 19; $i++) {
+                    foreach($f as $key => $value) {
+                        $v = $value['form'];
                         ?>
-                    <li><a href="#"><?php echo $f[$i]['form']['value']; ?><div><?php echo $f[$i]['form']['value']; ?></div></a></li>
+                    <li><a href="#"><?php echo $v['value']; ?><div style="background: <?php echo $v['color']; ?>;"><?php echo $v['value']; ?></div></a></li>
                     <?php }?>
-                    <li><a href="#">更多分类产品<div>更多分类产品</div></a></li>
                 </ul>
                 <ul class="fox">
                     <li><img src="" /></li>
