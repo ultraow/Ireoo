@@ -26,7 +26,7 @@ if($o['show'] == 1 or $o['show'] == 2 or $o['show'] == 3 or $o['show'] == 10000)
 
     if(!isset($_GET['i'])) {
         if(count($quanquan) > 0) {
-            $page = 'storeBid';
+            $page = 'storeEditBasic';
         }else{
             $page = 'storeAdd';
         }
