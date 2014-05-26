@@ -88,43 +88,50 @@ $mysql = new mysql;
                     foreach($f as $key => $value) {
                         $v = $value['form'];
                         ?>
-                    <li><a href="#"><?php echo $v['value']; ?><div style="background: <?php echo $v['color']; ?>;"><?php echo $v['value']; ?></div></a></li>
+                        <li><a href="#"><?php echo $v['value']; ?><div style="background: <?php echo $v['color']; ?>;"><?php echo $v['value']; ?></div></a></li>
                     <?php }?>
                 </ul>
-                <ul class="fox">
-                    <li><img src="" /></li>
-                    <li><img src="" /></li>
-                    <li><img src="" /></li>
-                    <li><img src="" /></li>
-                    <li><img src="" /></li>
-                </ul>
+                <div class="fox">
+                    <ul class="img">
+                        <li><img src="" /></li>
+                        <li><img src="" /></li>
+                        <li><img src="" /></li>
+                        <li><img src="" /></li>
+                        <li><img src="" /></li>
+                    </ul>
+
+                    <div class="index">
+                        <ul>
+                            <?php
+                            $mysql = new mysql();
+                            $store = new store();
+                            $s = array(
+                                'order' => 'id desc',
+                                'limit' => 'LIMIT 0, 16'
+                            );
+                            $r = $store->show($mysql, $s);
+                            //print_r($r);
+                            foreach($r as $k => $v) {
+                                ?>
+                                <li>
+                                    <a target="_blank" href="/<?php echo $v['id']; ?>">
+                                        <img src="<?php echo $v['avatar_large']; ?>" />
+                                        <div><?php echo $v['sname']; ?></div>
+                                    </a>
+
+                                </li>
+                            <?php
+                            }
+                            ?>
+                            <br class="clear" />
+                        </ul>
+                    </div>
+
+                </div>
             </div>
 
 
-            <div class="index">
-                <h1>最新加入的企业</h1>
-                <ul>
-                    <?php
-                    $mysql = new mysql();
-                    $store = new store();
-                    $s = array(
-                        'order' => 'id desc',
-                        'limit' => 'LIMIT 0, 10'
-                    );
-                    $r = $store->show($mysql, $s);
-                    //print_r($r);
-                    foreach($r as $k => $v) {
-                        ?>
-                        <li class="t<?php echo $k; ?>">
-                            <a target="_blank" href="/<?php echo $v['id']; ?>"><img src="<?php echo $v['avatar_large']; ?>" /></a>
 
-                        </li>
-                    <?php
-                    }
-                    ?>
-                    <br class="clear" />
-                </ul>
-            </div>
 
 
         </div>
@@ -133,53 +140,7 @@ $mysql = new mysql;
 
     </div>
 
-    <div class="mian">
 
-        <?php
-        $s = array(
-            'table' => 'form',
-            'order' => 'xian asc'
-        );
-        $f = $mysql->select($s);
-        foreach($f as $k => $v) {
-            ?>
-        <div class="index">
-            <h1><?php echo $v['form']['value']; ?></h1>
-            <ul>
-                <?php
-                $mysql = new mysql();
-                $s = array(
-                    'table' => 'goods',
-                    'condition' => "type = " . $v['form']['id'],
-                    'limit' => 'LIMIT 0, 12',
-                    'order' => 'id desc'
-                );
-                $r = $mysql->select($s);
-                //print_r($r);
-                foreach($r as $key => $value) {
-                    $v = $value['goods'];
-                    ?>
-                    <li class="f<?php echo $key; ?>">
-                        <?php
-                        $img = explode(",", $v['img']);
-                        if(is_numeric($img[0])) {
-                            $url = "/image.{$img[0]}.200.200.1";
-                        }else{
-                            $url = $img[0];
-                        }
-                        ?>
-                        <a target="_blank" href="/goods.<?php echo $v['id']; ?>"><img src="<?php echo $url; ?>" /></a>
-
-                    </li>
-                <?php
-                }
-                ?>
-                <br class="clear" />
-            </ul>
-        </div>
-        <?php } ?>
-
-    </div>
 
 
 </div>

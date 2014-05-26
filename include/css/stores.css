@@ -31,10 +31,10 @@ div.news ul.sousuo li input{padding: 5px; border: 1px #CCC solid; width: 120px; 
 div.news ul.sousuo li button{padding: 3px 7px; background: #4e8fd2; border: 1px #06F solid; color: #FFF;}
 
 /*    nlist    */
-ul.nlist{list-style: none; float: right; width: 900px;}
+ul.nlist{list-style: none; float: right; width: 1000px;}
 ul.nlist li{margin-bottom: 20px;}
 ul.nlist li.odd{background: rgb(251, 251, 251);}
-ul.nlist h1{font-size: 14px; line-height: 35px; border-bottom: 3px #4898f8 solid;}
+ul.nlist h1{font-size: 14px; line-height: 35px;}
 ul.nlist h1 a{float: right; color: #333; font-weight: normal; font-size: 12px;}
 
 /* ul.nlist li:hover{background: #e0f2ff;} */
@@ -89,9 +89,9 @@ div.page a.max{width: 70px;}
 div.index{margin: auto; width: 1200px; margin-bottom: 100px;}
 
 
-ul.m{list-style: none; float: left; width: 290px; background: #4898F8;}
+ul.m{list-style: none; float: left; width: 190px; background: #4898F8;}
 ul.m h1{line-height: 40px; height: 40px; background: #000; color: #EBEBEB; font-size: 14px; text-align: center;}
-ul.m li{border-top: 1px #64a8ff solid; padding: 0 5px;}
+ul.m li{border-top: 1px #64a8ff solid; padding: 0 10px;}
 
 ul.m li a{display: block; color: #FFF; line-height: 30px; font-size: 12px;}
-ul.m li:hover, ul.m li a:hover{background: #333; padding-left: 5px;}
+ul.m li:hover, ul.m li a:hover{background: #333; padding-left: 10px;}

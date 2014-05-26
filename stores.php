@@ -115,7 +115,7 @@ $s['condition'] = "sname like '%{$k}%'";
         <?php
         foreach($f as $key => $value) {
             ?>
-        <h1><?php echo $value['form']['value']; ?><a href="?type=<?php echo $value['form']['id']; ?>">更多</a></h1>
+        <h1 style="border-bottom: 3px <?php echo $value['form']['color']; ?> solid;"><?php echo $value['form']['value']; ?><a href="?type=<?php echo $value['form']['id']; ?>">更多</a></h1>
         <li>
         <?php
         $s = array(
