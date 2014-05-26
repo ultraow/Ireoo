@@ -15,9 +15,17 @@ if(isset($_GET['token'])) $token = $_GET['token'];
 
 if($token != '') {
     if($token != $_SESSION['token']) {
+        $_SESSION['token'] = $_GET['token'];
+        if(isset($_GET['m']) and $_GET['m'] == 'edit') {
         $r1 = $mysql->update('form', $_POST, "id = {$_POST['id']}");
         //print_r($_POST);
-        $_SESSION['token'] = $_GET['token'];
+        }
+
+
+        if(isset($_GET['m']) and $_GET['m'] == 'del') {
+            $id = $_GET['id'];
+            $mysql->delete('form',  "id = $id");
+        }
     }else{
         header("Location: /i?s=business&i=type");
     }
@@ -64,15 +72,17 @@ if($token != '') {
         //print_r($s);
         foreach($re as $key => $value) {
             $v = $value['form'];
+            $mysql->update('form', array('xian' => $key + 1), "id = {$v['id']}");
             ?>
             <tr>
-                <form action="?s=business&i=type&token=<?php echo md5(rand(0, 10000000000000)); ?>" method="post">
-                <td><input type="text" name="xian" value="<?php echo $v['xian']; ?>" /></td>
+                <form action="?s=business&i=type&m=edit&token=<?php echo md5(rand(0, 10000000000000)); ?>" method="post">
+                <td><input type="text" name="xian" value="<?php echo $key + 1; ?>" /></td>
                 <td><input type="text" name="value" value="<?php echo $v['value']; ?>" /></td>
                 <td><input type="text" name="index" value="<?php echo $v['index']; ?>" /></td>
                 <td>
                     <input type="hidden" name="id" value="<?php echo $v['id']; ?>" />
                     <button>修改</button>
+                    <a href="?s=business&i=type&m=del&id=<?php echo $v['id']; ?>&token=<?php echo md5(rand(0, 10000000000000)); ?>">删除</a>
                 </td>
                 </form>
             </tr>
