@@ -85,10 +85,11 @@ $mysql = new mysql;
                     );
                     $f = $mysql->select($s);
                     //print_r($f);
-                    foreach($f as $k => $v) {
+                    for($i = 0; $i < 19; $i++) {
                         ?>
-                    <li><?php echo $v['form']['value']; ?></li>
+                    <li><a href="#"><?php echo $f[$i]['form']['value']; ?><div><?php echo $f[$i]['form']['value']; ?></div></a></li>
                     <?php }?>
+                    <li><a href="#">更多分类产品<div>更多分类产品</div></a></li>
                 </ul>
                 <ul class="fox">
                     <li><img src="" /></li>

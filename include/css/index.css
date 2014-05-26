@@ -6,7 +6,7 @@ div.mian{width: 1200px; min-width: 1200px; margin: auto;}
 div.left{float: left; width: 1000px;}
 div.right{float: right; width: 190px; padding-left: 9px; border-left: 1px #EBEBEB solid; height: 885px;}
 
-.h500{height: 400px;}
+.h500{height: 500px;}
 .red{color: red;}
 
 
@@ -16,14 +16,10 @@ div.indextop h1 span{font-size: 14px; font-weight: normal; color: #333;}
 
 div.show{max-width: 100%; border-top: 3px #4898F8 solid;}
 div.show div.index{position: relative;}
-div.show div.index ul.caidan{position: absolute; left: 0; top: -43px; width: 200px; background: #4898F8; height: 443px; list-style: none;}
-div.show div.index ul.caidan h1{background: #000; color: #CCC; font-size: 14px; padding: 0 5px; text-align: center; line-height: 40px; height: 43px; border: none;}
-div.show div.index ul.caidan li{line-height: 21px; padding: 0 5px; height: auto; width: auto; border: none; font-size: 12px; color: #FFF;}
-div.show div.index ul.caidan li:hover{background: #333; color: #FFF;}
 
-div.show div.index ul.fox{list-style: none; padding-left: 200px; height: 400px; background: #EBEBEB; overflow: hidden;}
-div.show div.index ul.fox li{width: 800px; height: 400px;}
-div.show div.index ul.fox li img{width: 800px; height: 400px;}
+div.show div.index ul.fox{list-style: none; padding-left: 200px; height: 500px; background: #EBEBEB; overflow: hidden;}
+div.show div.index ul.fox li{width: 800px; height: 500px;}
+div.show div.index ul.fox li img{width: 800px; height: 500px;}
 
 div.index{max-width: 100%; margin-bottom: 50px;}
 div.index h1{font-size: 14px; line-height: 35px; height: 35px; color: #333; border-bottom: 3px #4898F8 solid;}
@@ -32,6 +28,15 @@ div.index ul li{display: inline-block; vertical-align: top; float: left; width: 
 div.index ul li h1{font-size: 14px; color: #333; margin: 0; padding: 5px; border: none; text-align: center; height: 14px; line-height: 18px;}
 div.index ul li a{display: inline-block;}
 div.index ul li a img{width: 200px; height: 200px;}
+
+div.show div.index ul.caidan{position:  absolute; left: 0; top: -43px; width: 200px; background: #4898F8; height: 543px; list-style: none;}
+div.show div.index ul.caidan h1{background: #000; color: #CCC; font-size: 14px; padding: 0 5px; text-align: center; line-height: 40px; height: 43px; border: none;}
+div.show div.index ul.caidan li{line-height: 25px; height: 25px; float: none; border: none; font-size: 12px; color: #FFF;}
+div.show div.index ul.caidan li:hover{background: #333; color: #FFF;}
+div.show div.index ul.caidan li a{text-decoration: none; padding: 0 10px; display: block; color: #FFF;}
+div.show div.index ul.caidan li a div{display: none; width: 800px; height: 500px; background: #FFF; position: absolute; top: 43px; left: 200px; color: #333;}
+div.show div.index ul.caidan li a:hover{padding-left: 20px;}
+div.show div.index ul.caidan li a:hover div{display: block;}
 
 .f0 a{}
 .f1 a{border-left: 1px #EBEBEB solid;}
