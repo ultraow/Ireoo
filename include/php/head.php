@@ -15,7 +15,7 @@
             ?>
         </div>
 
-        <li><a href="<?php echo HOST_URL; ?>"><span><?php echo HOST_NAME; ?></span></a></li>
+        <li><a href="<?php echo HOST_URL; ?>"><span><?php echo SNAME; ?></span></a></li>
         <li><a href="<?php echo HOST_URL; ?>store"><span>所有企业</span></a></li>
     </ul>
 

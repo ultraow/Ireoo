@@ -106,7 +106,7 @@ $s['condition'] = "sname like '%{$k}%'";
         $f = $mysql->select($s);
         foreach($f as $k => $v) {
         ?>
-        <li><a href="?type=<?php echo $v; ?>"><?php echo $v['form']['value']; ?></a></li>
+        <li><a href="search.html?type=<?php echo $v['form']['id']; ?>"><?php echo $v['form']['value']; ?></a></li>
         <?php } ?>
     </ul>
 
@@ -115,7 +115,7 @@ $s['condition'] = "sname like '%{$k}%'";
         <?php
         foreach($f as $key => $value) {
             ?>
-        <h1 style="border-bottom: 3px <?php echo $value['form']['color']; ?> solid;"><?php echo $value['form']['value']; ?><a href="?type=<?php echo $value['form']['id']; ?>">更多</a></h1>
+        <h1 style="border-bottom: 3px <?php echo $value['form']['color']; ?> solid;"><?php echo $value['form']['value']; ?><a href="search.html?type=<?php echo $value['form']['id']; ?>">更多</a></h1>
         <li>
         <?php
         $s = array(
@@ -128,7 +128,7 @@ $s['condition'] = "sname like '%{$k}%'";
         foreach($r as $k => $v) {
             ?>
 
-                <a class="img" target="_blank" href="<?php echo HOST_URL; ?><?php echo $v['store']['id']; ?>"><img src="<?php echo $v['store']['avatar_large']; ?>" /></a>
+                <a class="img" target="_blank" href="store.<?php echo $v['store']['id']; ?>.html"><img src="<?php echo $v['store']['avatar_large']; ?>" /></a>
 
         <?php } ?>
             <br class="clear" />

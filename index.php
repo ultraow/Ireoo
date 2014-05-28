@@ -20,7 +20,7 @@ $mysql = new mysql;
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title><?php echo HOST_NAME; ?> - 产品直销平台</title>
+    <title><?php echo HOST_NAME; ?></title>
     <meta name="keywords" content="<?php echo KEYWORDS; ?>" />
     <meta name="description" content="<?php echo DESCRIPTION; ?>" />
     <link href="include/css/head.css" rel="stylesheet" type="text/css">
@@ -89,8 +89,7 @@ $mysql = new mysql;
                         $v = $value['form'];
                         ?>
                         <li>
-                            <a href="#"><?php echo $v['value']; ?></a>
-                            <div style="background: <?php echo $v['color']; ?>;"><?php echo $v['value']; ?></div>
+                            <a href="search.html?type=<?php echo $v['id']; ?>"><?php echo $v['value']; ?></a>
                         </li>
                     <?php }?>
                 </ul>
@@ -118,7 +117,7 @@ $mysql = new mysql;
                             foreach($r as $k => $v) {
                                 ?>
                                 <li>
-                                    <a target="_blank" href="/<?php echo $v['id']; ?>">
+                                    <a target="_blank" href="/store.<?php echo $v['id']; ?>.html">
                                         <img src="<?php echo $v['avatar_large']; ?>" />
                                         <div><?php echo $v['sname']; ?></div>
                                     </a>

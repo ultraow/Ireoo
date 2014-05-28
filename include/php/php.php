@@ -22,7 +22,7 @@ if(isset($_SESSION['user'])) {
 }
 defined('ROOT') or define('ROOT', dirname(__FILE__) . '/../../');
 
-defined('HOST_NAME') or define('HOST_NAME','琦益网');
+defined('HOST_NAME') or define('HOST_NAME','琦益网 - 产品直销平台');
 defined('SNAME') or define('SNAME','琦益');
 defined('HOST_URL') or define('HOST_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/');
 defined('KEYWORDS') or define('KEYWORDS','琦益，琦益网，实体店，企业，琦益平台，琦益商城');
