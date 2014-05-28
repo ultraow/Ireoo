@@ -3,22 +3,11 @@
         	<span>
             	<a target="_blank" href="<?php echo HOST_URL; ?>" title="<?php echo SNAME; ?>"><?php echo SNAME; ?></a>
                 |
-                <!--
-                <a target="_blank" href="http://www.taobao.com/go/chn/tbk_channel/channelcode.php?pid=mm_27201356_3476513_11348999&eventid=101329
-" title="淘宝网">淘宝网</a>
-                |
-            	<a target="_blank" href="http://s.click.taobao.com/t_9?p=mm_27201356_0_0&l=http%3A%2F%2Fwww.tmall.com" title="天猫商城">天猫商城</a>
-                |
-                <a target="_blank" href="http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB05%2Bm7rfGKas1PIKp0U37pZuBotzOg7OjeU9mIWS5%2B5UROBz6sq4fiHePnGhf6UrWuOtfD2G6QGcAHIXpjhEtESpuqsRo0a&pid=mm_27201356_0_0" title="聚划算">聚划算</a>
-                |
-                <a target="_blank" href="http://s.click.taobao.com/t_9?p=mm_27201356_0_0&l=http%3A%2F%2Ftemai.tmall.com" title="天猫品牌特卖">天猫品牌特卖</a>
-                |
-                -->
                 <a target="_blank" href="http://about.ireoo.com" title="关于我们">关于我们</a>
                 |
                 <a target="_blank" href="http://about.ireoo.com/?s=work" title="人才招聘">人才招聘</a>
                 |
-                <a target="_blank" href="http://ireoo.com/reg" title="企业入住">企业入住<b style="color: red;">（免费）</b></a>
+                <a target="_blank" href="http://about.ireoo.com/?s=qiye" title="企业入住（免费）">企业入住<b style="color: red;">（免费）</b></a>
                 |
                 <a target="_blank" href="http://about.ireoo.com/?s=" title="广告服务">广告服务</a>
                 |
