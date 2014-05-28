@@ -88,7 +88,10 @@ $mysql = new mysql;
                     foreach($f as $key => $value) {
                         $v = $value['form'];
                         ?>
-                        <li><a href="#"><?php echo $v['value']; ?><div style="background: <?php echo $v['color']; ?>;"><?php echo $v['value']; ?></div></a></li>
+                        <li>
+                            <a href="#"><?php echo $v['value']; ?></a>
+                            <div style="background: <?php echo $v['color']; ?>;"><?php echo $v['value']; ?></div>
+                        </li>
                     <?php }?>
                 </ul>
                 <div class="fox">
@@ -101,6 +104,7 @@ $mysql = new mysql;
                     </ul>
 
                     <div class="index">
+                        <h1>最新入驻企业</h1>
                         <ul>
                             <?php
                             $mysql = new mysql();
@@ -128,6 +132,7 @@ $mysql = new mysql;
                     </div>
 
                 </div>
+                <br class="clear" />
             </div>
 
 

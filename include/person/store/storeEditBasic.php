@@ -95,7 +95,7 @@ $s = $s[0];
             <label>性质：</label>
             <select class="max" name="form">
                 <?php foreach($form as $k => $v) { ?>
-                    <option<?php if($s['form'] == $v) {echo ' selected="selected"';} ?> value="<?php echo $v; ?>"><?php echo $v; ?></option>
+                    <option<?php if($s['form'] == $k) {echo ' selected="selected"';} ?> value="<?php echo $k; ?>"><?php echo $v; ?></option>
                 <?php } ?>
             </select>
         </li>

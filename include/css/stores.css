@@ -39,7 +39,7 @@ ul.nlist h1 a{float: right; color: #333; font-weight: normal; font-size: 12px;}
 
 /* ul.nlist li:hover{background: #e0f2ff;} */
 ul.nlist li a.img{float: left;}
-ul.nlist li a.img, ul.nlist li a.img img{font-size:14px; display: inline-block; width: 180px; height: 180px;}
+ul.nlist li a.img, ul.nlist li a.img img{font-size:14px; display: inline-block; width: 200px; height: 200px;}
 
 
 /*   list   */

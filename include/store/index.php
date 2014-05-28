@@ -71,7 +71,7 @@
                 <ul>
                     <h1>其他信息</h1>
                     <li class="other first"><span><?php echo $this_store['sname']; ?></span> 成立于 <span><?php echo $this_store['time']; ?></span></li>
-                    <li class="other">是一个 <span><?php echo $this_store['form']; ?></span> 公司</li>
+                    <li class="other">企业类型 <span><?php echo $form[$this_store['form']]; ?></span></li>
                     <li class="other">目前规模 <span><?php echo $this_store['area']; ?></span></li>
                     <li class="other">目前已经拥有员工 <span><?php echo $this_store['persons']; ?></span> 人</li>
                     <li class="other"><?php if($this_store['nature'] == '实体' or $this_store['nature'] == '现实') {echo '拥有实体，可以在下面查看具体位置';} ?></li>
