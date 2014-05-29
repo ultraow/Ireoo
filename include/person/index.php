@@ -165,7 +165,7 @@
                         <?php
                         foreach($img as $k => $v) {
                             if(is_numeric($v)) {
-                                $url = "/image.{$v}.100.100.0";
+                                $url = "/image.{$v}.100.100.0.jpg";
                             }else{
                                 $url = $v;
                             }

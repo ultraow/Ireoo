@@ -102,7 +102,7 @@ $mysql = new mysql;
                         <li><img src="" /></li>
                     </ul>
 
-                    <div class="index">
+                    <div class="top">
                         <h1>最新入驻企业</h1>
                         <ul>
                             <?php
@@ -129,6 +129,63 @@ $mysql = new mysql;
                             <br class="clear" />
                         </ul>
                     </div>
+
+                    <div class="index">
+                        <h1>已认证的企业</h1>
+                        <ul>
+                            <?php
+                            $mysql = new mysql();
+                            $store = new store();
+                            $s = array(
+                                'order' => 'id desc',
+                                'limit' => 'LIMIT 0, 16'
+                            );
+                            $r = $store->show($mysql, $s);
+                            //print_r($r);
+                            foreach($r as $k => $v) {
+                                ?>
+                                <li>
+                                    <a target="_blank" href="/store.<?php echo $v['id']; ?>.html">
+                                        <img src="<?php echo $v['avatar_large']; ?>" />
+                                        <div><?php echo $v['sname']; ?></div>
+                                    </a>
+
+                                </li>
+                            <?php
+                            }
+                            ?>
+                            <br class="clear" />
+                        </ul>
+                    </div>
+
+                    <div class="index">
+                        <h1>平台推荐产品</h1>
+                        <ul>
+                            <?php
+                            $mysql = new mysql();
+                            $store = new store();
+                            $s = array(
+                                'order' => 'id desc',
+                                'limit' => 'LIMIT 0, 16'
+                            );
+                            $r = $store->show($mysql, $s);
+                            //print_r($r);
+                            foreach($r as $k => $v) {
+                                ?>
+                                <li>
+                                    <a target="_blank" href="/store.<?php echo $v['id']; ?>.html">
+                                        <img src="<?php echo $v['avatar_large']; ?>" />
+                                        <div><?php echo $v['sname']; ?></div>
+                                    </a>
+
+                                </li>
+                            <?php
+                            }
+                            ?>
+                            <br class="clear" />
+                        </ul>
+                    </div>
+
 
                 </div>
                 <br class="clear" />

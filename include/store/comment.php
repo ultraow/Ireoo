@@ -56,7 +56,7 @@
                 <?php $img = explode(',', $v['img']); if($img[0] != '') { ?>
                     <div class="img">
                         <?php foreach($img as $k1 => $v1) { ?>
-                            <img src="/image.<?php echo $v1; ?>.100.100.0" />
+                            <img src="/image.<?php echo $v1; ?>.100.100.0.jpg" />
                         <?php } ?>
                         <br class="clear" />
                     </div>

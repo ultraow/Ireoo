@@ -31,12 +31,21 @@ div.show div.index div.fox{float: right; width: 800px; padding-top: 10px;}
 div.show div.index div.fox ul.img{list-style: none; height: 400px; background: #EBEBEB; overflow: hidden; margin-bottom: 20px;}
 div.show div.index div.fox ul.img li{width: 800px; height: 400px;}
 div.show div.index div.fox ul.img li img{width: 800px; height: 400px;}
-div.show div.index div.fox div.index{background: #EBEBEB;}
+
+div.show div.index div.fox div.top{background: #EBEBEB; margin-bottom: 50px;}
+div.show div.index div.fox div.top h1{background: #FFF;}
+div.show div.index div.fox div.top ul li{width: 80px; height: 80px; padding: 10px;}
+div.show div.index div.fox div.top ul li a{position: relative;}
+div.show div.index div.fox div.top ul li a img{width: 80px; height: 80px;}
+div.show div.index div.fox div.top ul li a div{position: absolute; text-align: center; display: none; top: 0; left: 0; width: 70px; height: 80px; background: #000; color: #FFF; font-size: 14px; line-height: 80px; overflow: hidden; padding: 0 5px;}
+div.show div.index div.fox div.top ul li a:hover div{display: block;}
+
+div.show div.index div.fox div.index{}
 div.show div.index div.fox div.index h1{background: #FFF;}
-div.show div.index div.fox div.index ul li{width: 80px; height: 80px; padding: 10px;}
+div.show div.index div.fox div.index ul li{width: 100px; height: 100px;}
 div.show div.index div.fox div.index ul li a{position: relative;}
-div.show div.index div.fox div.index ul li a img{width: 80px; height: 80px;}
-div.show div.index div.fox div.index ul li a div{position: absolute; text-align: center; display: none; top: 0; left: 0; width: 70px; height: 80px; background: #000; color: #FFF; font-size: 14px; line-height: 80px; overflow: hidden; padding: 0 5px;}
+div.show div.index div.fox div.index ul li a img{width: 100px; height: 100px;}
+div.show div.index div.fox div.index ul li a div{position: absolute; text-align: center; display: none; top: 0; left: 0; width: 90px; height: 100px; background: #000; color: #FFF; font-size: 14px; line-height: 100px; overflow: hidden; padding: 0 5px;}
 div.show div.index div.fox div.index ul li a:hover div{display: block;}
 
 div.show div.index ul.caidan{float: left; width: 190px; background: #4898F8; list-style: none; box-shadow: 0 0 5px #333;}
