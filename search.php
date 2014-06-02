@@ -90,7 +90,7 @@ $s['condition'] = "sname like '%{$k}%'";
 <div class="mian">
     <div class="news">
         <div class="logo">
-            <h1>琦益<span>产品直销平台</span></h1>
+            <h1>琦益<span>企业产品直销平台</span></h1>
             <form action="<?php echo HOST_URL; ?>store" method="get">
                 <input type="text" name="k" value="<?php echo $k; ?>" />
                 <button>搜索</button>
@@ -99,9 +99,7 @@ $s['condition'] = "sname like '%{$k}%'";
     </div>
 </div>
 
-<ul class="if">
 
-</ul>
 <div class="index">
     <div class="m">
         <ul>
@@ -141,28 +139,44 @@ $s['condition'] = "sname like '%{$k}%'";
 
     <ul class="nlist">
 
+        <span class="t">
+            搜索结果[<?php echo $form[$_GET['type']]; ?>]
+        </span>
+
+        <ul class="if">
+
+        </ul>
+
         <?php
-        foreach($f as $key => $value) {
             ?>
-            <h1 style="border-bottom: 3px <?php echo $value['form']['color']; ?> solid;"><?php echo $value['form']['value']; ?><a href="search.html?type=<?php echo $value['form']['id']; ?>">更多</a></h1>
             <li>
                 <?php
                 $s = array(
-                    'table' => 'store',
-                    'condition' => "form = " . $value['form']['id'],
-                    'limit' => 'LIMIT 0, 10',
+                    'table' => 'goods',
+//                    'condition' => "form = " . $_GET['type'],
                     'order' => 'id desc'
                 );
                 $r = $mysql->select($s);
-                foreach($r as $k => $v) {
+                foreach($r as $key => $value) {
+                    $v = $value['goods'];
+                    //print_r($v);
+                    $img = explode(",", $v['img']);
+                    if(is_numeric($img[0])) {
+                        $url = "/image.{$img[0]}.400.400.1.jpg";
+                    }else{
+                        $url = $img[0];
+                    }
                     ?>
 
-                    <a class="img" target="_blank" href="store.<?php echo $v['store']['id']; ?>.html"><img src="<?php echo $v['store']['avatar_large']; ?>" /></a>
+                    <a class="img<?php if(($key+1)%4 == 0) {echo ' right';} ?>" target="_blank" href="goods.<?php echo $v['id']; ?>.html">
+                        <img src="<?php echo $url; ?>" />
+                        <h1><span>100<?php echo $v['count']; ?></span><?php echo $v['title']; ?></h1>
+                        <p>来自：<?php echo $v['address']; ?></p>
+                    </a>
 
                 <?php } ?>
                 <br class="clear" />
             </li>
-        <?php } ?>
         <br class="clear" />
     </ul>
 

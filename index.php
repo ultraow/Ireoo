@@ -37,7 +37,7 @@ $mysql = new mysql;
 
 <div class="indextop">
 
-    <h1>琦益<span>产品直销平台</span></h1>
+    <h1>琦益<span>企业产品直销平台</span></h1>
 
 </div>
 
