@@ -28,7 +28,7 @@ ul.nlist li a.img:hover{background: #EBEBEB; box-shadow: 0 0 0 10px #EBEBEB;}
 ul.nlist li a.img{float: left; width: 210px; height: 300px; overflow: hidden; margin-right: 20px; margin-bottom: 20px;}
 ul.nlist li a.img.right{margin-right: 0;}
 ul.nlist li a.img img{display: inline-block; width: 210px; height: 210px;}
-ul.nlist li a.img h1{font-size: 16px; color: #000; line-height: 30px; height: 30px; overflow: hidden;}
+ul.nlist li a.img h1{font-size: 16px; color: #000; line-height: 30px; height: 30px; overflow: hidden; white-space: nowrap; text-overflow:ellipsis;}
 ul.nlist li a.img h1 span{float: right; color: red; font-weight: normal; font-size: 12px;}
 ul.nlist li a.img p{font-size: 12px; color: #333;}
 
@@ -45,10 +45,10 @@ div.tags a{padding: 10px; font-size: 12px; color: #FFF; text-decoration: none; b
 div.tags a:hover{background: #FFF; color: red;}
 
 /*      if       */
-ul.if{margin-bottom: 20px; border: 1px #EBEBEB solid; padding: 10px; background: #EBEBEB;}
-ul.if a{font-size: 12px; margin-left: 20px; color: #333;}
+ul.if{margin-bottom: 20px; border: 1px #EBEBEB solid; padding: 10px;}
+ul.if a{font-size: 12px; padding: 5px 10px; color: #333; white-space: nowrap; text-overflow:ellipsis; display: inline-block;}
 ul.if a:hover{text-decoration: underline;}
-ul.if a.on{color: #4898F8;}
+ul.if a.on{background: #4898F8; color: #FFF;}
 
 
 div.index{margin: auto; width: 1200px; margin-bottom: 100px;}

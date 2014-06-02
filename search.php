@@ -151,7 +151,7 @@ $s['condition'] = "sname like '%{$k}%'";
 
         <ul class="if">
             <?php foreach($form as $key => $value) { ?>
-            <a href="?type=<?php echo $key; ?>"><?php echo $value; ?></a>
+            <a<?php if($key == $_GET['type']) {echo ' class="on"';} ?> href="?type=<?php echo $key; ?>"><?php echo $value; ?></a>
             <?php } ?>
         </ul>
 
