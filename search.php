@@ -150,41 +150,57 @@ $s['condition'] = "sname like '%{$k}%'";
         </span>
 
         <ul class="if">
-            <?php foreach($form as $key => $value) { ?>
-            <a<?php if($key == $_GET['type']) {echo ' class="on"';} ?> href="?type=<?php echo $key; ?>"><?php echo $value; ?></a>
-            <?php } ?>
+            <li>
+                <?php foreach($form as $key => $value) { ?>
+                    <a<?php if($key == $_GET['type']) {echo ' class="on"';} ?> href="?type=<?php echo $key; ?>"><?php echo $value; ?></a>
+                <?php } ?>
+            </li>
+        </ul>
+
+        <ul class="if back">
+
+            <li>
+
+            </li>
+            <li class="right">
+                <a href="?list=max">+</a>
+                <a href="?list=min">-</a>
+                <br class="clear" />
+            </li>
+            <br class="clear" />
+
         </ul>
 
         <?php
-            ?>
-            <li>
-                <?php
-                $s = array(
-                    'table' => 'goods',
+        ?>
+        <li>
+            <?php
+            $s = array(
+                'table' => 'goods',
 //                    'condition' => "form = " . $_GET['type'],
-                    'order' => 'id desc'
-                );
-                $r = $mysql->select($s);
-                foreach($r as $key => $value) {
-                    $v = $value['goods'];
-                    //print_r($v);
-                    $img = explode(",", $v['img']);
-                    if(is_numeric($img[0])) {
-                        $url = "/image.{$img[0]}.400.400.1.jpg";
-                    }else{
-                        $url = $img[0];
-                    }
-                    ?>
+                'order' => 'id desc'
+            );
+            $r = $mysql->select($s);
+            foreach($r as $key => $value) {
+                $v = $value['goods'];
+                //print_r($v);
+                $img = explode(",", $v['img']);
+                if(is_numeric($img[0])) {
+                    $url = "/image.{$img[0]}.400.400.1.jpg";
+                }else{
+                    $url = $img[0];
+                }
+                ?>
 
-                    <a class="img<?php if(($key+1)%4 == 0) {echo ' right';} ?>" target="_blank" href="goods.<?php echo $v['id']; ?>.html">
-                        <img src="<?php echo $url; ?>" />
-                        <h1><span>100<?php echo $v['count']; ?></span><?php echo $v['title']; ?></h1>
-                        <p>来自：<?php echo $v['address']; ?></p>
-                    </a>
+                <a class="img<?php if(($key+1)%4 == 0) {echo ' right';} ?>" target="_blank" href="goods.<?php echo $v['id']; ?>.html">
+                    <img src="<?php echo $url; ?>" />
+                    <h1><span>100<?php echo $v['count']; ?></span><?php echo $v['title']; ?></h1>
+                    <p>来自：<?php echo $v['address']; ?></p>
+                </a>
 
-                <?php } ?>
-                <br class="clear" />
-            </li>
+            <?php } ?>
+            <br class="clear" />
+        </li>
         <br class="clear" />
     </ul>
 

@@ -45,10 +45,17 @@ div.tags a{padding: 10px; font-size: 12px; color: #FFF; text-decoration: none; b
 div.tags a:hover{background: #FFF; color: red;}
 
 /*      if       */
-ul.if{margin-bottom: 20px; border: 1px #EBEBEB solid; padding: 10px;}
-ul.if a{font-size: 12px; padding: 5px 10px; color: #333; white-space: nowrap; text-overflow:ellipsis; display: inline-block;}
-ul.if a:hover{text-decoration: underline;}
-ul.if a.on{background: #4898F8; color: #FFF;}
+ul.if{margin-bottom: 20px; border: 1px #EBEBEB solid;}
+ul.if.back{background: #f3f3f3;}
+ul.if li{list-style: none; display: inline-block; margin: 0;}
+ul.if li a{font-size: 12px; padding: 5px 10px; margin: 5px; color: #333; white-space: nowrap; display: inline-block;}
+ul.if li a:hover{text-decoration: underline;}
+ul.if li a.on{background: #4898F8; color: #FFF;}
+ul.if li a.on:hover{text-decoration: none;}
+
+ul.if li.right{float: right;}
+ul.if li.right a{margin: 0; padding: 0; text-align: center; border-left: 1px #EBEBEB solid; float: left; width: 40px; height: 40px; line-height: 40px;}
+ul.if li.right a:hover{text-decoration: none; background: #FFF; color: #4898F8;}
 
 
 div.index{margin: auto; width: 1200px; margin-bottom: 100px;}
