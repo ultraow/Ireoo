@@ -45,7 +45,10 @@ div.tags a{padding: 10px; font-size: 12px; color: #FFF; text-decoration: none; b
 div.tags a:hover{background: #FFF; color: red;}
 
 /*      if       */
-ul.if{margin-bottom: 10px; display: none;}
+ul.if{margin-bottom: 20px; border: 1px #EBEBEB solid; padding: 10px; background: #EBEBEB;}
+ul.if a{font-size: 12px; margin-left: 20px; color: #333;}
+ul.if a:hover{text-decoration: underline;}
+ul.if a.on{color: #4898F8;}
 
 
 div.index{margin: auto; width: 1200px; margin-bottom: 100px;}

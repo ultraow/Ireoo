@@ -128,8 +128,14 @@ $s['condition'] = "sname like '%{$k}%'";
             $st = $mysql->select($s);
             foreach($st as $key => $value) {
                 $v = $value['goods'];
+                $img = explode(",", $v['img']);
+                if(is_numeric($img[0])) {
+                    $url = "/image.{$img[0]}.400.400.1.jpg";
+                }else{
+                    $url = $img[0];
+                }
                 ?>
-                <li><a href="/goods.<?php echo $v['id']; ?>.html"><img src="<?php echo $v['avatar_large']; ?>" /></a></li>
+                <li><a href="/goods.<?php echo $v['id']; ?>.html"><img src="<?php echo $url; ?>" /></a></li>
             <?php } ?>
             <br class="clear" />
         </ul>
@@ -144,7 +150,9 @@ $s['condition'] = "sname like '%{$k}%'";
         </span>
 
         <ul class="if">
-
+            <?php foreach($form as $key => $value) { ?>
+            <a href="?type=<?php echo $key; ?>"><?php echo $value; ?></a>
+            <?php } ?>
         </ul>
 
         <?php
