@@ -26,7 +26,7 @@ defined('HOST_NAME') or define('HOST_NAME','琦益网 - 产品直销平台');
 defined('SNAME') or define('SNAME','琦益');
 defined('HOST_URL') or define('HOST_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/');
 defined('KEYWORDS') or define('KEYWORDS','琦益，琦益网，实体店，企业，琦益平台，琦益商城');
-defined('DESCRIPTION') or define('DESCRIPTION','琦益，由淮安万达信息科技有限公司开发，专注于现实网络开发，是一款结合实体店的宣传营销平台。通过琦益平台，可以快速销售您的产品！');
+defined('DESCRIPTION') or define('DESCRIPTION','琦益，由淮安万达信息科技有限公司开发，专注于现实网络开发，是一款结合企业的宣传营销平台。通过琦益平台，可以快速销售您的产品！');
 defined('GPS') or define('GPS','淮安');
 
 $nature = array('网络', '实体');
