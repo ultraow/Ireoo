@@ -28,8 +28,8 @@ ul.nlist li a.img:hover{background: #EBEBEB; box-shadow: 0 0 0 10px #EBEBEB;}
 ul.nlist li a.img{float: left; width: 210px; height: 300px; overflow: hidden; margin-right: 20px; margin-bottom: 20px;}
 ul.nlist li a.img.right{margin-right: 0;}
 ul.nlist li a.img img{display: inline-block; width: 210px; height: 210px;}
-ul.nlist li a.img h1{font-size: 16px; color: #000; line-height: 30px; height: 30px; overflow: hidden; white-space: nowrap; text-overflow:ellipsis;}
-ul.nlist li a.img h1 span{float: right; color: red; font-weight: normal; font-size: 12px;}
+ul.nlist li a.img h1{font-size: 20px; color: red; line-height: 30px; height: 30px; overflow: hidden; white-space: nowrap; text-overflow:ellipsis;}
+ul.nlist li a.img h1 span{float: right; color: #b6b6b6; font-weight: normal; font-size: 12px;}
 ul.nlist li a.img p{font-size: 12px; color: #333;}
 
 /*   form    */
@@ -55,7 +55,7 @@ ul.if li a.on:hover{text-decoration: none;}
 
 ul.if li.right{float: right;}
 ul.if li.right a{margin: 0; padding: 0; text-align: center; border-left: 1px #EBEBEB solid; float: left; width: 40px; height: 40px; line-height: 40px;}
-ul.if li.right a:hover{text-decoration: none; background: #FFF; color: #4898F8;}
+ul.if li.right a:hover{text-decoration: none; background: #FFF; color: #ff5c50;}
 
 
 div.index{margin: auto; width: 1200px; margin-bottom: 100px;}

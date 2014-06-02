@@ -192,10 +192,10 @@ $s['condition'] = "sname like '%{$k}%'";
                 }
                 ?>
 
-                <a class="img<?php if(($key+1)%4 == 0) {echo ' right';} ?>" target="_blank" href="goods.<?php echo $v['id']; ?>.html">
-                    <img src="<?php echo $url; ?>" />
-                    <h1><span>100<?php echo $v['count']; ?></span><?php echo $v['title']; ?></h1>
-                    <p>来自：<?php echo $v['address']; ?></p>
+                <a class="img<?php if(($key+1)%4 == 0) {echo ' right';} ?>" target="_blank" href="goods.<?php echo $v['id']; ?>.html" title="<?php echo $v['title']; ?>">
+                    <img src="<?php echo $url; ?>" alt="<?php echo $v['title']; ?>" />
+                    <h1><span>100</span>¥<?php echo $v['rebate']; ?></h1>
+                    <p><?php echo $v['title']; ?></p>
                 </a>
 
             <?php } ?>
