@@ -41,6 +41,7 @@ $mysql->execute("UPDATE `store` SET `count` = `count` + 1 WHERE id = {$_GET['id'
     <meta name="description" content="<?php if($this_store['synopsis'] != '-' and $this_store['synopsis'] != '') {echo $this_store['synopsis'];}else{echo DESCRIPTION;} ?>" />
     <link href="<?php echo HOST_URL; ?>include/css/head.css" rel="stylesheet" type="text/css">
     <link href="<?php echo HOST_URL; ?>include/css/store.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo HOST_URL; ?>include/css/normalize.css" rel="stylesheet" type="text/css">
     <link href="<?php echo HOST_URL; ?>include/css/foot.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="<?php echo HOST_URL; ?>include/js/jquery.js"></script>
     <script type="text/javascript" src="<?php echo HOST_URL; ?>include/js/title.js"></script>
@@ -86,7 +87,7 @@ $mysql->execute("UPDATE `store` SET `count` = `count` + 1 WHERE id = {$_GET['id'
         });
     </script>
 
-    <script src="http://l.tbcdn.cn/apps/top/x/sdk.js?appkey=21390994"></script> <!-- 淘宝链接 -->
+    <!--    <script src="http://l.tbcdn.cn/apps/top/x/sdk.js?appkey=21390994"></script>  淘宝链接 -->
 </head>
 <body>
 <?php require_once("include/php/head.php"); ?>
@@ -97,7 +98,7 @@ $mysql->execute("UPDATE `store` SET `count` = `count` + 1 WHERE id = {$_GET['id'
                 <span class="img" id="editimg"><img src="<?php echo $this_store['avatar_large']; ?>" /></span>
             </div>
             <div class="name">
-                <h1><?php echo $this_store['sname']; ?></h1>
+                <h1><?php echo $this_store['sname']; ?><?php if($this_store['show'] == 1) {echo '<i class="Icon Icon--verified Icon--small" style="color: #4898F8; font-size: 20px;"></i>';} ?></h1>
             </div>
             <div class="b">
                 <img src="<?php echo $this_store['bg']; ?>" />

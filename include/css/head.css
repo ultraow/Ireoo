@@ -78,3 +78,5 @@ button{background: #6394D0; border: none; font-size: 14px; color: #FFF; font-wei
 button:hover{background: #A2BFE3;}
 
 i.add{width: 16px; height: 16px; display: inline-block; background: url(../include/images/1e7BH6Rysyh.png) no-repeat -34px -525px;}
+
+span.renzheng{color: #FFF; background: green; display: inline-block; width: 30px; height: 30px; border-radius: 30px; content: '\f099'; font-family: "rosettaicons";}
