@@ -50,7 +50,8 @@ if($token != '') {
             <td>用户名</td>
             <td>手机</td>
             <td>邮箱</td>
-            <td>商城</td>
+            <td>类型</td>
+            <td>操作员</td>
             <td>操作</td>
         </tr>
         </thead>
@@ -70,11 +71,11 @@ if($token != '') {
                 <td><?php echo $v['email']; ?></td>
                 <td>
                 <?php
-                    if($v['show'] == 0) {echo '个人账号';}
-                    if($v['show'] == 1) {echo '商家用户';}
-                    if($v['show'] == 2) {echo '加盟商城';}
+                    if($v['show'] <= 1) {echo '普通用户';}
+                    elseif($v['show'] == 2) {echo '认证用户';}
                 ?>
                 </td>
+                <td>admin</td>
                 <td>
                     <a class="recharge" Id="<?php echo $v['id']; ?>">修改</a>
                 </td>

@@ -13,7 +13,7 @@ div.mian div h1{margin-bottom: 10px; color: #333;}
 div.mian div h2{margin-bottom: 20px; font-weight: normal; font-size: 12px; color: #999;}
 div.mian ul h3{font-size: 18px; line-height: 40px; height: 40px; color: #FFF; background: green; margin-bottom: 10px; padding-left: 10px; font-weight: normal;}
 
-div.mian ul{list-style: none; width: 490px; float: left;}
+div.mian ul{list-style: none; width: 490px; margin: auto;}
 
 li{margin-bottom: 5px;}
 li label{display: block; color: #333; font-size: 14px; line-height: 30px;}

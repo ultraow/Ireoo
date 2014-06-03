@@ -98,8 +98,8 @@ class user
             'username' => $this->user['username'],
             'password' => $this->user['password'],
             'phone'    => $this->user['phone'],
-            '`show`'   => 2,
-            'avatar'        => '2',
+            '`show`'   => 1,
+            'avatar'        => 'user/avatar.jpg',
             'avatar_large'  => 'user/avatar.jpg',
             'ip'       => $this->getIP(),
             'timer'    => time()
