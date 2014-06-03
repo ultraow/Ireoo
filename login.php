@@ -84,7 +84,7 @@ require_once("include/php/php.php");
         <div class="mian">
 		<div>
 			<h1>登陆琦益</h1>
-			<h2>打造全球最大企业社交平台</h2>
+			<h2>企业产品直销平台</h2>
 		</div>
 		
         	<ul>
