@@ -133,4 +133,22 @@ for($i=0;$i<$len;$i++){
 }
 return join($new_str);
 }
+
+function echoGet($no = '') {
+    $n = explode(',', $no);
+    $i = 0;
+    $g = $_GET;
+    foreach($_GET as $k => $v) {
+        foreach($n as $kn => $vn) {
+            if($vn == $k) {
+                unset($g[$k]);
+            }
+        }
+    }
+    foreach($g as $k => $v) {
+        echo $k . '=' . $v . '&';
+        $i++;
+    }
+}
+
 ?>

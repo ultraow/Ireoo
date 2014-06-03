@@ -15,12 +15,15 @@ if(isset($_GET['token'])) $token = $_GET['token'];
 
 if($token != '') {
     if($token != $_SESSION['token']) {
-        $r1 = $mysql->update('user', $_POST, "id = $id");
+        if($_GET['m'] == 'set') {
+            $r1 = $mysql->update('store', array('show' => 1), "id = {$_GET['id']}");
+        }elseif($_GET['m'] == 'unset') {
+            $r1 = $mysql->update('store', array('show' => 0), "id = {$_GET['id']}");
+        }
         //print_r($_POST);
         $_SESSION['token'] = $_GET['token'];
-    }else{
-        header("Location: /i?s=business&i=index");
     }
+    header("Location: /i?s=business");
 }
 
 ?>
@@ -48,8 +51,7 @@ if($token != '') {
         <thead>
         <tr>
             <td>用户名</td>
-            <td>手机</td>
-            <td>邮箱</td>
+            <td>简介</td>
             <td>类型</td>
             <td>操作员</td>
             <td>操作</td>
@@ -58,26 +60,26 @@ if($token != '') {
         <tbody>
         <?php
         $sql = array(
-            'table' => 'user'
+            'table' => 'store'
         );
         $re = $mysql->select($sql);
         //print_r($s);
         foreach($re as $key => $value) {
-            $v = $value['user'];
+            $v = $value['store'];
             ?>
             <tr>
-                <td><?php echo $v['username']; ?></td>
-                <td><?php echo $v['phone']; ?></td>
-                <td><?php echo $v['email']; ?></td>
+                <td><?php echo $v['sname']; ?></td>
+                <td><div style="width: 500px; height: 60px; text-overflow: ellipsis; overflow: hidden;"><?php echo $v['desc']; ?></div></td>
                 <td>
                 <?php
-                    if($v['show'] <= 1) {echo '普通用户';}
-                    elseif($v['show'] == 2) {echo '认证用户';}
+                    if($v['show'] == 0) {echo '普通用户';}
+                    elseif($v['show'] == 1) {echo '认证用户';}
                 ?>
                 </td>
                 <td>admin</td>
                 <td>
-                    <a class="recharge" Id="<?php echo $v['id']; ?>">修改</a>
+                    <a href="?<?php echoGet('m,id,token'); ?>m=set&id=<?php echo $v['id']; ?>&token=<?php echo md5(rand(0, 10000000000000)); ?>">认证</a>
+                    <a href="?<?php echoGet('m,id,token'); ?>m=unset&id=<?php echo $v['id']; ?>&token=<?php echo md5(rand(0, 10000000000000)); ?>">取消认证</a>
                 </td>
             </tr>
         <?php

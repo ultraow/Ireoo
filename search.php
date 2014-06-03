@@ -242,22 +242,3 @@ $s['limit'] = "LIMIT " . $page * $show . ", $show";
     <?php require_once("include/php/foot.php"); ?>
     </body>
     </html>
-
-<?php
-function echoGet($no = '') {
-    $n = explode(',', $no);
-    $i = 0;
-    $g = $_GET;
-    foreach($_GET as $k => $v) {
-        foreach($n as $kn => $vn) {
-            if($vn == $k) {
-                unset($g[$k]);
-            }
-        }
-    }
-    foreach($g as $k => $v) {
-        echo $k . '=' . $v . '&';
-        $i++;
-    }
-}
-?>
