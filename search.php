@@ -99,7 +99,7 @@ $s['limit'] = "LIMIT " . $page * $show . ", $show";
         <div class="news">
             <div class="logo">
                 <h1>琦益<span>企业产品直销平台</span></h1>
-                <form action="<?php echo HOST_URL; ?>search.html" method="get">
+                <form action="<?php echo HOST_URL; ?>search.html?<?php echoGet('k'); ?>" method="get">
                     <input type="text" name="k" value="<?php echo $k; ?>" />
                     <button>搜索</button>
                 </form>
@@ -154,7 +154,7 @@ $s['limit'] = "LIMIT " . $page * $show . ", $show";
         <ul class="nlist">
 
         <span class="t">
-            搜索结果[<?php echo $form[$_GET['type']]; ?>]
+            搜索结果
         </span>
 
             <ul class="if">
