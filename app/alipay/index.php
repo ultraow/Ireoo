@@ -47,7 +47,7 @@ if($token != '') {
                     'condition' => 'id = ' . $r['gid']
                 );
                 $r = $mysql->row($s);
-                $mysql->update('favorites', array('member' => $_GET['m'] - 1, 'money' => ($_GET['m'] + 1) * $r['rebate']), 'id = ' . $_GET['id']);
+                $mysql->update('cart', array('member' => $_GET['m'] - 1, 'money' => ($_GET['m'] - 1) * $r['rebate']), 'id = ' . $_GET['id']);
             }
         }
         $_SESSION['token'] = $_GET['token'];
