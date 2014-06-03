@@ -60,7 +60,7 @@ if(isset($_GET['put']) and $_GET['put'] == 'yes') {
     <script type="text/javascript" src="<?php echo HOST_URL; ?>include/js/jquery.js"></script>
     <script type="text/javascript">
         if($(window).width() < 600) {
-            location.href = '/3Ggoods.<?php echo $id; ?>';
+            location.href = 'http://mobile.ireoo.com/goods.<?php echo $id; ?>.html';
         }
     </script>
 </head>

@@ -11,16 +11,7 @@ rewrite "/i$" /i.php last;
 rewrite "/search\.html$" /search.php last;
 rewrite "/image\.([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]{1})\.jpg$" /app/image/index.php?id=$1&width=$2&height=$3&type=$4 last;
 rewrite "/wx([0-9]{1,})$" /app/weixin/index.php?wx=$1 last;
-rewrite "/3G([0-9]+)$" /web/3G/store.php?id=$1 last;
-rewrite "/3G([0-9]+)index$" /web/3G/mian.php?id=$1 last;
-rewrite "/3Gstore$" /web/3G/stores.php last;
-rewrite "/3G$" /web/3G/index.php last;
-rewrite "/3Glogin$" /web/3G/login.php last;
-rewrite "/3Greg$" /web/3G/reg.php last;
-rewrite "/card$" /web/3G/card.php last;
-rewrite "/setting$" /web/3G/setting.php last;
-rewrite "/carte$" /web/3G/carte.php last;
-rewrite "/3Ggoods\.([0-9]+)$" /web/3G/goods.php?id=$1 last;
+
 rewrite "/goods\.([0-9]+)\.html$" /goods.php?id=$1 last;
 rewrite "/news.html$" /news.php last;
 rewrite "/news_([0-9]+)\.html$" /news.php?id=$1 last;
