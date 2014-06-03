@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="ireoo.com" showNewOnTargetInSync="false">
+  <component name="PublishConfigData" serverName="ireoo.com" promptOnLocalOverwrite="false" showNewOnTargetInSync="false">
     <serverData>
       <paths name="ireoo.com">
         <serverdata>

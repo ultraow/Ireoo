@@ -5,7 +5,7 @@
             <?php
             if(is_array($o)) {
                 ?>
-                <a href="<?php echo HOST_URL; ?>i"><img src="<?php echo $o['avatar_large']; ?>" /><span><?php echo $o['username']; ?></span></a><a href="<?php echo HOST_URL; ?>/"><span>收藏夹</span></a><a href="<?php echo HOST_URL; ?>/cart"><span>购物车</span></a><a href="#"><span>联系客服</span></a><a href="<?php echo HOST_URL; ?>?loginout=yes"><span>退出</span></a>
+                <a href="<?php echo HOST_URL; ?>i"><img src="<?php echo $o['avatar_large']; ?>" /><span><?php echo $o['username']; ?></span></a><a href="<?php echo HOST_URL; ?>"><span>收藏夹</span></a><a href="<?php echo HOST_URL; ?>cart"><span>购物车</span></a><a href="#"><span>联系客服</span></a><a href="<?php echo HOST_URL; ?>?loginout=yes"><span>退出</span></a>
             <?php
             }else{
                 ?>

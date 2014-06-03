@@ -8,7 +8,7 @@ div.head div.goods div.img img{position: absolute; width: 400px; height: 400px;}
 div.head div.goods h1{font-size: 18px; padding: 10px 10px 10px 420px; color: #333;}
 
 div.head div.goods ul.mode, div.head div.goods ul.pay{list-style: none;}
-div.head div.goods ul.mode{background: #ff5c50; margin-left: 410px;}
+div.head div.goods ul.mode{background: #ff5c50; padding-left: 410px;}
 div.head div.goods ul.mode li{font-size: 12px; padding: 5px 10px; color: #CCC;}
 
 div.head div.goods ul.mode li label{float: left; width: 80px; color: #FFF; font-size: 12px; text-align: right; padding-right: 20px; padding-top: 15px;}
