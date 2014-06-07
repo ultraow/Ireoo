@@ -99,7 +99,7 @@
 
     function initialize() {
         if (GBrowserIsCompatible()) {
-            map = new GMap2(document.getElementById("map_canvas"));
+            map = new GMap2(document.getElementById("gps"));
             map.setCenter(new GLatLng(39.917, 116.397), 13);
             geocoder = new GClientGeocoder();
         }
