@@ -19,11 +19,11 @@ div.mian{max-width: 1000px; margin: auto; border-top: none;}
 /*   shead   */
 div.shead{position: relative; width: 1000px; margin: auto;}
 
-div.shead div.avatar{background: #FFF; position: absolute; padding: 4px; border: 1px #999 solid; overflow: auto; bottom: -60px; left: 0; box-shadow: 0 0 5px RGBA(0, 0, 0, 0.8);}
+div.shead div.avatar{background: #FFF; position: absolute; padding: 4px; border: 1px #999 solid; overflow: auto; bottom: -60px; left: 10px; box-shadow: 0 0 5px RGBA(0, 0, 0, 0.8);}
 div.shead div.avatar span.img{display: inline-block;}
 div.shead div.avatar span.img img{width: 150px; height: 150px;}
 
-div.shead div.name{position: absolute; bottom: -50px; left: 180px;}
+div.shead div.name{position: absolute; bottom: -50px; left: 190px;}
 div.shead div.name h1{color: #333; text-shadow: 0 0 0 3px #CCC; font-size: 25px; font-family: 'microsoft yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; display: block;}
 div.shead div.name h1 i{color: #4898F8; font-size: 20px; margin-left: 10px;}
 div.shead div.name span{display: block; padding-top: 5px; padding-bottom: 10px;}
