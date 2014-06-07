@@ -86,30 +86,44 @@
     <h1 class="t">位置<span><b>[</b> <?php echo $this_store['address']; ?> <b>]</b></span></h1>
     <div class="gps" id="gps"></div>
 </div>
-<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyACxm41BecCMxLEDgKIhPA-Yo0yJRgp4Lo&sensor=true"></script>
+
+    <script src="http://ditu.google.cn/maps?file=api&v=2.x&key=ABQIAAAAnibKqISEMs32X7h_YXptqRT2DmDDGPor_W_5RLHo-7MuXY3P7xQVD1mgwiHcnOKxYO-fXXYt0yPfcQ&hl=zh-CN"></script>
+
+
+
 <script type="text/javascript">
-    var map;
+
+
+    var map = null;
+    var geocoder = null;
+
     function initialize() {
-        var mapOptions = {
-            zoom: <?php echo $this_store['ZOOM']; ?>,
-            center: new google.maps.LatLng(<?php echo $this_store['GPS']!='0, 0'?$this_store['GPS']:"33.595577, 119.034311"; ?>),
-            panControl: false,
-            scaleControl: false,
-            mapTypeControl: false,
-            streetViewControl: false,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        map = new google.maps.Map(document.getElementById('gps'),
-            mapOptions);
-        marker = new google.maps.Marker({
-            map:map,
-            draggable: false,
-            animation: google.maps.Animation.DROP,
-            position: new google.maps.LatLng(<?php echo $this_store['GPS']!='0, 0'?$this_store['GPS']:"33.595577, 119.034311"; ?>)
-        });
-        marker.setAnimation(google.maps.Animation.BOUNCE);
-        //map.controls[google.maps.ControlPosition.CENTER].push(homeControlDiv);
+        if (GBrowserIsCompatible()) {
+            map = new GMap2(document.getElementById("map_canvas"));
+            map.setCenter(new GLatLng(39.917, 116.397), 13);
+            geocoder = new GClientGeocoder();
+        }
+        showAddress("<?php echo $this_store['address']; ?>");
     }
+
+    function showAddress(address) {
+        if (geocoder) {
+            geocoder.getLatLng(
+                address,
+                function(point) {
+                    if (!point) {
+                        //alert("不能解析: " + address);
+                    } else {
+                        map.setCenter(point, 13);
+                        var marker = new GMarker(point);
+                        map.addOverlay(marker);
+                        marker.openInfoWindowHtml(address);
+                    }
+                }
+            );
+        }
+    }
+
 
     google.maps.event.addDomListener(window, 'load', initialize);
 </script>
