@@ -100,11 +100,8 @@
     function initialize() {
         if (GBrowserIsCompatible()) {
             map = new GMap2(document.getElementById("gps"));
-            map.setCenter(new GLatLng(<?php echo $this_store['GPS']; ?>), <?php echo $this_store['ZOOM']; ?>);
+            map.setCenter(new GLatLng(33.59568842578548, 119.03450270617009), 13);
             geocoder = new GClientGeocoder();
-            var marker = new GMarker(new GLatLng(<?php echo $this_store['GPS']; ?>));
-            map.addOverlay(marker);
-            marker.openInfoWindowHtml("<?php echo $this_store['address']; ?>");
         }
         showAddress("<?php echo $this_store['address']; ?>");
     }
@@ -116,6 +113,10 @@
                 function(point) {
                     if (!point) {
                         //alert("不能解析: " + address);
+                        map.setCenter(new GLatLng(33.59568842578548, 119.03450270617009), 13);
+                        var marker = new GMarker(new GLatLng(33.59568842578548, 119.03450270617009));
+                        map.addOverlay(marker);
+                        marker.openInfoWindowHtml("琦益网");
                     } else {
                         map.setCenter(point, 13);
                         var marker = new GMarker(point);
