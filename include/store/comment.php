@@ -33,9 +33,9 @@
     a.del{color: #4898F8; text-decoration: none; display: inline-block; font-weight: bold; width: 15px; height: 15px; background: url("include/images/close.png") no-repeat 0 0; float: right;}
     a.del:hover{background-position: 0 -32px;}
 
-    h1.t{font-family: "microsoft yahei"; font-size: 20px; line-height: 50px; height: 80px; border-bottom: 1px #CCC solid; padding-left: 10px;}
-    h1.t span{font-size: 12px; font-weight: normal; margin-left: 20px; color: #666;}
-    h1.t span b{color: #CCC; font-weight: normal;}
+    div.index h1.t{font-family: "microsoft yahei"; font-size: 20px; line-height: 50px; height: 80px; border-bottom: 1px #CCC solid; padding-left: 10px;}
+    div.index h1.t span{font-size: 12px; font-weight: normal; margin-left: 20px; color: #666;}
+    div.index h1.t span b{color: #CCC; font-weight: normal;}
 </style>
 <?php require_once('lib/timer.class.php'); ?>
 <style type="text/css">
