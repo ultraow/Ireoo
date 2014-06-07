@@ -97,7 +97,7 @@
     // 百度地图API功能
     var map = new BMap.Map("gps");
     var point = new BMap.Point(116.331398,39.897445);
-    map.centerAndZoom(point,12);
+    map.centerAndZoom(point,13);
     // 创建地址解析器实例
     var myGeo = new BMap.Geocoder();
     // 将地址解析结果显示在地图上,并调整地图视野
