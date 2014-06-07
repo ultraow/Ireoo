@@ -102,6 +102,9 @@
             map = new GMap2(document.getElementById("gps"));
             map.setCenter(new GLatLng(<?php echo $this_store['GPS']; ?>), <?php echo $this_store['ZOOM']; ?>);
             geocoder = new GClientGeocoder();
+            var marker = new GMarker(new GLatLng(<?php echo $this_store['GPS']; ?>));
+            map.addOverlay(marker);
+            marker.openInfoWindowHtml("<?php echo $this_store['address']; ?>");
         }
         showAddress("<?php echo $this_store['address']; ?>");
     }
