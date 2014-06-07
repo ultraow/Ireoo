@@ -8,7 +8,7 @@
     div.index ul li span.img img{width: 60px; height: 60px;}
     div.index ul li div{font-weight: normal; font-family: Arial, Helvetica, sans-serif; padding-left: 70px; position: relative;}
 
-    div.index ul li div div.img{padding: 0; max-width: 303px; max-height: 303px; overflow: hidden;}
+    div.index ul li div div.img{padding: 0; max-width: 603px; max-height: 603px; overflow: hidden;}
     div.index ul li div div.img img{float: left; height: auto; margin-bottom: 1px; margin-right: 1px;}
 
     div.index ul li div h1{font-size: 12px; margin-bottom: 10px;}
@@ -62,7 +62,7 @@
                     <?php $img = explode(',', $v['img']); if($img[0] != '') { ?>
                         <div class="img">
                             <?php foreach($img as $k1 => $v1) { ?>
-                                <img src="/image.<?php echo $v1; ?>.100.100.0.jpg" />
+                                <img src="/image.<?php echo $v1; ?>.200.200.0.jpg" />
                             <?php } ?>
                             <br class="clear" />
                         </div>
