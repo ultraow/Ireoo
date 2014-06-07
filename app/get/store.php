@@ -15,7 +15,7 @@ if(isset($_POST)) {
     $_POST['ip'] = getIP();
     $_POST['timer'] = time();
 
-    print_r($_POST);
+    //print_r($_POST);
     $s = array(
         'table' => 'store',
         'condition' => "sname like '%{$_POST['sname']}%'"
