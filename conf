@@ -1,5 +1,5 @@
 if ( $host != "ireoo.com") {
-    rewrite ^/(.*)$ http://ireoo.com/$1 permanent;
+    #rewrite ^/(.*)$ http://ireoo.com/$1 permanent;
 }
 
 rewrite "/s$" /storeAdmin/index.php last;
