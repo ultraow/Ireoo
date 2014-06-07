@@ -36,12 +36,12 @@ div.shead div.name ul li span{margin-right: 5px; display: inline-block; height: 
 div.shead div.b{overflow: hidden; border-bottom: 1px #CCC solid; height: 300px;}
 div.shead div.b img{width: 1000px;}
 
-ul.m{background: #CCC; margin-bottom: 10px;}
-ul.m a{display: inline-block; text-decoration: none; padding: 0 15px 0 15px; font-weight: bold; color: #999; font-size: 13px; height: 43px; line-height: 46px;}
+ul.m{background: #CCC;}
+ul.m a{display: inline-block; text-decoration: none; padding: 0 15px 0 15px; font-weight: bold; color: #4898F8; font-size: 13px; height: 43px; line-height: 46px;}
 ul.m a.first{margin-left: 10px;}
 ul.m a.on{background: #4898F8; color: #FFF;}
 ul.m a:hover{background: #333;}
-ul.m a span{color: #CCC; font-size: 12px; margin-left: 5px;}
+ul.m a span{color: #FFF; font-size: 12px; margin-left: 5px;}
 
 /*   tab    */
 div.tab{margin-bottom: 10px; position: relative;}
