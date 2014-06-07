@@ -8,8 +8,8 @@
     div.index ul li span.img img{width: 60px; height: 60px;}
     div.index ul li div{font-weight: normal; font-family: Arial, Helvetica, sans-serif; padding-left: 70px; position: relative;}
 
-    div.index ul li div div.img{padding: 0; max-width: 609px; max-height: 609px; overflow: hidden;}
-    div.index ul li div div.img img{float: left; height: auto; margin-bottom: 3px; margin-right: 3px;}
+    div.index ul li div div.img{padding: 0; max-width: 612px; max-height: 612px; overflow: hidden;}
+    div.index ul li div div.img img{float: left; height: auto; margin-bottom: 4px; margin-right: 4px;}
 
     div.index ul li div h1{font-size: 12px; margin-bottom: 10px;}
     div.index ul li div h1 a.name{color: #4898F8; text-decoration: none; font-size: 14px;}
@@ -62,7 +62,16 @@
                     <?php $img = explode(',', $v['img']); if($img[0] != '') { ?>
                         <div class="img">
                             <?php foreach($img as $k1 => $v1) { ?>
-                                <img src="/image.<?php echo $v1; ?>.200.200.0.jpg" />
+                                <?php
+                                if(count($img) >= 5) {
+                                    $l = 200;
+                                }elseif(count($img) >= 2 and count($img) < 5) {
+                                    $l = 301;
+                                }else{
+                                    $l = 604;
+                                }
+                                ?>
+                                <img src="/image.<?php echo $v1; ?>.<?php echo $l; ?>.<?php echo $l; ?>.0.jpg" />
                             <?php } ?>
                             <br class="clear" />
                         </div>
