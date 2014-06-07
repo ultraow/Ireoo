@@ -87,7 +87,7 @@
     <div class="gps" id="gps"></div>
 </div>
 
-    <script src="http://ditu.google.cn/maps?file=api&v=2.x&key=ABQIAAAAnibKqISEMs32X7h_YXptqRT2DmDDGPor_W_5RLHo-7MuXY3P7xQVD1mgwiHcnOKxYO-fXXYt0yPfcQ&hl=zh-CN"></script>
+    <script src="http://ditu.google.cn/maps?file=api&v=4.x&key=ABQIAAAAnibKqISEMs32X7h_YXptqRT2DmDDGPor_W_5RLHo-7MuXY3P7xQVD1mgwiHcnOKxYO-fXXYt0yPfcQ&hl=zh-CN"></script>
 
 
 
@@ -116,12 +116,12 @@
                         map.setCenter(new GLatLng(33.59568842578548, 119.03450270617009), 13);
                         var marker = new GMarker(new GLatLng(33.59568842578548, 119.03450270617009));
                         map.addOverlay(marker);
-                        marker.openInfoWindowHtml("琦益网");
+                        marker.openInfoWindowHtml("琦益网<br />江苏省淮安市清河区曙光南路2号");
                     } else {
                         map.setCenter(point, 13);
                         var marker = new GMarker(point);
                         map.addOverlay(marker);
-                        marker.openInfoWindowHtml("<?php echo $this_store['sname']; ?>");
+                        marker.openInfoWindowHtml("<?php echo $this_store['sname']; ?><br /><?php echo $this_store['address']; ?>");
                     }
                 }
             );
