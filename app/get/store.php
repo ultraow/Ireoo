@@ -16,7 +16,11 @@ if(isset($_POST)) {
     $_POST['timer'] = time();
 
     print_r($_POST);
-    if($mysql->insert('store', $_POST)) echo '成功!';
+    if($mysql->insert('store', $_POST)) {
+        echo '成功!';
+    }else{
+        echo mysql_error();
+    }
 
 }else{
     die('数据不存在!');
@@ -41,3 +45,4 @@ function getIP() {
         $ip = "unknown";
     return $ip;
 }
+
