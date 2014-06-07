@@ -16,10 +16,19 @@ if(isset($_POST)) {
     $_POST['timer'] = time();
 
     print_r($_POST);
-    if($mysql->insert('store', $_POST)) {
-        echo '成功!';
+    $s = array(
+        'table' => 'store',
+        'condition' => "sname = '{$_POST['sname']}'"
+    );
+    $r = $mysql->row($s);
+    if(is_array($r)) {
+        echo '数据已经存在!';
     }else{
-        echo mysql_error();
+        if($mysql->insert('store', $_POST)) {
+            echo '成功!';
+        }else{
+            echo mysql_error();
+        }
     }
 
 }else{
