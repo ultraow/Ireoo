@@ -87,7 +87,7 @@
     <div class="gps" id="gps"></div>
 </div>
 
-    <script src="http://ditu.google.cn/maps?file=api&v=2.x&key=ABQIAAAAnibKqISEMs32X7h_YXptqRT2DmDDGPor_W_5RLHo-7MuXY3P7xQVD1mgwiHcnOKxYO-fXXYt0yPfcQ&hl=zh-CN"></script>
+    <script src="http://ditu.google.cn/maps?file=api&v=3.x&key=ABQIAAAAnibKqISEMs32X7h_YXptqRT2DmDDGPor_W_5RLHo-7MuXY3P7xQVD1mgwiHcnOKxYO-fXXYt0yPfcQ&hl=zh-CN"></script>
 
 
 
@@ -103,7 +103,7 @@
             map.setCenter(new GLatLng(39.917, 116.397), 13);
             geocoder = new GClientGeocoder();
         }
-        showAddress("中国<?php echo $this_store['address']; ?>");
+        showAddress("<?php echo $this_store['address']; ?>");
     }
 
     function showAddress(address) {
