@@ -13,7 +13,7 @@
 </style>
 
 <div class="index">
-    <h1 class="t">照片<span><b>[</b> 共 <?php echo count($photo); ?> 张 <b>]</b></span></h1>
+    <h1 class="t">照片<span><b>[</b> 共 <?php if(is_array($photo)) {echo count($photo);}else{echo '0';} ?> 张 <b>]</b></span></h1>
     <ul>
         <li>
             <?php
