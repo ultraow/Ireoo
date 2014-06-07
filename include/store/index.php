@@ -112,7 +112,7 @@
                 address,
                 function(point) {
                     if (!point) {
-                        //alert("不能解析: " + address);
+                        alert("不能解析: " + address);
                     } else {
                         map.setCenter(point, 13);
                         var marker = new GMarker(point);
