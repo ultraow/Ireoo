@@ -11,7 +11,7 @@ ul, ol{list-style: none;}
 .clear{clear: both;}
 
 /*   x   */
-div.x{border-bottom: 1px #CCC solid; background: #FFF; margin-bottom: 100px;}
+div.x{border-bottom: 1px #CCC solid; background: #FFF; margin-bottom: 120px;}
 
 /*   mian   */
 div.mian{max-width: 1000px; margin: auto; border-top: none;}
@@ -33,7 +33,7 @@ div.shead div.name ul{padding: 5px; width: 288px; border: 1px RGB(232, 232, 232)
 div.shead div.name ul li{font-size: 12px; display: inline-block; line-height: 20px; width: 140px;}
 div.shead div.name ul li span{margin-right: 5px; display: inline-block; height: auto; padding: 0;}
 
-div.shead div.b{overflow: hidden; border-bottom: 1px #CCC solid; height: 300px;}
+div.shead div.b{overflow: hidden; height: 300px;}
 div.shead div.b img{width: 1000px;}
 
 ul.m{background: #CCC;}
