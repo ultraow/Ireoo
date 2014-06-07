@@ -126,15 +126,21 @@ $follow = is_array($followre);
 
 
     <div class="show">
-        <ul class="m">
-            <a class="first" href="/store.<?php echo $this_store['id']; ?>.html">简介</a><a href="/store.<?php echo $this_store['id']; ?>.html?i=comment">动态<span><?php $say = $store->getSay($mysql); if(is_array($say)) {if(count($say) <= 99) {echo count($say);}else{echo '99+';}}else{echo 0;} ?></span></a><a href="/store.<?php echo $this_store['id']; ?>.html?i=photo">照片<span><?php $photo = $store->getPhoto($mysql);  if(is_array($photo)) {if(count($photo) <= 99) {echo count($photo);}else{echo '99+';}}else{echo 0;} ?></span></a><a href="/store.<?php echo $this_store['id']; ?>.html?i=goods">宝贝<span><?php $goods = $store->getGoods($mysql);  if(is_array($goods)) {if(count($goods) <= 99) {echo count($goods);}else{echo '99+';}}else{echo 0;} ?></span></a>
-        </ul>
         <?php
         if(isset($_GET['i'])) {
             $index = $_GET['i'];
         }else{
             $index = 'index';
         }
+        ?>
+        <ul class="m">
+            <a class="first<?php if($index == 'index') {echo ' on';} ?>" href="/store.<?php echo $this_store['id']; ?>.html">简介</a>
+            <a<?php if($index == 'index') {echo ' class="on"';} ?> href="/store.<?php echo $this_store['id']; ?>.html?i=comment">动态<span><?php $say = $store->getSay($mysql); if(is_array($say)) {if(count($say) <= 99) {echo count($say);}else{echo '99+';}}else{echo 0;} ?></span></a>
+            <a<?php if($index == 'index') {echo ' class="on"';} ?> href="/store.<?php echo $this_store['id']; ?>.html?i=photo">照片<span><?php $photo = $store->getPhoto($mysql);  if(is_array($photo)) {if(count($photo) <= 99) {echo count($photo);}else{echo '99+';}}else{echo 0;} ?></span></a>
+            <a<?php if($index == 'index') {echo ' class="on"';} ?> href="/store.<?php echo $this_store['id']; ?>.html?i=goods">宝贝<span><?php $goods = $store->getGoods($mysql);  if(is_array($goods)) {if(count($goods) <= 99) {echo count($goods);}else{echo '99+';}}else{echo 0;} ?></span></a>
+            <br class="clear" />
+        </ul>
+        <?php
         include_once('include/store/' . $index . '.php');
         ?>
     </div>
