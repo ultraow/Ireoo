@@ -22,3 +22,4 @@ rewrite "/pay$" /app/alipay/pay.php last;
 
 #allow 122.195.226.200;
 #deny all;
+
