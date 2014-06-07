@@ -92,62 +92,63 @@ $mysql->execute("UPDATE `store` SET `count` = `count` + 1 WHERE id = {$_GET['id'
 <body>
 <?php require_once("include/php/head.php"); ?>
 <div class="x">
-    <div class="mian">
-        <div class="shead">
-            <div class="avatar">
-                <span class="img" id="editimg"><img src="<?php echo $this_store['avatar_large']; ?>" /></span>
-            </div>
-            <div class="name">
-                <h1><?php echo $this_store['sname']; ?><?php if($this_store['show'] == 1) {echo '<i class="Icon Icon--verified Icon--small" style="color: #4898F8; font-size: 20px; margin-left: 10px;"></i>';} ?></h1>
-            </div>
-            <div class="b">
-                <img src="<?php echo $this_store['bg']; ?>" />
-            </div>
-            <ul class="m">
-                <a class="first" href="/store.<?php echo $this_store['id']; ?>.html">简介</a><a href="/store.<?php echo $this_store['id']; ?>.html?i=comment">动态<span><?php $say = $store->getSay($mysql); if(is_array($say)) {if(count($say) <= 99) {echo count($say);}else{echo '99+';}}else{echo 0;} ?></span></a><a href="/store.<?php echo $this_store['id']; ?>.html?i=photo">照片<span><?php $photo = $store->getPhoto($mysql);  if(is_array($photo)) {if(count($photo) <= 99) {echo count($photo);}else{echo '99+';}}else{echo 0;} ?></span></a><a href="/store.<?php echo $this_store['id']; ?>.html?i=goods">宝贝<span><?php $goods = $store->getGoods($mysql);  if(is_array($goods)) {if(count($goods) <= 99) {echo count($goods);}else{echo '99+';}}else{echo 0;} ?></span></a>
-            </ul>
-        </div>
 
+    <div class="shead">
+        <div class="avatar">
+            <span class="img" id="editimg"><img src="<?php echo $this_store['avatar_large']; ?>" /></span>
+        </div>
+        <div class="name">
+            <h1><?php echo $this_store['sname']; ?><?php if($this_store['show'] == 1) {echo '<i class="Icon Icon--verified Icon--small" style="color: #4898F8; font-size: 20px; margin-left: 10px;"></i>';} ?></h1>
+        </div>
+        <div class="b">
+            <img src="<?php echo $this_store['bg']; ?>" />
+        </div>
+        <ul class="m">
+            <a class="first" href="/store.<?php echo $this_store['id']; ?>.html">简介</a><a href="/store.<?php echo $this_store['id']; ?>.html?i=comment">动态<span><?php $say = $store->getSay($mysql); if(is_array($say)) {if(count($say) <= 99) {echo count($say);}else{echo '99+';}}else{echo 0;} ?></span></a><a href="/store.<?php echo $this_store['id']; ?>.html?i=photo">照片<span><?php $photo = $store->getPhoto($mysql);  if(is_array($photo)) {if(count($photo) <= 99) {echo count($photo);}else{echo '99+';}}else{echo 0;} ?></span></a><a href="/store.<?php echo $this_store['id']; ?>.html?i=goods">宝贝<span><?php $goods = $store->getGoods($mysql);  if(is_array($goods)) {if(count($goods) <= 99) {echo count($goods);}else{echo '99+';}}else{echo 0;} ?></span></a>
+        </ul>
+    </div>
+</div>
+
+<?php
+$followsql = array(
+    'table' => 'follow',
+    'condition' => "sid = '{$_GET['id']}' and uid = '{$o['id']}'"
+);
+$followre = $mysql->row($followsql);
+$followsql = array(
+    'table' => 'follow',
+    'condition' => "sid = '{$_GET['id']}'"
+);
+$followMember = $mysql->select($followsql);
+$follow = is_array($followre);
+?>
+
+<div class="mian">
+
+    <div class="show">
         <?php
-        $followsql = array(
-            'table' => 'follow',
-            'condition' => "sid = '{$_GET['id']}' and uid = '{$o['id']}'"
-        );
-        $followre = $mysql->row($followsql);
-        $followsql = array(
-            'table' => 'follow',
-            'condition' => "sid = '{$_GET['id']}'"
-        );
-        $followMember = $mysql->select($followsql);
-        $follow = is_array($followre);
+        if(isset($_GET['i'])) {
+            $index = $_GET['i'];
+        }else{
+            $index = 'index';
+        }
+        include_once('include/store/' . $index . '.php');
         ?>
-
-
-
-        <div class="show">
-            <?php
-            if(isset($_GET['i'])) {
-                $index = $_GET['i'];
-            }else{
-                $index = 'index';
-            }
-            include_once('include/store/' . $index . '.php');
-            ?>
-        </div>
-
-        <div class="right">
-            <ul class="waring">
-                <!-- <li>关注人数：<span id="follow"><?php //echo count($followMember); ?></span></li> -->
-                <li>已经有 <span><?php echo $this_store['count'] + 1; ?></span> 人浏览过该页面。</li>
-                <!-- <li class="right"><?php //if($follow) {echo '<button>取消关注</button>';}else{echo '<button>关注</button>';} ?></li>
-                <li class="right">关注我们，领取会员卡，获得更多优惠！  </li> -->
-            </ul>
-        </div>
-
-        <br class="clear" />
     </div>
 
+    <div class="right">
+        <ul class="waring">
+            <!-- <li>关注人数：<span id="follow"><?php //echo count($followMember); ?></span></li> -->
+            <li>已经有 <span><?php echo $this_store['count'] + 1; ?></span> 人浏览过该页面。</li>
+            <!-- <li class="right"><?php //if($follow) {echo '<button>取消关注</button>';}else{echo '<button>关注</button>';} ?></li>
+                <li class="right">关注我们，领取会员卡，获得更多优惠！  </li> -->
+        </ul>
+    </div>
+
+    <br class="clear" />
 </div>
+
+
 <br class="clear" />
 <?php require_once("include/php/foot.php"); ?>
 </body>

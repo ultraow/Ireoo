@@ -14,7 +14,7 @@ ul, ol{list-style: none;}
 div.x{max-width: 1000px; margin:auto;}
 
 /*   mian   */
-div.mian{max-width: 1000px; float: left; border-top: none; margin-bottom: 20px;}
+div.mian{max-width: 1000px; margin: auto; border-top: none; margin-bottom: 20px;}
 
 /*   shead   */
 div.shead{position: relative; margin-bottom: 15px; border-bottom: 1px #CCC solid; background: #FFF;}
