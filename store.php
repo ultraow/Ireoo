@@ -22,8 +22,7 @@ $store = new store(array('id' => $id));                 //load store class
 
 $user = new user();                                     //加载新用户
 $this_store = $store->show_one($mysql);
-print_r($this_store);
-//if(!is_array($this_store)) header('Location: ' . HOST_URL . 'store');
+if(!is_array($this_store)) header('Location: ' . HOST_URL . 'store');
 //获取当前ID的店面基本信息
 $admin = $user->getID($mysql, $this_store['uid']);
 //获取该店管理员身份
