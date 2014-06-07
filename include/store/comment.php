@@ -1,5 +1,5 @@
 <style type="text/css">
-        /*    index    */
+    /*    index    */
     div.index{border: 1px #CCC solid; margin-bottom: 15px; background: #FFF;}/*float: left; width: 560px; */
     div.index ul{padding: 10px; position: relative;}
 
@@ -32,6 +32,10 @@
 
     a.del{color: #4898F8; text-decoration: none; display: inline-block; font-weight: bold; width: 15px; height: 15px; background: url("include/images/close.png") no-repeat 0 0; float: right;}
     a.del:hover{background-position: 0 -32px;}
+
+    h1.t{font-family: "microsoft yahei"; font-size: 20px; line-height: 50px; height: 80px; border-bottom: 1px #CCC solid; padding-left: 10px;}
+    h1.t span{font-size: 12px; font-weight: normal; margin-left: 20px; color: #666;}
+    h1.t span b{color: #CCC; font-weight: normal;}
 </style>
 <?php require_once('lib/timer.class.php'); ?>
 <style type="text/css">
@@ -44,32 +48,32 @@
 
     <ul>
         <?php if(is_array($say)){ foreach($say as $k => $v) { ?>
-        <li>
+            <li>
         	<span class="img">
                 <?php $user = new user; $u = $user->getID($mysql, $v['uid']); ?>
                 <img src="<?php echo $u['avatar']; ?>" />
             </span>
-            <div>
+                <div>
                 <span>
                     <?php if($v['uid'] == $o['id']) { ?><a class="del" title="删除帖子" rel="<?php echo $v['id']; ?>" href="?del=<?php echo $v['id']; ?>"></a><?php } ?>
                     <h1><a class="name" href="#" id="user" rel="<?php echo $this_store['uid']; ?>"><?php echo $u['username']; ?></a></h1><?php echo html_entity_decode(htmlentities($v['txt'])); ?>
                 </span>
 
-                <?php $img = explode(',', $v['img']); if($img[0] != '') { ?>
-                    <div class="img">
-                        <?php foreach($img as $k1 => $v1) { ?>
-                            <img src="/image.<?php echo $v1; ?>.100.100.0.jpg" />
-                        <?php } ?>
-                        <br class="clear" />
-                    </div>
-                <?php } ?>
+                    <?php $img = explode(',', $v['img']); if($img[0] != '') { ?>
+                        <div class="img">
+                            <?php foreach($img as $k1 => $v1) { ?>
+                                <img src="/image.<?php echo $v1; ?>.100.100.0.jpg" />
+                            <?php } ?>
+                            <br class="clear" />
+                        </div>
+                    <?php } ?>
 
-                <em>
-                    <a class="timer" rel="<?php echo date('Y年m月d日，H时i分', $v['timer']); ?>"><?php new timer($v['timer']); ?></a> 查看 <a href="http://www.ireoo.com/w/<?php echo $v['id']; ?>">详细信息</a>
-                </em>
-            </div>
-            <br />
-        </li>
+                    <em>
+                        <a class="timer" rel="<?php echo date('Y年m月d日，H时i分', $v['timer']); ?>"><?php new timer($v['timer']); ?></a> 查看 <a href="http://www.ireoo.com/w/<?php echo $v['id']; ?>">详细信息</a>
+                    </em>
+                </div>
+                <br />
+            </li>
         <?php }}else{echo '<li style="text-align: center; font-size: 12px; border: none;">暂无信息</li>';} ?>
     </ul>
 </div>

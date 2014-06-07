@@ -6,8 +6,9 @@
     div.index ul li h1{padding: 8px;}
     div.index ul li img{margin-top: 3px; margin-left: 3px;}
 
-    div.index h1.t span{font-size: 12px; font-weight: normal; margin-left: 20px; color: #666;}
-    div.index h1.t span b{color: #CCC; font-weight: normal;}
+    h1.t{font-family: "microsoft yahei"; font-size: 20px; line-height: 50px; height: 80px; border-bottom: 1px #CCC solid; padding-left: 10px;}
+    h1.t span{font-size: 12px; font-weight: normal; margin-left: 20px; color: #666;}
+    h1.t span b{color: #CCC; font-weight: normal;}
 
 </style>
 

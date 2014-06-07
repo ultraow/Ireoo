@@ -10,6 +10,7 @@ div.goods ul li a img{width: 160px; height: 160px; cursor: pointer;}
 div.goods ul li a h1{display: inline-block; font-size: 14px; height: 24px; line-height: 24px; overflow: hidden; cursor: pointer; color: #333;}
 div.goods ul li a:hover h1{color: #000;}
 
+h1.t{font-family: "microsoft yahei"; font-size: 20px; line-height: 50px; height: 80px; border-bottom: 1px #CCC solid; padding-left: 10px;}
 h1.t span{font-size: 12px; font-weight: normal; margin-left: 20px; color: #666;}
 h1.t span b{color: #CCC; font-weight: normal;}
 </style>
