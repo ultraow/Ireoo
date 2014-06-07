@@ -129,7 +129,7 @@
     }
 
 
-    setTimeout("initialize()",3000);
+    initialize();
 </script>
 <?php } ?>
 
