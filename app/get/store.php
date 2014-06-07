@@ -25,7 +25,7 @@ if(isset($_POST)) {
         echo '已经存在!';
     }else{
         if($mysql->insert('store', $_POST)) {
-            echo '保存成功!';
+            echo 'success';
         }else{
             echo '失败代码：' . mysql_error();
         }
