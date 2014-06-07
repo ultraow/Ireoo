@@ -11,7 +11,7 @@ ul, ol{list-style: none;}
 .clear{clear: both;}
 
 /*   x   */
-div.x{max-width: 1000px; margin:auto; background: #FFF; margin-bottom: 20px;}
+div.x{background: #FFF; margin-bottom: 20px;}
 
 /*   mian   */
 div.mian{max-width: 1000px; margin: auto; border-top: none;}
