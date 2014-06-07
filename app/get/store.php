@@ -22,12 +22,12 @@ if(isset($_POST)) {
     );
     $r = $mysql->row($s);
     if(is_array($r)) {
-        echo '数据已经存在!';
+        echo '已经存在!';
     }else{
         if($mysql->insert('store', $_POST)) {
-            echo '成功!';
+            echo '保存成功!';
         }else{
-            echo mysql_error();
+            echo '失败代码：' . mysql_error();
         }
     }
 
