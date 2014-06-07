@@ -18,7 +18,7 @@ if(isset($_POST)) {
     print_r($_POST);
     $s = array(
         'table' => 'store',
-        'condition' => "sname = '{$_POST['sname']}'"
+        'condition' => "sname like '%{$_POST['sname']}%'"
     );
     $r = $mysql->row($s);
     if(is_array($r)) {
