@@ -16,6 +16,8 @@ if(isset($_POST)) {
     $_POST['timer'] = time();
 
     print_r($_POST);
+    if($mysql->insert('store', $_POST)) echo '成功!';
+
 }else{
     die('数据不存在!');
 }
