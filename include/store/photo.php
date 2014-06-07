@@ -6,9 +6,13 @@
     div.index ul li h1{padding: 8px;}
     div.index ul li img{margin-top: 3px; margin-left: 3px;}
 
+    div.index h1.t span{font-size: 12px; font-weight: normal; margin-left: 20px; color: #666;}
+    div.index h1.t span b{color: #CCC; font-weight: normal;}
+
 </style>
 
 <div class="index">
+    <h1 class="t">照片<span><b>[</b> 共 <?php echo count($photo); ?> 张 <b>]</b></span></h1>
     <ul>
         <li>
             <?php

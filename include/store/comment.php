@@ -40,6 +40,8 @@
     li.say img{top: 0; left: 0; position: absolute;}
 </style>
 <div class="index">
+    <h1 class="t">动态<span><b>[</b> 共 <?php echo count($say); ?> 张 <b>]</b></span></h1>
+
     <ul>
         <?php if(is_array($say)){ foreach($say as $k => $v) { ?>
         <li>

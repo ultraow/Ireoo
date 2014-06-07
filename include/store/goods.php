@@ -3,16 +3,20 @@
 div.goods ul{background: #FFF;}
 div.goods ul li{float: left;}
 div.goods ul li a{display: inline-block; width: 160px; padding: 10px; cursor: pointer;}
-<<<<<<< HEAD
+
 div.goods ul li a:hover{background: #fafafa;}
-=======
-div.goods ul li a:hover{background: #f6f6f6;}
->>>>>>> 6ecc538392d00a0c778c332ec0ec09abbaada7f7
+
 div.goods ul li a img{width: 160px; height: 160px; cursor: pointer;}
 div.goods ul li a h1{display: inline-block; font-size: 14px; height: 24px; line-height: 24px; overflow: hidden; cursor: pointer; color: #333;}
 div.goods ul li a:hover h1{color: #000;}
+
+h1.t span{font-size: 12px; font-weight: normal; margin-left: 20px; color: #666;}
+h1.t span b{color: #CCC; font-weight: normal;}
 </style>
 <div class="goods">
+
+    <h1 class="t">产品<span><b>[</b> 共 <?php echo count($goods); ?> 张 <b>]</b></span></h1>
+
     <ul>
     <?php
         $s = array(
