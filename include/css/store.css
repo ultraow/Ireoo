@@ -19,7 +19,7 @@ div.mian{max-width: 1000px; margin: auto; border-top: none;}
 /*   shead   */
 div.shead{position: relative; width: 1000px; margin: auto;}
 
-div.shead div.avatar{background: #FFF; position: absolute; padding: 4px; border: 1px #999 solid; overflow: auto; bottom: 20px; left: 20px; box-shadow: 0 0 5px RGBA(0, 0, 0, 0.8);}
+div.shead div.avatar{background: #FFF; position: absolute; padding: 4px; border: 1px #999 solid; overflow: auto; bottom: -40px; left: 0; box-shadow: 0 0 5px RGBA(0, 0, 0, 0.8);}
 div.shead div.avatar span.img{display: inline-block;}
 div.shead div.avatar span.img img{width: 150px; height: 150px;}
 
@@ -36,11 +36,11 @@ div.shead div.name ul li span{margin-right: 5px; display: inline-block; height: 
 div.shead div.b{overflow: hidden; border-bottom: 1px #CCC solid; height: 300px;}
 div.shead div.b img{width: 1000px;}
 
-div.shead ul.m{}
-div.shead ul.m a{display: inline-block; text-decoration: none; border-right: 1px #CCC solid; padding: 0 15px 0 15px; font-weight: bold; color: #4898F8; font-size: 13px; height: 43px; line-height: 46px;}
-div.shead ul.m a.first{margin-left: 200px; border-left: 1px #CCC solid;}
-div.shead ul.m a:hover{background: #EBEBEB;}
-div.shead ul.m a span{color: #CCC; font-size: 12px; margin-left: 5px;}
+ul.m{background: #4898F8;}
+ul.m a{display: inline-block; text-decoration: none; border-right: 1px #CCC solid; padding: 0 15px 0 15px; font-weight: bold; color: #4898F8; font-size: 13px; height: 43px; line-height: 46px;}
+ul.m a.first{margin-left: 200px; border-left: 1px #CCC solid;}
+ul.m a:hover{background: #EBEBEB;}
+ul.m a span{color: #CCC; font-size: 12px; margin-left: 5px;}
 
 /*   tab    */
 div.tab{margin-bottom: 10px; position: relative;}
