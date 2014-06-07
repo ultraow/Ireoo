@@ -100,7 +100,7 @@
     function initialize() {
         if (GBrowserIsCompatible()) {
             map = new GMap2(document.getElementById("gps"));
-            map.setCenter(new GLatLng(39.917, 116.397), 13);
+            map.setCenter(new GLatLng(<?php echo $this_store['GPS']; ?>), <?php echo $this_store['ZOOM']; ?>);
             geocoder = new GClientGeocoder();
         }
         showAddress("<?php echo $this_store['address']; ?>");
@@ -112,7 +112,7 @@
                 address,
                 function(point) {
                     if (!point) {
-                        alert("不能解析: " + address);
+                        //alert("不能解析: " + address);
                     } else {
                         map.setCenter(point, 13);
                         var marker = new GMarker(point);
