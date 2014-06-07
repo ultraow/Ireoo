@@ -125,7 +125,7 @@
     }
 
 
-    google.maps.event.addDomListener(window, 'load', initialize);
+    initialize();
 </script>
 <?php } ?>
 
