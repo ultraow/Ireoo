@@ -25,7 +25,7 @@
                     $i ++;
                     $timer = strtotime(date('Y-m-d', $v['timer']));
                 }
-                ?><a href="#"><img id="photo" rel="<?php echo $v['size']; ?>" src="<?php echo '/image.'.$v['id'].'.175.175.0'; ?>" /></a><?php }}else{echo '<li style="text-align: center; font-size: 12px; border: none;">管理员很懒，还没有上传照片！</li>';} ?>
+                ?><a href="#"><img id="photo" rel="<?php echo $v['size']; ?>" src="<?php echo '/image.'.$v['id'].'.175.175.0'; ?>" /></a><?php }}else{echo '<li style="text-align: center; font-size: 12px; border: none; line-height: 100px; height: 100px;">管理员很懒，还没有上传照片！</li>';} ?>
         </li>
     </ul>
 </div>
