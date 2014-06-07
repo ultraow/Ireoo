@@ -36,7 +36,7 @@ div.shead div.name ul li span{margin-right: 5px; display: inline-block; height: 
 div.shead div.b{overflow: hidden; border-bottom: 1px #CCC solid; height: 300px;}
 div.shead div.b img{width: 1000px;}
 
-div.shead ul.m{border-left: 1px #CCC solid; border-right: 1px #CCC solid;}
+div.shead ul.m{}
 div.shead ul.m a{display: inline-block; text-decoration: none; border-right: 1px #CCC solid; padding: 0 15px 0 15px; font-weight: bold; color: #4898F8; font-size: 13px; height: 43px; line-height: 46px;}
 div.shead ul.m a.first{margin-left: 200px; border-left: 1px #CCC solid;}
 div.shead ul.m a:hover{background: #EBEBEB;}
