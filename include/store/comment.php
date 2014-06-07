@@ -8,8 +8,8 @@
     div.index ul li span.img img{width: 60px; height: 60px;}
     div.index ul li div{font-weight: normal; font-family: Arial, Helvetica, sans-serif; padding-left: 70px; position: relative;}
 
-    div.index ul li div div.img{padding: 0; max-width: 603px; max-height: 603px; overflow: hidden;}
-    div.index ul li div div.img img{float: left; height: auto; margin-bottom: 1px; margin-right: 1px;}
+    div.index ul li div div.img{padding: 0; max-width: 609px; max-height: 609px; overflow: hidden;}
+    div.index ul li div div.img img{float: left; height: auto; margin-bottom: 3px; margin-right: 3px;}
 
     div.index ul li div h1{font-size: 12px; margin-bottom: 10px;}
     div.index ul li div h1 a.name{color: #4898F8; text-decoration: none; font-size: 14px;}
