@@ -21,7 +21,7 @@ div.shead{position: relative; width: 1000px; margin: auto;}
 
 div.shead div.avatar{background: #FFF; position: absolute; padding: 4px; border: 1px #999 solid; overflow: auto; bottom: 20px; left: 20px; box-shadow: 0 0 5px RGBA(0, 0, 0, 0.8);}
 div.shead div.avatar span.img{display: inline-block;}
-div.shead div.avatar span.img img{}
+div.shead div.avatar span.img img{width: 150px; height: 150px;}
 
 div.shead div.name{position: absolute; bottom: 50px; left: 200px;}
 div.shead div.name h1{color: #FFF; text-shadow: 0 0 0 3px #000; font-size: 25px; font-family: 'microsoft yahei', 'Helvetica Neue', Helvetica, Arial, sans-serif; display: block;}
