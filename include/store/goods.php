@@ -15,7 +15,7 @@ h1.t span b{color: #CCC; font-weight: normal;}
 </style>
 <div class="goods">
 
-    <h1 class="t">产品<span><b>[</b> 共 <?php echo count($goods); ?> 张 <b>]</b></span></h1>
+    <h1 class="t">产品<span><b>[</b> 共 <?php echo count($goods); ?> 个 <b>]</b></span></h1>
 
     <ul>
     <?php
