@@ -5,7 +5,8 @@
  * Date: 6/7/14
  * Time: 12:16 AM
  */
-
+header("Content-type: text/html; charset=utf-8");
+date_default_timezone_set("PRC");
 include_once('../../lib/mysql.class.php');
 $mysql = new mysql;
 
