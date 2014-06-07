@@ -8,8 +8,8 @@ class store
             '`id`'                => NULL,
             '`show`'           => 0,
             '`uid`'              => 0,
-            '`avatar`'          => 'uploads/u/avatarBackground.jpg',
-            '`avatar_large`' => 'uploads/u/avatarBackground.jpg',
+            '`avatar`'          => 'uploads/u/storeAvatar.jpg',
+            '`avatar_large`' => 'uploads/u/storeAvatar.jpg',
             '`sname`'         => '-',
             '`synopsis`'      => '-',
             '`province`'      => '江苏省',
@@ -221,8 +221,8 @@ class store
         return false;
     }
 
-    function browse() {
-        $r = $mysql->update('store', array("bowse" => "'bowse' + 1"), "id = {$this->store['id']}");
+    function count($mysql) {
+        $r = $mysql->update('store', array("count" => "count + 1"), "id = {$this->store['id']}");
         if($r) {
             return true;
         }else{
