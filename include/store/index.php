@@ -87,49 +87,27 @@
     <div class="gps" id="gps"></div>
 </div>
 
-    <script src="http://ditu.google.cn/maps?file=api&v=4.x&key=ABQIAAAAnibKqISEMs32X7h_YXptqRT2DmDDGPor_W_5RLHo-7MuXY3P7xQVD1mgwiHcnOKxYO-fXXYt0yPfcQ&hl=zh-CN"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=1A838L3DfrnjS0CwbSsMv1l7"></script>
 
 
 
 <script type="text/javascript">
 
 
-    var map = null;
-    var geocoder = null;
-
-    function initialize() {
-        if (GBrowserIsCompatible()) {
-            map = new GMap2(document.getElementById("gps"));
-            map.setCenter(new GLatLng(33.59568842578548, 119.03450270617009), 13);
-            geocoder = new GClientGeocoder();
+    // 百度地图API功能
+    var map = new BMap.Map("gps");
+    var point = new BMap.Point(116.331398,39.897445);
+    map.centerAndZoom(point,12);
+    // 创建地址解析器实例
+    var myGeo = new BMap.Geocoder();
+    // 将地址解析结果显示在地图上,并调整地图视野
+    myGeo.getPoint("<?php echo $this_store['address']; ?>", function(point){
+        if (point) {
+            map.centerAndZoom(point, 16);
+            map.addOverlay(new BMap.Marker(point));
         }
-        showAddress("<?php echo $this_store['address']; ?>");
-    }
+    });
 
-    function showAddress(address) {
-        if (geocoder) {
-            geocoder.getLatLng(
-                address,
-                function(point) {
-                    if (!point) {
-                        //alert("不能解析: " + address);
-                        map.setCenter(new GLatLng(33.59568842578548, 119.03450270617009), 13);
-                        var marker = new GMarker(new GLatLng(33.59568842578548, 119.03450270617009));
-                        map.addOverlay(marker);
-                        marker.openInfoWindowHtml("琦益网<br />江苏省淮安市清河区曙光南路2号");
-                    } else {
-                        map.setCenter(point, 13);
-                        var marker = new GMarker(point);
-                        map.addOverlay(marker);
-                        marker.openInfoWindowHtml("<?php echo $this_store['sname']; ?><br /><?php echo $this_store['address']; ?>");
-                    }
-                }
-            );
-        }
-    }
-
-
-    initialize();
 </script>
 <?php } ?>
 
