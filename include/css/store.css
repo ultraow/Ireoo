@@ -11,10 +11,10 @@ ul, ol{list-style: none;}
 .clear{clear: both;}
 
 /*   x   */
-div.x{max-width: 1000px; margin:auto;}
+div.x{max-width: 1000px; margin:auto; background: #FFF; margin-bottom: 20px;}
 
 /*   mian   */
-div.mian{max-width: 1000px; margin: auto; border-top: none; margin-bottom: 20px;}
+div.mian{max-width: 1000px; margin: auto; border-top: none;}
 
 /*   shead   */
 div.shead{position: relative; margin-bottom: 15px; border-bottom: 1px #CCC solid; background: #FFF;}
