@@ -103,7 +103,7 @@
             map.setCenter(new GLatLng(39.917, 116.397), 13);
             geocoder = new GClientGeocoder();
         }
-        showAddress("<?php echo $this_store['address']; ?>");
+        showAddress("中国<?php echo $this_store['address']; ?>");
     }
 
     function showAddress(address) {
