@@ -87,7 +87,7 @@
     <div class="gps" id="gps"></div>
 </div>
 
-    <script src="http://ditu.google.cn/maps?file=api&v=3.x&key=ABQIAAAAnibKqISEMs32X7h_YXptqRT2DmDDGPor_W_5RLHo-7MuXY3P7xQVD1mgwiHcnOKxYO-fXXYt0yPfcQ&hl=zh-CN"></script>
+    <script src="http://ditu.google.cn/maps?file=api&v=2.x&key=ABQIAAAAnibKqISEMs32X7h_YXptqRT2DmDDGPor_W_5RLHo-7MuXY3P7xQVD1mgwiHcnOKxYO-fXXYt0yPfcQ&hl=zh-CN"></script>
 
 
 
@@ -121,7 +121,7 @@
                         map.setCenter(point, 13);
                         var marker = new GMarker(point);
                         map.addOverlay(marker);
-                        marker.openInfoWindowHtml(address);
+                        marker.openInfoWindowHtml("<?php echo $this_store['sname']; ?>");
                     }
                 }
             );
