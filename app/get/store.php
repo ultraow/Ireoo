@@ -14,6 +14,8 @@ if(isset($_POST)) {
     $_POST['uid'] = 123456789;
     $_POST['ip'] = getIP();
     $_POST['timer'] = time();
+    $_POST['GPS'] = '0, 0';
+    $_POST['ZOOM'] = 12;
 
     //print_r($_POST);
     $s = array(
