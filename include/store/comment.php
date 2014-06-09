@@ -83,6 +83,6 @@
                 </div>
                 <br />
             </li>
-        <?php }}else{echo '<li style="text-align: center; font-size: 12px; border: none;">暂无信息</li>';} ?>
+        <?php }}else{echo '<li style="text-align: center; font-size: 12px; border: none; padding: 0; height: 100px; line-height: 100px;">暂时没有发布新的动态</li>';} ?>
     </ul>
 </div>
