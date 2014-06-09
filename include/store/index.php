@@ -87,7 +87,7 @@
     <div class="gps" id="gps"></div>
 </div>
 
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=NXwYo1m02QQyuGa2exykGdtO"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=NXwYo1m02QQyuGa2exykGdtO"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
     <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
 
@@ -103,9 +103,7 @@
     var myGeo = new BMap.Geocoder();
     // 将地址解析结果显示在地图上,并调整地图视野
 
-
-
-    myGeo.getPoint("<?php echo $this_store['address']; ?>", function(point){
+    myGeo.getPoint("<?php echo $this_store['sname']; ?>", function(point){
         if (point) {
 
 
@@ -142,8 +140,90 @@
             });
             searchInfoWindow.open(marker);
 
+        }else{
+
+            myGeo.getPoint("<?php echo $this_store['address']; ?>", function(point){
+                if (point) {
+
+
+                    var content = '<div style="margin:0;line-height:20px;padding:2px;">' +
+                        '<img src="<?php echo $this_store['avatar_large']; ?>" alt="" style="float:right;zoom:1;overflow:hidden;width:100px;height:100px;margin-left:3px;"/>' +
+                        '地址：<?php echo $this_store['address']; ?>' +
+                        '</div>';
+
+                    //创建检索信息窗口对象
+                    var searchInfoWindow = null;
+                    searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+                        title  : "<?php echo $this_store['sname']; ?>",      //标题
+                        width  : 290,             //宽度
+                        height : 105,              //高度
+                        panel  : "panel",         //检索结果面板
+                        enableAutoPan : true,      //自动平移
+                        searchTypes   :[
+                            BMAPLIB_TAB_SEARCH,   //周边检索
+                            BMAPLIB_TAB_TO_HERE,  //到这里去
+                            BMAPLIB_TAB_FROM_HERE //从这里出发
+                        ]
+                    });
+
+
+
+
+                    map.centerAndZoom(point, 16);
+                    var marker = new BMap.Marker(point);
+                    //searchInfoWindow.open(marker);
+                    map.addOverlay(marker);
+                    marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+                    marker.addEventListener("click", function(e){
+                        searchInfoWindow.open(marker);
+                    });
+                    searchInfoWindow.open(marker);
+
+                }else{
+
+                    point = new BMap.Point(119.04067,33.602066);
+                    var content = '<div style="margin:0;line-height:20px;padding:2px;">' +
+                        '<img src="uploads/u/s1.jpg" alt="" style="float:right;zoom:1;overflow:hidden;width:100px;height:100px;margin-left:3px;"/>' +
+                        '地图无法检索到该企业位置，下面显示琦益网总部位置！' +
+                        '</div>';
+
+                    //创建检索信息窗口对象
+                    var searchInfoWindow = null;
+                    searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+                        title  : "错误信息",      //标题
+                        width  : 290,             //宽度
+                        height : 105,              //高度
+                        panel  : "panel",         //检索结果面板
+                        enableAutoPan : true,      //自动平移
+                        searchTypes   :[
+                            BMAPLIB_TAB_SEARCH,   //周边检索
+                            BMAPLIB_TAB_TO_HERE,  //到这里去
+                            BMAPLIB_TAB_FROM_HERE //从这里出发
+                        ]
+                    });
+
+
+
+
+                    map.centerAndZoom(point, 16);
+                    var marker = new BMap.Marker(point);
+                    //searchInfoWindow.open(marker);
+                    map.addOverlay(marker);
+                    marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+                    marker.addEventListener("click", function(e){
+                        searchInfoWindow.open(marker);
+                    });
+                    searchInfoWindow.open(marker);
+
+                }
+            });
+
+
         }
+
     });
+
+
 
 
 

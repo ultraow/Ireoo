@@ -34,7 +34,7 @@ div.index h1.t span b{color: #CCC; font-weight: normal;}
                 $url = $img[0];
             }
     ?>
-        <li><a href="<?php echo HOST_URL . 'goods.' . $l['id']; ?>"><img width="160px" height="160px" src="<?php echo $url; ?>" /><h1><?php echo $l['title']; ?></h1></a></li>
+        <li><a href="<?php echo HOST_URL . 'goods.' . $l['id'] . '.html'; ?>"><img width="160px" height="160px" src="<?php echo $url; ?>" /><h1><?php echo $l['title']; ?></h1></a></li>
     <?php } ?>
         <br class="clear" />
     </ul>
