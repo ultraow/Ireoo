@@ -20,16 +20,16 @@ if(isset($_POST)) {
     //print_r($_POST);
     $s = array(
         'table' => 'store',
-        'condition' => "sname like '%{$_POST['sname']}%'"
+        'condition' => "sname = '{$_POST['sname']}' and city = '{$_POST['city']}'"
     );
     $r = $mysql->row($s);
     if(is_array($r)) {
-        echo '已经存在!';
+        echo '[' . $_POST['sname'] . ']数据已经存在!';
     }else{
         if($mysql->insert('store', $_POST)) {
-            echo 'success';
+            echo '[' . $_POST['sname'] . ']数据保存成功!';
         }else{
-            echo '失败代码：' . mysql_error();
+            echo '[' . $_POST['sname'] . ']数据保存失败！失败代码：' . mysql_error();
         }
     }
 
