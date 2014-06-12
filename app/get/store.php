@@ -25,12 +25,12 @@ if(isset($_POST)) {
     $r = $mysql->row($s);
     if(is_array($r)) {
         $mysql->update('store', $_POST, "id = {$r['id']}");
-        echo '编号[' . $r['id'] . '][' . $_POST['sname'] . ']数据已经更新!';
+        echo '编号[' . $r['id'] . '][' . $_POST['form'] . '][' . $_POST['sname'] . ']数据已经更新!';
     }else{
         if($mysql->insert('store', $_POST)) {
-            echo '[' . $_POST['sname'] . ']数据保存成功!';
+            echo '[' . $_POST['form'] . '][' . $_POST['sname'] . ']数据保存成功!';
         }else{
-            echo '[' . $_POST['sname'] . ']数据保存失败！失败代码：' . mysql_error();
+            echo '[' . $_POST['form'] . '][' . $_POST['sname'] . ']数据保存失败！失败代码：' . mysql_error();
         }
     }
 
