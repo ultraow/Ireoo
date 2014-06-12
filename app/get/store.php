@@ -24,7 +24,8 @@ if(isset($_POST)) {
     );
     $r = $mysql->row($s);
     if(is_array($r)) {
-        echo '[' . $_POST['sname'] . ']数据已经存在!';
+        $mysql->update('store', $_POST, "id = {$r['id']}");
+        echo '编号[' . $r['id'] . '][' . $_POST['sname'] . ']数据已经更新!';
     }else{
         if($mysql->insert('store', $_POST)) {
             echo '[' . $_POST['sname'] . ']数据保存成功!';

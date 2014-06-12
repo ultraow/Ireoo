@@ -118,7 +118,7 @@ $mysql = new mysql;
                             foreach($r as $k => $v) {
                                 ?>
                                 <li>
-                                    <a target="_blank" href="/store.<?php echo $v['id']; ?>.html">
+                                    <a target="_blank" href="/<?php echo $v['id']; ?>">
                                         <img src="<?php echo $v['avatar_large']; ?>" />
                                         <div><?php if($v['show'] == 1) {echo '<i class="Icon Icon--verified Icon--small"></i>';} ?><?php echo $v['sname']; ?></div>
                                     </a>
@@ -147,7 +147,7 @@ $mysql = new mysql;
                             foreach($r as $k => $v) {
                                 ?>
                                 <li>
-                                    <a target="_blank" href="/store.<?php echo $v['id']; ?>.html">
+                                    <a target="_blank" href="/<?php echo $v['id']; ?>">
                                         <img src="<?php echo $v['avatar_large']; ?>" />
                                         <div><?php echo $v['sname']; ?><?php if($v['show'] == 1) {echo '<i class="Icon Icon--verified Icon--small"></i>';} ?></div>
                                     </a>
@@ -175,7 +175,7 @@ $mysql = new mysql;
                             foreach($r as $k => $v) {
                                 ?>
                                 <li>
-                                    <a target="_blank" href="/store.<?php echo $v['id']; ?>.html">
+                                    <a target="_blank" href="/<?php echo $v['id']; ?>">
                                         <img src="<?php echo $v['avatar_large']; ?>" />
                                         <div><?php echo $v['sname']; ?><?php if($v['show'] == 1) {echo '<i class="Icon Icon--verified Icon--small"></i>';} ?></div>
                                     </a>

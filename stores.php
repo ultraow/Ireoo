@@ -122,13 +122,13 @@ $s['condition'] = "sname like '%{$k}%'";
             'table' => 'store',
             'condition' => "form = " . $value['form']['id'],
             'limit' => 'LIMIT 0, 10',
-            'order' => 'id desc'
+            'order' => 'id asc'
         );
         $r = $mysql->select($s);
         foreach($r as $k => $v) {
             ?>
 
-                <a class="img" target="_blank" href="store.<?php echo $v['store']['id']; ?>.html"><img src="<?php echo $v['store']['avatar_large']; ?>" /></a>
+                <a class="img" target="_blank" href="/<?php echo $v['store']['id']; ?>"><img src="<?php echo $v['store']['avatar_large']; ?>" /></a>
 
         <?php } ?>
             <br class="clear" />
