@@ -13,6 +13,7 @@ $run = new runtime();
 $run->start();
 
 $mysql = new mysql;
+$store = new store();
 ?>
 <?php //if(!is_array($o)) { ?>
 <!DOCTYPE html>
@@ -68,6 +69,21 @@ $mysql = new mysql;
                     扫描二维码关注微信公众帐号<br />
                     <span>动动手指，就可赚钱</span>
                 </li>
+
+                <li class="join">
+                    <h1>最近加入的企业</h1>
+                    <?php
+                    $s = array(
+                        'order' => 'id desc',
+                        'limit' => 'LIMIT 0, 10'
+                    );
+                    $r = $store->show($mysql, $s);
+                    //print_r($r);
+                    foreach($r as $k => $v) {
+                    ?>
+                    <a target="_blank" href="<?php echo $v['id']; ?>" title="<?php echo $v['sname']; ?>"><i class="Icon Icon--verified Icon--small"></i><?php echo $v['sname']; ?></a>
+                    <?php } ?>
+                </li>
             </ul>
 
 
@@ -107,8 +123,7 @@ $mysql = new mysql;
                         <h1>最新入驻企业</h1>
                         <ul>
                             <?php
-                            $mysql = new mysql();
-                            $store = new store();
+
                             $s = array(
                                 'order' => 'id desc',
                                 'limit' => 'LIMIT 0, 16'
