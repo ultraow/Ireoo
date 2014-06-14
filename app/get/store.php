@@ -11,34 +11,41 @@ include_once('../../lib/mysql.class.php');
 $mysql = new mysql;
 
 if(isset($_POST)) {
-    $_POST['uid'] = 123456789;
-    $_POST['ip'] = getIP();
-    $_POST['timer'] = time();
-    $_POST['GPS'] = '0, 0';
-    $_POST['ZOOM'] = 12;
+    #echo strlen($_POST['city']);
+    if(strlen($_POST['city']) >= 9){
+        $_POST['uid'] = 123456789;
+        $_POST['ip'] = getIP();
+        $_POST['timer'] = time();
+        $_POST['GPS'] = '0, 0';
+        $_POST['ZOOM'] = 12;
+        $_POST['avatar'] = 'uploads/u/storeAvatar.jpg';
+        $_POST['avatar_large'] = 'uploads/u/storeAvatar.jpg';
 
-    //print_r($_POST);
-    $s = array(
-        'table' => 'store',
-        'condition' => "sname = '{$_POST['sname']}' and city = '{$_POST['city']}'"
-    );
-    $r = $mysql->row($s);
-    if(is_array($r)) {
-        $mysql->update('store', $_POST, "id = {$r['id']}");
-        echo '编号[' . $r['id'] . '][' . $_POST['form'] . '][' . $_POST['sname'] . ']数据已经更新!';
-    }else{
-        if($mysql->insert('store', $_POST)) {
-            echo '[' . $_POST['form'] . '][' . $_POST['sname'] . ']数据保存成功!';
+        //print_r($_POST);
+        $s = array(
+            'table' => 'store',
+            'condition' => "sname = '{$_POST['sname']}' and city = '{$_POST['city']}'"
+        );
+        $r = $mysql->row($s);
+        if(is_array($r)) {
+
+            $mysql->update('store', $_POST, "id = {$r['id']}");
+            echo '编号[' . $r['id'] . '][' . $_POST['sname'] . ']数据已经更新!';
         }else{
-            echo '[' . $_POST['form'] . '][' . $_POST['sname'] . ']数据保存失败！失败代码：' . mysql_error();
+            if($mysql->insert('store', $_POST)) {
+                echo '[' . $_POST['sname'] . ']数据保存成功!';
+            }else{
+                echo '[' . $_POST['sname'] . ']数据保存失败！失败代码：' . mysql_error();
+            }
         }
+    }else{
+        echo '[' . $_POST['sname'] . ']数据错误！';
     }
-
 }else{
-    die('数据不存在!');
+    echo '数据不存在!';
 }
 
-
+unset($mysql);
 
 function getIP() {
     if (@$_SERVER["HTTP_X_FORWARDED_FOR"])
