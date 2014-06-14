@@ -42,8 +42,12 @@ ul.nlist li a.img{float: left;}
 ul.nlist li a.img, ul.nlist li a.img img{font-size:14px; display: inline-block; width: 100px; height: 100px;}
 
 ul.nlist li div{padding-left: 120px;}
-ul.nlist li div h1{font-size: 30px; color: #333; margin-bottom: 10px;}
-ul.nlist li div span{color: #999; font-weight: normal;}
+ul.nlist li div h1{margin-bottom: 10px; padding-right: 40px; position: relative; display: inline-block;}
+ul.nlist li div h1 a{font-size: 30px; color: #333; font-family: 'microsoft yahei'; font-weight: bold; text-decoration: none;}
+ul.nlist li div h1 a:hover{color: #000; text-decoration: underline;}
+ul.nlist li div h1 i{font-size: 30px; color: #CCC; display: inline-block; width: 30px; height: 30px; position: absolute; right: 0; top: 10px;}
+ul.nlist li div h1 i.ok{color: #4898F8;}
+ul.nlist li div span{color: #999; font-weight: normal; font-size: 12px; display: block;}
 
 
 /*   list   */

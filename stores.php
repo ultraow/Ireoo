@@ -45,6 +45,7 @@ $s['condition'] = "sname like '%{$k}%'";
     <script type="text/javascript" src="<?php echo HOST_URL; ?>include/js/jquery.js"></script>
     <link href="<?php echo HOST_URL; ?>include/css/head.css" rel="stylesheet" type="text/css">
     <link href="<?php echo HOST_URL; ?>include/css/stores.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo HOST_URL; ?>include/css/normalize.css" rel="stylesheet" type="text/css">
     <link href="<?php echo HOST_URL; ?>include/css/foot.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="<?php echo HOST_URL; ?>include/js/changeSize.js"></script>
     <!-- <script src="http://l.tbcdn.cn/apps/top/x/sdk.js?appkey=21390994"></script> -->
@@ -106,7 +107,7 @@ $s['condition'] = "sname like '%{$k}%'";
         $f = $mysql->select($s);
         foreach($f as $k => $v) {
         ?>
-        <li><a href="?span=<?php echo $v['form']['id']; ?>"><?php echo $v['form']['value']; ?></a></li>
+        <li><a href="?<?php echoGet('span'); ?>span=<?php echo $v['form']['id']; ?>"><?php echo $v['form']['value']; ?></a></li>
         <?php } ?>
     </ul>
 
@@ -116,11 +117,20 @@ $s['condition'] = "sname like '%{$k}%'";
         <h1 style="border-bottom: 3px #CCC solid;"><?php echo $form[$_GET['span']]; ?></h1>
         <?php
         }
+
+        if(isset($_GET['page'])) {
+            $page = $_GET['page'];
+        }else{
+            $page = 0;
+        }
+        $show = 20;
+        $start = $page * $show;
         $s = array(
             'table' => 'store',
-            'limit' => 'LIMIT 0, 20',
+            'limit' => "LIMIT $start, $show",
             'order' => 'id desc'
         );
+        //print_r($s);
         if(isset($_GET['span'])) $s['condition'] = "form = " . $_GET['span'];
         $r = $mysql->select($s);
         foreach($r as $k => $v) {
@@ -130,7 +140,16 @@ $s['condition'] = "sname like '%{$k}%'";
 
                 <a class="img" target="_blank" href="/<?php echo $v['store']['id']; ?>"><img src="<?php echo $v['store']['avatar_large']; ?>" alt="<?php echo $v['store']['sname']; ?>" /></a>
             <div>
-                <h1><?php echo $v['store']['sname']; ?></h1>
+                <h1>
+                    <a target="_blank" title="<?php echo $v['store']['sname']; ?>" href="/<?php echo $v['store']['id']; ?>">
+                        <?php echo $v['store']['sname']; ?>
+                        <?php if($v['store']['show'] == 1) { ?>
+                            <i class="Icon Icon--verified Icon--small ok" title="认证企业"></i>
+                        <?php }else{ ?>
+                            <i class="Icon Icon--verified Icon--small" title="未认证企业"></i>
+                        <?php } ?>
+                    </a>
+                </h1>
                 <span>详细地址：<?php echo $v['store']['address']; ?></span>
             </div>
 
@@ -139,6 +158,12 @@ $s['condition'] = "sname like '%{$k}%'";
         </li>
     <?php } ?>
         <br class="clear" />
+        <div>
+            <?php if($page > 0) {?>
+            <a href="?<?php echoGet('page'); ?>page=<?php echo $page - 1; ?>">上一页</a>
+            <?php } ?>
+            <a href="?<?php echoGet('page'); ?>page=<?php echo $page + 1; ?>">下一页</a>
+        </div>
     </ul>
 
 
