@@ -112,28 +112,32 @@ $s['condition'] = "sname like '%{$k}%'";
 
     <ul class="nlist">
 
+        <?php if(isset($_GET['span'])) { ?>
+        <h1 style="border-bottom: 3px #CCC solid;"><?php echo $form[$_GET['span']]; ?></h1>
         <?php
-        foreach($f as $key => $value) {
-            ?>
-        <h1 style="border-bottom: 3px <?php echo $value['form']['color']; ?> solid;"><?php echo $value['form']['value']; ?><a href="search.html?type=<?php echo $value['form']['id']; ?>">更多</a></h1>
-        <li>
-        <?php
+        }
         $s = array(
             'table' => 'store',
-            'condition' => "form = " . $value['form']['id'],
-            'limit' => 'LIMIT 0, 10',
-            'order' => 'id asc'
+            'limit' => 'LIMIT 0, 20',
+            'order' => 'id desc'
         );
+        if(isset($_GET['span'])) $s['condition'] = "form = " . $_GET['span'];
         $r = $mysql->select($s);
         foreach($r as $k => $v) {
-            ?>
+        ?>
+        <li>
 
-                <a class="img" target="_blank" href="/<?php echo $v['store']['id']; ?>"><img src="<?php echo $v['store']['avatar_large']; ?>" /></a>
 
-        <?php } ?>
+                <a class="img" target="_blank" href="/<?php echo $v['store']['id']; ?>"><img src="<?php echo $v['store']['avatar_large']; ?>" alt="<?php echo $v['store']['sname']; ?>" /></a>
+            <div>
+                <h1><?php echo $v['store']['sname']; ?></h1>
+                <span>详细地址：<?php echo $v['store']['address']; ?></span>
+            </div>
+
+
             <br class="clear" />
         </li>
-        <?php } ?>
+    <?php } ?>
         <br class="clear" />
     </ul>
 

@@ -32,14 +32,18 @@ div.news ul.sousuo li button{padding: 3px 7px; background: #4e8fd2; border: 1px 
 
 /*    nlist    */
 ul.nlist{list-style: none; float: right; width: 1000px;}
-ul.nlist li{margin-bottom: 20px;}
+ul.nlist li{padding: 10px 0; border-bottom: 1px #EBEBEB double;}
 ul.nlist li.odd{background: rgb(251, 251, 251);}
 ul.nlist h1{font-size: 14px; line-height: 35px;}
 ul.nlist h1 a{float: right; color: #333; font-weight: normal; font-size: 12px;}
 
 /* ul.nlist li:hover{background: #e0f2ff;} */
 ul.nlist li a.img{float: left;}
-ul.nlist li a.img, ul.nlist li a.img img{font-size:14px; display: inline-block; width: 200px; height: 200px;}
+ul.nlist li a.img, ul.nlist li a.img img{font-size:14px; display: inline-block; width: 100px; height: 100px;}
+
+ul.nlist li div{padding-left: 120px;}
+ul.nlist li div h1{font-size: 30px; color: #333; margin-bottom: 10px;}
+ul.nlist li div span{color: #999; font-weight: normal;}
 
 
 /*   list   */
