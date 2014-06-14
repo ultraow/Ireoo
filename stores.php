@@ -106,7 +106,7 @@ $s['condition'] = "sname like '%{$k}%'";
         $f = $mysql->select($s);
         foreach($f as $k => $v) {
         ?>
-        <li><a href="search.html?type=<?php echo $v['form']['id']; ?>"><?php echo $v['form']['value']; ?></a></li>
+        <li><a href="?span=<?php echo $v['form']['id']; ?>"><?php echo $v['form']['value']; ?></a></li>
         <?php } ?>
     </ul>
 
