@@ -126,6 +126,10 @@ $s['limit'] = "LIMIT " . $page * $show . ", $show";
                 <br class="clear" />
             </ul>
 
+            <ul style="padding: 0;">
+                <a href="http://s.click.taobao.com/t?e=m%3D2%26s%3D5rKrr7mEbjscQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAtUhQN%2BiGc9WDi2u4AAyFm1oTRyrWiMWJgwxTHigconOkNSp%2FaM4CD0Akp%2FXGYDIf%2Bdn1BbglxZYxUhy8exlzcq9AmARIwX9K2Zg%2BdzdQFOwfMRvoxSVDSdLyrb2g0H2G5JcxXijM%2BwneEHpPTskRHnPKdU%2FdTrgjbw4MC6y5nKlXF%2B87KN7TKeiZ%2BQMlGz6FQ%3D%3D" target="_blank"><img style="width: 280px;" src="http://gtms03.alicdn.com/tps/i3/TB1LP1GFFXXXXajXXXXj64lTXXX-200-200.jpg" /></a>
+            </ul>
+
             <ul>
                 <h1>琦益推荐的产品</h1>
                 <?php

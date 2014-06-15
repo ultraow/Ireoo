@@ -77,17 +77,23 @@ $store = new store();
                     <span>数据还在持续增加中...</span>
                 </li>
 
-                <li style="margin-bottom: 20px;">
+                <li class="tk">
+                    <script type="text/javascript"> (function(win,doc){ var s = doc.createElement("script"), h = doc.getElementsByTagName("head")[0]; if (!win.alimamatk_show) { s.charset = "gbk"; s.async = true; s.src = "http://a.alimama.cn/tkapi.js"; h.insertBefore(s, h.firstChild); }; var o = { pid: "mm_27201356_3489904_23078787",/*推广单元ID，用于区分不同的推广渠道*/ appkey: "",/*通过TOP平台申请的appkey，设置后引导成交会关联appkey*/ unid: ""/*自定义统计字段*/ }; win.alimamatk_onload = win.alimamatk_onload || []; win.alimamatk_onload.push(o); })(window,document);</script>
+                    <a data-type="5" data-tmpl="198x200" data-tmplid="135" data-style="2" data-border="1" href="#">淘宝充值</a>
+                </li>
+
+                <li class="tk">
                     <a href="http://s.click.taobao.com/t?e=m%3D2%26s%3D5rKrr7mEbjscQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAtUhQN%2BiGc9WDi2u4AAyFm1oTRyrWiMWJgwxTHigconOkNSp%2FaM4CD0Akp%2FXGYDIf%2Bdn1BbglxZYxUhy8exlzcq9AmARIwX9K2Zg%2BdzdQFOwfMRvoxSVDSdLyrb2g0H2G5JcxXijM%2BwneEHpPTskRHnPKdU%2FdTrgjbw4MC6y5nKlXF%2B87KN7TKeiZ%2BQMlGz6FQ%3D%3D" target="_blank"><img src="http://gtms03.alicdn.com/tps/i3/TB1LP1GFFXXXXajXXXXj64lTXXX-200-200.jpg" /></a>
                 </li>
 
-                <li>
-                    <script type="text/javascript"> (function(win,doc){ var s = doc.createElement("script"), h = doc.getElementsByTagName("head")[0]; if (!win.alimamatk_show) { s.charset = "gbk"; s.async = true; s.src = "http://a.alimama.cn/tkapi.js"; h.insertBefore(s, h.firstChild); }; var o = { pid: "mm_27201356_3489904_23078787",/*推广单元ID，用于区分不同的推广渠道*/ appkey: "",/*通过TOP平台申请的appkey，设置后引导成交会关联appkey*/ unid: ""/*自定义统计字段*/ }; win.alimamatk_onload = win.alimamatk_onload || []; win.alimamatk_onload.push(o); })(window,document);</script>
-                    <a data-type="2" biz-keyword="服装" data-tmpl="192x290" data-tmplid="9" data-rd="2" data-style="2" data-border="1" href="#">服装</a>
+                <li class="tk">
+                    <a data-type="3" data-tmpl="198x300" data-tmplid="162" data-rd="2" data-style="2" data-border="1" href="#"></a>
                 </li>
             </ul>
 
-
+            <style type="text/css">
+                tkbox{width: 198px !important;}
+            </style>
 
         </div>
 
@@ -107,36 +113,44 @@ $store = new store();
                         $v = $value['form'];
                         ?>
                         <li>
-                            <a href="store?span=<?php echo $v['id']; ?>"><?php echo $v['value']; ?></a>
+                            <a href="search.html?type=<?php echo $v['id']; ?>"><?php echo $v['value']; ?></a>
                         </li>
                     <?php }?>
                 </ul>
                 <div class="fox">
                     <ul class="img">
-                        <li><a target="_blank" href="http://ai.taobao.com?pid=mm_27201356_3489904_23068843"><img src="" /></a></li>
-                        <li><a target="_blank" href="http://ai.taobao.com?pid=mm_27201356_3489904_23068843"><img src="" /></a></li>
-                        <li><a target="_blank" href="http://ai.taobao.com?pid=mm_27201356_3489904_23068843"><img src="" /></a></li>
-                        <li><a target="_blank" href="http://ai.taobao.com?pid=mm_27201356_3489904_23068843"><img src="" /></a></li>
-                        <li><a target="_blank" href="http://ai.taobao.com?pid=mm_27201356_3489904_23068843"><img src="" /></a></li>
+                        <li><a target="_blank" href="http://ai.taobao.com?pid=mm_27201356_3489904_23068843"><img src="uploads/index/g1.jpg" /></a></li>
+                        <li><a target="_blank" href="http://ai.taobao.com?pid=mm_27201356_3489904_23068843"><img src="uploads/index/g2.jpg" /></a></li>
+                        <li><a target="_blank" href="http://ai.taobao.com?pid=mm_27201356_3489904_23068843"><img src="uploads/index/g3.jpg" /></a></li>
+                        <li><a target="_blank" href="http://ai.taobao.com?pid=mm_27201356_3489904_23068843"><img src="uploads/index/g4.jpg" /></a></li>
+                        <li><a target="_blank" href="http://ai.taobao.com?pid=mm_27201356_3489904_23068843"><img src="uploads/index/g5.jpg" /></a></li>
                     </ul>
 
                     <div class="top">
-                        <h1>最新入驻企业</h1>
+                        <h1>最新发布的产品</h1>
                         <ul>
                             <?php
 
                             $s = array(
+                                'table' => 'goods',
                                 'order' => 'id desc',
-                                'limit' => 'LIMIT 0, 16'
+                                'limit' => 'LIMIT 0, 24'
                             );
-                            $r = $store->show($mysql, $s);
+                            $r = $mysql->select($s);
                             //print_r($r);
-                            foreach($r as $k => $v) {
+                            foreach($r as $key => $value) {
+                                $v = $value['goods'];
+                                $img = explode(",", $v['img']);
+                                if(is_numeric($img[0])) {
+                                    $url = "/image.{$img[0]}.400.400.1.jpg";
+                                }else{
+                                    $url = $img[0];
+                                }
                                 ?>
                                 <li>
-                                    <a target="_blank" href="/<?php echo $v['id']; ?>">
-                                        <img src="<?php echo $v['avatar_large']; ?>" />
-                                        <div><?php if($v['show'] == 1) {echo '<i class="Icon Icon--verified Icon--small"></i>';} ?><?php echo $v['sname']; ?></div>
+                                    <a target="_blank" href="/goods.<?php echo $v['id']; ?>.html">
+                                        <img src="<?php echo $url; ?>" />
+                                        <div><?php echo $v['title']; ?></div>
                                     </a>
 
                                 </li>
@@ -146,6 +160,8 @@ $store = new store();
                             <br class="clear" />
                         </ul>
                     </div>
+
+                    <a style="margin-bottom: 50px; display: block;" href="http://s.click.taobao.com/t?e=m%3D2%26s%3Db0K29gBX7LUcQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAj3pndogN0KFJueFsfV7LcFoTRyrWiMWJgwxTHigconOkNSp%2FaM4CD0Akp%2FXGYDIf%2Bdn1BbglxZYxUhy8exlzcq9AmARIwX9K%2BnbtOD3UdznPV1H2z0iQv9NkKVMHClW0QbMqOpFMIvnvjQXzzpXdTHGJe8N%2FwNpGw%3D%3D" target="_blank"><img style="width: 800px;" src="http://gtms02.alicdn.com/tps/i2/TB1pa6lFXXXXXcZapXXmtfR6FXX-760-90.jpg" /></a>
 
                     <div class="index">
                         <h1>已认证的企业</h1>
@@ -178,30 +194,31 @@ $store = new store();
 
                     <div class="index">
                         <h1>平台推荐产品</h1>
-                        <ul>
-                            <?php
-                            $mysql = new mysql();
-                            $store = new store();
-                            $s = array(
-                                'order' => 'id desc',
-                                'limit' => 'LIMIT 0, 16'
-                            );
-                            $r = $store->show($mysql, $s);
-                            //print_r($r);
-                            foreach($r as $k => $v) {
-                                ?>
-                                <li>
-                                    <a target="_blank" href="/<?php echo $v['id']; ?>">
-                                        <img src="<?php echo $v['avatar_large']; ?>" />
-                                        <div><?php echo $v['sname']; ?><?php if($v['show'] == 1) {echo '<i class="Icon Icon--verified Icon--small"></i>';} ?></div>
-                                    </a>
-
-                                </li>
-                            <?php
-                            }
-                            ?>
-                            <br class="clear" />
-                        </ul>
+                        <a data-type="3" data-tmpl="800x90" data-tmplid="195" data-rd="2" data-style="2" data-border="1" href="#"></a>
+<!--                        <ul>-->
+<!--                            --><?php
+//                            $mysql = new mysql();
+//                            $store = new store();
+//                            $s = array(
+//                                'order' => 'id desc',
+//                                'limit' => 'LIMIT 0, 16'
+//                            );
+//                            $r = $store->show($mysql, $s);
+//                            //print_r($r);
+//                            foreach($r as $k => $v) {
+//                                ?>
+<!--                                <li>-->
+<!--                                    <a target="_blank" href="/--><?php //echo $v['id']; ?><!--">-->
+<!--                                        <img src="--><?php //echo $v['avatar_large']; ?><!--" />-->
+<!--                                        <div>--><?php //echo $v['sname']; ?><!----><?php //if($v['show'] == 1) {echo '<i class="Icon Icon--verified Icon--small"></i>';} ?><!--</div>-->
+<!--                                    </a>-->
+<!---->
+<!--                                </li>-->
+<!--                            --><?php
+//                            }
+//                            ?>
+<!--                            <br class="clear" />-->
+<!--                        </ul>-->
                     </div>
 
 

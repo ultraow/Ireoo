@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="ireoo.com" promptOnLocalOverwrite="false" showNewOnTargetInSync="false">
+  <component name="PublishConfigData" serverName="ireoo" promptOnLocalOverwrite="false" showNewOnTargetInSync="false">
     <serverData>
-      <paths name="ireoo.com">
+      <paths name="ireoo">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
