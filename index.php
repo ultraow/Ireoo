@@ -71,18 +71,10 @@ $store = new store();
                 </li>
 
                 <li class="join">
-                    <h1>最近加入的企业</h1>
-                    <?php
-                    $s = array(
-                        'order' => 'id desc',
-                        'limit' => 'LIMIT 0, 10'
-                    );
-                    $r = $store->show($mysql, $s);
-                    //print_r($r);
-                    foreach($r as $k => $v) {
-                    ?>
-                    <a target="_blank" href="<?php echo $v['id']; ?>" title="<?php echo $v['sname']; ?>"><i class="Icon Icon--verified Icon--small"></i><?php echo $v['sname']; ?></a>
-                    <?php } ?>
+                    <h1>琦益网状况</h1>
+                    <span>收入企业总量：<b><?php echo $mysql->_count('`store`'); ?></b></span>
+                    <span>收入产品总量：<b><?php echo $mysql->_count('`goods`'); ?></b></span>
+                    <span>数据还在持续增加中...</span>
                 </li>
             </ul>
 
