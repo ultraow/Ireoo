@@ -121,10 +121,10 @@ $s['condition'] = "sname like '%{$k}%'";
         if(isset($_GET['page'])) {
             $page = $_GET['page'];
         }else{
-            $page = 0;
+            $page = 1;
         }
         $show = 20;
-        $start = $page * $show;
+        $start = ($page - 1) * $show;
         $s = array(
             'table' => 'store',
             'limit' => "LIMIT $start, $show",
@@ -173,7 +173,7 @@ $s['condition'] = "sname like '%{$k}%'";
 
 
 
-            <?php if($page > 0) {?>
+            <?php if($page > 1) {?>
             <a href="?<?php echoGet('page'); ?>page=<?php echo $page - 1; ?>">上一页</a>
             <?php } ?>
             <a href="?<?php echoGet('page'); ?>page=<?php echo $page + 1; ?>">下一页</a>
