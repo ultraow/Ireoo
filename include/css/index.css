@@ -98,7 +98,7 @@ div.right ul li.qr{background: #EBEBEB; padding: 5px; font-size: 12px; text-alig
 div.right ul li.qr img{width: 100%;}
 div.right ul li.qr span{color: red; font-weight: 700;}
 
-div.right ul li.join{font-size: 14px;}
+div.right ul li.join{font-size: 14px; margin-bottom: 20px;}
 div.right ul li.join h1{font-size: 16px; color: #4898F8; margin-bottom: 10px;}
 div.right ul li.join span{display: block; line-height: 25px;}
 div.right ul li.join span b{color: green;}

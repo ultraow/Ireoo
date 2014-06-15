@@ -76,6 +76,15 @@ $store = new store();
                     <span>收入产品总量：<b><?php echo $mysql->_count('`goods`'); ?></b></span>
                     <span>数据还在持续增加中...</span>
                 </li>
+
+                <li style="margin-bottom: 20px;">
+                    <a href="http://s.click.taobao.com/t?e=m%3D2%26s%3D5rKrr7mEbjscQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAtUhQN%2BiGc9WDi2u4AAyFm1oTRyrWiMWJgwxTHigconOkNSp%2FaM4CD0Akp%2FXGYDIf%2Bdn1BbglxZYxUhy8exlzcq9AmARIwX9K2Zg%2BdzdQFOwfMRvoxSVDSdLyrb2g0H2G5JcxXijM%2BwneEHpPTskRHnPKdU%2FdTrgjbw4MC6y5nKlXF%2B87KN7TKeiZ%2BQMlGz6FQ%3D%3D" target="_blank"><img src="http://gtms03.alicdn.com/tps/i3/TB1LP1GFFXXXXajXXXXj64lTXXX-200-200.jpg" /></a>
+                </li>
+
+                <li>
+                    <script type="text/javascript"> (function(win,doc){ var s = doc.createElement("script"), h = doc.getElementsByTagName("head")[0]; if (!win.alimamatk_show) { s.charset = "gbk"; s.async = true; s.src = "http://a.alimama.cn/tkapi.js"; h.insertBefore(s, h.firstChild); }; var o = { pid: "mm_27201356_3489904_23078787",/*推广单元ID，用于区分不同的推广渠道*/ appkey: "",/*通过TOP平台申请的appkey，设置后引导成交会关联appkey*/ unid: ""/*自定义统计字段*/ }; win.alimamatk_onload = win.alimamatk_onload || []; win.alimamatk_onload.push(o); })(window,document);</script>
+                    <a data-type="2" biz-keyword="服装" data-tmpl="192x290" data-tmplid="9" data-rd="2" data-style="2" data-border="1" href="#">服装</a>
+                </li>
             </ul>
 
 
@@ -104,11 +113,11 @@ $store = new store();
                 </ul>
                 <div class="fox">
                     <ul class="img">
-                        <li><img src="" /></li>
-                        <li><img src="" /></li>
-                        <li><img src="" /></li>
-                        <li><img src="" /></li>
-                        <li><img src="" /></li>
+                        <li><a target="_blank" href="http://ai.taobao.com?pid=mm_27201356_3489904_23068843"><img src="" /></a></li>
+                        <li><a target="_blank" href="http://ai.taobao.com?pid=mm_27201356_3489904_23068843"><img src="" /></a></li>
+                        <li><a target="_blank" href="http://ai.taobao.com?pid=mm_27201356_3489904_23068843"><img src="" /></a></li>
+                        <li><a target="_blank" href="http://ai.taobao.com?pid=mm_27201356_3489904_23068843"><img src="" /></a></li>
+                        <li><a target="_blank" href="http://ai.taobao.com?pid=mm_27201356_3489904_23068843"><img src="" /></a></li>
                     </ul>
 
                     <div class="top">
