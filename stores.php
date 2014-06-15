@@ -107,7 +107,7 @@ $s['condition'] = "sname like '%{$k}%'";
         $f = $mysql->select($s);
         foreach($f as $k => $v) {
         ?>
-        <li><a href="?<?php echoGet('span'); ?>span=<?php echo $v['form']['id']; ?>"><?php echo $v['form']['value']; ?></a></li>
+        <li><a href="?span=<?php echo $v['form']['id']; ?>"><?php echo $v['form']['value']; ?></a></li>
         <?php } ?>
     </ul>
 
@@ -158,25 +158,41 @@ $s['condition'] = "sname like '%{$k}%'";
         </li>
     <?php } ?>
         <br class="clear" />
-        <div>
+        <div class="page">
 
             <?php
 
+            if(isset($_GET['span'])) {
+                $where = "form = " . $_GET['span'];
+            }else{
+                $where = '1';
+            }
+            $zong = $mysql->_count('`store`', $where);
 
-            $zong = $mysql->_count('`store`');
-
-            print_r($zong);
-
-
+            //print_r($zong);
+            $ye = ceil($zong/$show);
+            //echo $ye;
             ?>
 
 
 
 
             <?php if($page > 1) {?>
-            <a href="?<?php echoGet('page'); ?>page=<?php echo $page - 1; ?>">上一页</a>
+            <a href="?<?php echoGet('page'); ?>page=<?php echo $page - 1; ?>">《</a>
             <?php } ?>
-            <a href="?<?php echoGet('page'); ?>page=<?php echo $page + 1; ?>">下一页</a>
+
+            <?php
+            $_start = $page - 2;
+            $_show = 5;
+            if($ye < $_show) $_show = $ye;
+            if($_start < 1) $_start = 1;
+            if($page > $ye - 2) $_start = $ye - $_show + 1;
+            for($i=$_start; $i < $_start + $_show; $i++) { ?>
+                <a<?php if($page == $i) {echo ' class="on"';} ?> href="?<?php echoGet('page'); ?>page=<?php echo $i; ?>"><?php echo $i; ?></a>
+            <?php } ?>
+            <?php if($page < $ye) {?>
+            <a href="?<?php echoGet('page'); ?>page=<?php echo $page + 1; ?>">》</a>
+            <?php } ?>
         </div>
     </ul>
 

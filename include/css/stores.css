@@ -93,6 +93,7 @@ div.page span{background: #008200; color: #FFF;}
 div.page a{background: #EBEBEB; color: #333;}
 div.page a:hover{background: #BBB;}
 div.page a.max{width: 70px;}
+div.page a.on{background: #4898F8;}
 
 div.index{margin: auto; width: 1200px; margin-bottom: 100px;}
 

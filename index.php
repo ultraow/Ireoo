@@ -98,7 +98,7 @@ $store = new store();
                         $v = $value['form'];
                         ?>
                         <li>
-                            <a href="search.html?type=<?php echo $v['id']; ?>"><?php echo $v['value']; ?></a>
+                            <a href="store?span=<?php echo $v['id']; ?>"><?php echo $v['value']; ?></a>
                         </li>
                     <?php }?>
                 </ul>
