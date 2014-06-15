@@ -47,7 +47,7 @@ class mysql {
 	function execute($s='') {
 	         $t = microtime(true);
 	         $r = mysql_query($s,$this->con);
-	         //echo '查询耗时：'.round((microtime(true) - $t)*1000).' MS';
+	         echo '查询耗时：'.round((microtime(true) - $t)*1000).' MS';
 		if ($r) return true;
 		return false;
 	}
@@ -115,6 +115,11 @@ class mysql {
 		if ($table===null) return false;
 		return $this->execute("DELETE FROM $table WHERE $conditions");
 	}
+    function _count($table=null,$conditions='1') {
+        if ($table===null) return false;
+        $l = $this->query("SELECT count(*) FROM $table WHERE $conditions");
+        return $l[0][0]['count(*)'];
+    }
 }
 
 ?>

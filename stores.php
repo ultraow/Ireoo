@@ -159,6 +159,20 @@ $s['condition'] = "sname like '%{$k}%'";
     <?php } ?>
         <br class="clear" />
         <div>
+
+            <?php
+
+
+            $zong = $mysql->_count('`store`');
+
+            print_r($zong);
+
+
+            ?>
+
+
+
+
             <?php if($page > 0) {?>
             <a href="?<?php echoGet('page'); ?>page=<?php echo $page - 1; ?>">上一页</a>
             <?php } ?>
