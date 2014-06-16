@@ -143,6 +143,7 @@ $follow = is_array($followre);
         <?php
         include_once('include/store/' . $index . '.php');
         ?>
+        <script> var dsaid=40112; var dwidth=720; var dheight=90; </script> <script type="text/javascript" src="http://unionjs.dianxin.com/sekuai.js" name="sekuai.js" charset="utf-8" ></script>
     </div>
 
     <div class="right">
