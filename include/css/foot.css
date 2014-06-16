@@ -2,7 +2,7 @@
 /* CSS Document */
 
 /*    foot     */
-div.foot{background: #333; box-shadow: 0 0 5px #000;}
+div.foot{background: #333;}
 div.foot div{max-width: 1200px; margin: auto; font-size:12px; color:#000; padding-bottom:20px; padding-top: 20px;}
 div.foot div a, div.foot div a b{color:#999; text-decoration:none;}
 div.foot div a:hover, div.foot div a:hover b{color: #666; text-decoration: none;}

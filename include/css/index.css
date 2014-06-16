@@ -1,12 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
 
-div.mian{width: 1200px; min-width: 1200px; margin: auto; margin-bottom: 100px;}
+div.mian{width: 1200px; min-width: 1200px; margin: auto;}
 
 div.left{float: left; width: 1000px;}
-div.right{float: right; width: 190px; padding-left: 10px; height: 680px;}
+div.right{float: right; width: 190px; padding-left: 10px;}
 
-.h500{height: 500px;}
 .red{color: red;}
 
 
@@ -19,7 +18,7 @@ div.show div.index{position: relative;}
 
 
 
-div.index{max-width: 100%; margin-bottom: 50px;}
+div.index{max-width: 100%;}
 div.index h1{font-size: 14px; line-height: 35px; height: 35px; color: #333; border-bottom: 3px #4898F8 solid;}
 div.index ul{list-style: none;}
 div.index ul li{display: inline-block; vertical-align: top; float: left; width: 200px; height: 200px;}
@@ -27,7 +26,7 @@ div.index ul li h1{font-size: 14px; color: #333; margin: 0; padding: 5px; border
 div.index ul li a{display: inline-block;}
 div.index ul li a img{width: 200px; height: 200px;}
 
-div.show div.index div.fox{float: right; width: 800px; padding-top: 10px;}
+div.show div.index div.fox{float: right; width: 800px;}
 div.show div.index div.fox ul.img{list-style: none; height: 475px; background: #EBEBEB; overflow: hidden; margin-bottom: 20px;}
 div.show div.index div.fox ul.img li{width: 800px; height: 475px;}
 div.show div.index div.fox ul.img li img{width: 800px; height: 475px;}
@@ -49,14 +48,15 @@ div.show div.index div.fox div.index ul li a img{width: 100px; height: 100px;}
 div.show div.index div.fox div.index ul li a div{position: absolute; text-align: center; display: none; top: 0; left: 0; width: 90px; height: 100px; background: #000; color: #FFF; font-size: 14px; line-height: 100px; overflow: hidden; padding: 0 5px;}
 div.show div.index div.fox div.index ul li a:hover div{display: block;}
 
-div.show div.index ul.caidan{float: left; width: 190px; background: #4898F8; list-style: none;}
+div.show div.index ul.caidan{float: left; width: 200px; background: #EBEBEB; list-style: none;}
 /*box-shadow: 0 0 5px #333;*/
-div.show div.index ul.caidan h1{background: #000; color: #CCC; font-size: 14px; padding: 0 5px; text-align: center; line-height: 40px; height: 43px; border: none; position: absolute; left: 0; top: -43px; width: 180px;}
-div.show div.index ul.caidan li{line-height: 30px; height: 30px; float: none; border: none; font-size: 12px; color: #FFF; width: 190px; position: relative;}
-div.show div.index ul.caidan li:hover{background: #3875bf; color: #FFF;}
-div.show div.index ul.caidan li a{text-decoration: none; padding: 0 20px; display: block; color: #FFF;}
+div.show div.index ul.caidan h1{background: #000; color: #CCC; font-size: 14px; padding: 0 5px; text-align: center; line-height: 40px; height: 43px; border: none; position: absolute; left: 0; top: -43px; width: 190px;}
+div.show div.index ul.caidan li{line-height: 30px; height: 30px; float: none; border: none; font-size: 12px; color: #FFF; width: 200px; position: relative;}
+div.show div.index ul.caidan li:hover{background: #CCC; color: #FFF;}
+div.show div.index ul.caidan li a{text-decoration: none; padding: 0 20px; display: block; color: #666;}
 div.show div.index ul.caidan li div.bottom{bottom: 0; top: inherit;}
 div.show div.index ul.caidan li a:hover{padding-left: 20px;}
+div.show div.index ul.caidan li a span{float: right; color: #89c3f8;}
 
 .f0 a{}
 .f1 a{border-left: 1px #EBEBEB solid;}

@@ -75,6 +75,7 @@ $store = new store();
                     <span>收入企业总量：<b><?php echo $mysql->_count('`store`'); ?></b></span>
                     <span>收入产品总量：<b><?php echo $mysql->_count('`goods`'); ?></b></span>
                     <span>数据还在持续增加中...</span>
+                    <span>每天凌晨更新数据</span>
                 </li>
 
                 <li class="tk">
@@ -87,15 +88,11 @@ $store = new store();
                 </li>
             </ul>
 
-            <style type="text/css">
-                tkbox{width: 198px !important;}
-            </style>
-
         </div>
 
         <div class="left">
 
-            <div class="index h500">
+            <div class="index">
                 <ul class="caidan">
                     <h1>企业及产品行业分类</h1>
                     <?php
@@ -109,7 +106,7 @@ $store = new store();
                         $v = $value['form'];
                         ?>
                         <li>
-                            <a href="search.html?type=<?php echo $v['id']; ?>"><?php echo $v['value']; ?></a>
+                            <a href="search.html?type=<?php echo $v['id']; ?>"><?php echo $v['value']; ?><span><?php echo $mysql->_count('`store`', "form = " . $v['id']); ?></span></a>
                         </li>
                     <?php }?>
                 </ul>
@@ -158,15 +155,14 @@ $store = new store();
                     </div>
 
                     <div class="index">
-                        <h1>已认证的企业</h1>
+                        <h1>最新更新的企业</h1>
                         <ul>
                             <?php
                             $mysql = new mysql();
                             $store = new store();
                             $s = array(
                                 'order' => 'id desc',
-                                'condition' => '`show` = 1',
-                                'limit' => 'LIMIT 0, 16'
+                                'limit' => 'LIMIT 0, 4'
                             );
                             $r = $store->show($mysql, $s);
                             //print_r($r);
@@ -175,7 +171,8 @@ $store = new store();
                                 <li>
                                     <a target="_blank" href="/<?php echo $v['id']; ?>">
                                         <img src="<?php echo $v['avatar_large']; ?>" />
-                                        <div><?php echo $v['sname']; ?><?php if($v['show'] == 1) {echo '<i class="Icon Icon--verified Icon--small"></i>';} ?></div>
+                                        <h1><?php echo $v['sname']; ?><?php if($v['show'] == 1) {echo '<i class="Icon Icon--verified Icon--small"></i>';} ?></h1>
+                                        <span><?php echo $v['address']; ?></span>
                                     </a>
 
                                 </li>
@@ -183,6 +180,16 @@ $store = new store();
                             }
                             ?>
                             <br class="clear" />
+                        </ul>
+                    </div>
+
+                    <div class="index">
+                        <h1>合作伙伴</h1>
+                        <ul>
+                            <li><img src="" /></li>
+                            <li><img src="" /></li>
+                            <li><img src="" /></li>
+                            <li><img src="" /></li>
                         </ul>
                     </div>
 
