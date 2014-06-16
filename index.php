@@ -87,7 +87,7 @@ $store = new store();
                 </li>
 
                 <li class="tk">
-                    <a data-type="3" data-tmpl="198x300" data-tmplid="162" data-rd="2" data-style="2" data-border="1" href="#"></a>
+                    <script> var dsaid=40076; var dwidth=200; var dheight=200; </script> <script type="text/javascript" src="http://unionjs.dianxin.com/showPic.js" name="showpic" charset="utf-8" ></script>
                 </li>
             </ul>
 

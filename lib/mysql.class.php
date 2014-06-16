@@ -47,7 +47,7 @@ class mysql {
 	function execute($s='') {
 	         $t = microtime(true);
 	         $r = mysql_query($s,$this->con);
-	         echo '查询耗时：'.round((microtime(true) - $t)*1000).' MS';
+	         //echo '查询耗时：'.round((microtime(true) - $t)*1000).' MS';
 		if ($r) return true;
 		return false;
 	}

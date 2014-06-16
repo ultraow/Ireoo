@@ -144,11 +144,16 @@ if(isset($_GET['put']) and $_GET['put'] == 'yes') {
             <li>维护：</li>
         </ul>
 
+        <ul style="padding: 0; border: none;">
+            <script> var dsaid=40076; var dwidth=200; var dheight=200; </script> <script type="text/javascript" src="http://unionjs.dianxin.com/showPic.js" name="showpic" charset="utf-8" ></script>
+        </ul>
+
     </div>
 
     <div class="synopsis">
         <h1>详细介绍</h1>
         <?php echo $this_goods['synopsis']; ?>
+        <script> var dsaid=40083; var dwidth=960; var dheight=90; </script> <script type="text/javascript" src="http://unionjs.dianxin.com/showPic.js" name="showpic" charset="utf-8" ></script>
     </div>
     <br class="clear" />
 </div>

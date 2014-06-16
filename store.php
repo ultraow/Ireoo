@@ -152,6 +152,11 @@ $follow = is_array($followre);
             <!-- <li class="right"><?php //if($follow) {echo '<button>取消关注</button>';}else{echo '<button>关注</button>';} ?></li>
                 <li class="right">关注我们，领取会员卡，获得更多优惠！  </li> -->
         </ul>
+
+        <ul>
+            <script> var dsaid=40080; var dwidth=270; var dheight=280; </script> <script type="text/javascript" src="http://unionjs.dianxin.com/showPic.js" name="showpic" charset="utf-8" ></script>
+        </ul>
+
     </div>
 
     <br class="clear" />
