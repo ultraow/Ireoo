@@ -83,10 +83,6 @@ $store = new store();
                 </li>
 
                 <li class="tk">
-                    <a href="http://s.click.taobao.com/t?e=m%3D2%26s%3D5rKrr7mEbjscQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAtUhQN%2BiGc9WDi2u4AAyFm1oTRyrWiMWJgwxTHigconOkNSp%2FaM4CD0Akp%2FXGYDIf%2Bdn1BbglxZYxUhy8exlzcq9AmARIwX9K2Zg%2BdzdQFOwfMRvoxSVDSdLyrb2g0H2G5JcxXijM%2BwneEHpPTskRHnPKdU%2FdTrgjbw4MC6y5nKlXF%2B87KN7TKeiZ%2BQMlGz6FQ%3D%3D" target="_blank"><img src="http://gtms03.alicdn.com/tps/i3/TB1LP1GFFXXXXajXXXXj64lTXXX-200-200.jpg" /></a>
-                </li>
-
-                <li class="tk">
                     <script> var dsaid=40076; var dwidth=200; var dheight=200; </script> <script type="text/javascript" src="http://unionjs.dianxin.com/showPic.js" name="showpic" charset="utf-8" ></script>
                 </li>
             </ul>
@@ -161,8 +157,6 @@ $store = new store();
                         </ul>
                     </div>
 
-                    <a style="margin-bottom: 50px; display: block;" href="http://s.click.taobao.com/t?e=m%3D2%26s%3Db0K29gBX7LUcQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAj3pndogN0KFJueFsfV7LcFoTRyrWiMWJgwxTHigconOkNSp%2FaM4CD0Akp%2FXGYDIf%2Bdn1BbglxZYxUhy8exlzcq9AmARIwX9K%2BnbtOD3UdznPV1H2z0iQv9NkKVMHClW0QbMqOpFMIvnvjQXzzpXdTHGJe8N%2FwNpGw%3D%3D" target="_blank"><img style="width: 800px;" src="http://gtms02.alicdn.com/tps/i2/TB1pa6lFXXXXXcZapXXmtfR6FXX-760-90.jpg" /></a>
-
                     <div class="index">
                         <h1>已认证的企业</h1>
                         <ul>
@@ -190,35 +184,6 @@ $store = new store();
                             ?>
                             <br class="clear" />
                         </ul>
-                    </div>
-
-                    <div class="index">
-                        <h1>平台推荐产品</h1>
-                        <a data-type="3" data-tmpl="800x90" data-tmplid="195" data-rd="2" data-style="2" data-border="1" href="#"></a>
-<!--                        <ul>-->
-<!--                            --><?php
-//                            $mysql = new mysql();
-//                            $store = new store();
-//                            $s = array(
-//                                'order' => 'id desc',
-//                                'limit' => 'LIMIT 0, 16'
-//                            );
-//                            $r = $store->show($mysql, $s);
-//                            //print_r($r);
-//                            foreach($r as $k => $v) {
-//                                ?>
-<!--                                <li>-->
-<!--                                    <a target="_blank" href="/--><?php //echo $v['id']; ?><!--">-->
-<!--                                        <img src="--><?php //echo $v['avatar_large']; ?><!--" />-->
-<!--                                        <div>--><?php //echo $v['sname']; ?><!----><?php //if($v['show'] == 1) {echo '<i class="Icon Icon--verified Icon--small"></i>';} ?><!--</div>-->
-<!--                                    </a>-->
-<!---->
-<!--                                </li>-->
-<!--                            --><?php
-//                            }
-//                            ?>
-<!--                            <br class="clear" />-->
-<!--                        </ul>-->
                     </div>
 
 
