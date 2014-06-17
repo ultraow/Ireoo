@@ -106,7 +106,7 @@ $store = new store();
                         $v = $value['form'];
                         ?>
                         <li>
-                            <a href="search.html?type=<?php echo $v['id']; ?>"><?php echo $v['value']; ?><span><?php echo $mysql->_count('`store`', "form = " . $v['id']); ?></span></a>
+                            <a target="_blank" href="/store?span=<?php echo $v['id']; ?>"><?php echo $v['value']; ?><span><?php echo $mysql->_count('`store`', "form = " . $v['id']); ?></span></a>
                         </li>
                     <?php }?>
                 </ul>
@@ -120,70 +120,168 @@ $store = new store();
                     </ul>
 
                     <div class="top">
-                        <h1>最新发布的产品</h1>
                         <ul>
-                            <?php
+                            <li>
+                                <a target="_blank" href="/search.html?k=女装">
+                                    <img src="/include/images/index/type/1.jpg" />
+                                    <div>女装</div>
+                                </a>
 
-                            $s = array(
-                                'table' => 'goods',
-                                'order' => 'id desc',
-                                'limit' => 'LIMIT 0, 24'
-                            );
-                            $r = $mysql->select($s);
-                            //print_r($r);
-                            foreach($r as $key => $value) {
-                                $v = $value['goods'];
-                                $img = explode(",", $v['img']);
-                                if(is_numeric($img[0])) {
-                                    $url = "/image.{$img[0]}.400.400.1.jpg";
-                                }else{
-                                    $url = $img[0];
-                                }
-                                ?>
-                                <li>
-                                    <a target="_blank" href="/goods.<?php echo $v['id']; ?>.html">
-                                        <img src="<?php echo $url; ?>" />
-                                        <div><?php echo $v['title']; ?></div>
-                                    </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="/search.html?k=女内">
+                                    <img src="/include/images/index/type/2.jpg" />
+                                    <div>女内</div>
+                                </a>
 
-                                </li>
-                            <?php
-                            }
-                            ?>
+                            </li>
+                            <li>
+                                <a target="_blank" href="/search.html?k=男装">
+                                    <img src="/include/images/index/type/3.jpg" />
+                                    <div>男装</div>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a target="_blank" href="/search.html?k=男内">
+                                    <img src="/include/images/index/type/4.jpg" />
+                                    <div>男内</div>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a target="_blank" href="/search.html?k=男鞋">
+                                    <img src="/include/images/index/type/5.jpg" />
+                                    <div>男鞋</div>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a target="_blank" href="/search.html?k=女鞋">
+                                    <img src="/include/images/index/type/6.jpg" />
+                                    <div>女鞋</div>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a target="_blank" href="/search.html?k=箱包">
+                                    <img src="/include/images/index/type/7.jpg" />
+                                    <div>箱包</div>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a target="_blank" href="/search.html?k=手机">
+                                    <img src="/include/images/index/type/8.jpg" />
+                                    <div>手机</div>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a target="_blank" href="/search.html?k=电脑">
+                                    <img src="/include/images/index/type/9.jpg" />
+                                    <div>电脑</div>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a target="_blank" href="/search.html?k=数码">
+                                    <img src="/include/images/index/type/10.jpg" />
+                                    <div>数码</div>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a target="_blank" href="/search.html?k=护肤">
+                                    <img src="/include/images/index/type/11.jpg" />
+                                    <div>护肤</div>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a target="_blank" href="/search.html?k=洁净">
+                                    <img src="/include/images/index/type/12.jpg" />
+                                    <div>洁净</div>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a target="_blank" href="/search.html?k=户外">
+                                    <img src="/include/images/index/type/13.jpg" />
+                                    <div>户外</div>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a target="_blank" href="/search.html?k=家装">
+                                    <img src="/include/images/index/type/14.jpg" />
+                                    <div>家装</div>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a target="_blank" href="/search.html?k=母婴">
+                                    <img src="/include/images/index/type/15.jpg" />
+                                    <div>母婴</div>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a target="_blank" href="/search.html?k=美食">
+                                    <img src="/include/images/index/type/16.jpg" />
+                                    <div>美食</div>
+                                </a>
+
+                            </li>
+
                             <br class="clear" />
                         </ul>
                     </div>
 
-                    <div class="index">
+                    <div class="update">
                         <h1>最新更新的企业</h1>
                         <ul>
-                            <?php
-                            $mysql = new mysql();
-                            $store = new store();
-                            $s = array(
-                                'order' => 'id desc',
-                                'limit' => 'LIMIT 0, 4'
-                            );
-                            $r = $store->show($mysql, $s);
-                            //print_r($r);
-                            foreach($r as $k => $v) {
-                                ?>
-                                <li>
-                                    <a target="_blank" href="/<?php echo $v['id']; ?>">
-                                        <img src="<?php echo $v['avatar_large']; ?>" />
-                                        <h1><?php echo $v['sname']; ?><?php if($v['show'] == 1) {echo '<i class="Icon Icon--verified Icon--small"></i>';} ?></h1>
-                                        <span><?php echo $v['address']; ?></span>
-                                    </a>
+                            <li>
+                                <a target="_blank" href="/100314156">
+                                    <img src="uploads/u/storeAvatar.jpg" />
+                                </a>
+                                <h1>伊宁市飞机场路孙梅汽车租赁店</h1>
+                                <span>伊宁市飞机场路二巷66号</span>
 
-                                </li>
-                            <?php
-                            }
-                            ?>
+
+                            </li>
+                            <li>
+                                <a target="_blank" href="/100314155">
+                                    <img src="uploads/u/storeAvatar.jpg" />
+                                </a>
+                                <h1>新源那拉提机场</h1>
+                                <span>近郊伊犁哈萨克自治区新源县</span>
+
+
+                            </li>
+                            <li>
+                                <a target="_blank" href="/100314154">
+                                    <img src="uploads/u/storeAvatar.jpg" />
+                                </a>
+                                <h1>伊宁机场1号候机楼</h1>
+                                <span>飞机场路273</span>
+
+
+                            </li>
+                            <li>
+                                <a target="_blank" href="/100314153">
+                                    <img src="uploads/u/storeAvatar.jpg" />
+                                </a>
+                                <h1>飞机场路/G218(路口)</h1>
+                                <span>新疆维吾尔自治区伊犁哈萨克自治州伊宁市</span>
+
+
+                            </li>
                             <br class="clear" />
                         </ul>
                     </div>
 
-                    <div class="index">
+                    <div class="hezuo">
                         <h1>合作伙伴</h1>
                         <ul>
                             <li><img src="" /></li>
