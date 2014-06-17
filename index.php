@@ -81,6 +81,11 @@ $store = new store();
                 <li class="tk">
                     <script> var dsaid=40076; var dwidth=200; var dheight=200; </script> <script type="text/javascript" src="http://unionjs.dianxin.com/showPic.js" name="showpic" charset="utf-8" ></script>
                 </li>
+
+                <li>
+                    <script type="text/javascript" >BAIDU_CLB_SLOT_ID = "930970";</script>
+                    <script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script>
+                </li>
             </ul>
 
         </div>
