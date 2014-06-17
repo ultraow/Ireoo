@@ -107,6 +107,12 @@ ul.waring li.right{float: right; border-right: none; padding-right: 0;}
 ul.waring li.right button{font-size: 12px; padding: 0 20px; height: 30px; background: #00d900;}
 ul.waring li.right button:hover{background: green;}
 
+ul.list{border: 1px #CCC solid; padding: 10px; background: #FFF; list-style: square;}
+ul.list h1{font-size: 14px; font-weight: normal; height: 30px;}
+ul.list li{padding-left: 20px;}
+ul.list li a{font-size: 14px; color: green; text-decoration: none; line-height: 20px; height: 20px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 228px; display: block;}
+ul.list li a:hover{text-decoration: underline;}
+
 div.show{float: left; width: 720px;}
 div.right{float: right; width: 270px; padding-left: 10px;}
 

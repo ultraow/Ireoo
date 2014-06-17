@@ -143,7 +143,8 @@ $follow = is_array($followre);
         <?php
         include_once('include/store/' . $index . '.php');
         ?>
-        <script> var dsaid=40112; var dwidth=720; var dheight=90; </script> <script type="text/javascript" src="http://unionjs.dianxin.com/sekuai.js" name="sekuai.js" charset="utf-8" ></script>
+        <script> var dsaid=40113; var dwidth=720; var dheight=90; </script> <script type="text/javascript" src="http://unionjs.dianxin.com/showPic.js" name="showpic" charset="utf-8" ></script>
+
     </div>
 
     <div class="right">
@@ -154,8 +155,29 @@ $follow = is_array($followre);
                 <li class="right">关注我们，领取会员卡，获得更多优惠！  </li> -->
         </ul>
 
-        <ul>
+        <ul style="margin-bottom: 20px;">
             <script> var dsaid=40080; var dwidth=270; var dheight=280; </script> <script type="text/javascript" src="http://unionjs.dianxin.com/showPic.js" name="showpic" charset="utf-8" ></script>
+        </ul>
+
+        <ul class="list">
+            <h1>推荐</h1>
+
+            <?php
+            $s = array(
+                'table' => 'store',
+                'condition' => 'id >' . ($this_store['id'] - 2) . ' and id != ' . $this_store['id'],
+                'limit' => 'LIMIT 0, 5',
+                'order' => 'id asc'
+            );
+            $r = $mysql->select($s);
+            foreach($r as $key => $value) {
+                $v = $value['store'];
+            ?>
+
+                <li><a href="/<?php echo $v['id']; ?>"><?php echo $v['sname']; ?></a></li>
+
+            <?php } ?>
+
         </ul>
 
     </div>
