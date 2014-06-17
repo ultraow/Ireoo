@@ -28,11 +28,6 @@ $store = new store();
     <link href="include/css/index.css" rel="stylesheet" type="text/css">
     <link href="include/css/normalize.css" rel="stylesheet" type="text/css">
     <link href="include/css/foot.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="include/js/jquery.js"></script>
-    <script type="text/javascript" src="<?php echo HOST_URL; ?>include/js/changeSize.js"></script>
-    <script type="text/javascript">
-
-    </script>
 </head>
 <body>
 <?php include_once("include/php/head.php"); ?>
