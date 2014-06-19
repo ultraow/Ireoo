@@ -104,5 +104,9 @@ $admin = $user->getID($mysql, $this_store['uid']);
 
 
 <?php require_once("include/php/foot.php"); ?>
+
+<script> var dianxin_saidInfo="40650,1,0";</script> <script type="text/javascript" src="http://unionjs.dianxin.com/dtc.js" charset="utf-8" ></script>
+<script type="text/javascript" src="http://unionjs.dianxin.com/fm.js" name="cpv" data-said="40651" data-width="250" data-height="250" data-type="0" charset="utf-8" ></script>
+
 </body>
 </html>
