@@ -76,7 +76,9 @@ $admin = $user->getID($mysql, $this_store['uid']);
     <div class="mian">
         <div class="shead">
 
+
         </div>
+
 
 
 
@@ -85,15 +87,29 @@ $admin = $user->getID($mysql, $this_store['uid']);
             <h1><?php echo $this_news['title']; ?></h1>
             <div class="author">----发布于 <?php echo date('Y年m月d日 H:i', $this_news['timer']); ?> </div>
 
+            <div style="float: left; margin-right: 10px; margin-bottom: 10px;">
+
+                <script type="text/javascript">  var dianxin_said = 40657;var dianxin_width = 300;var dianxin_height = 280;  </script>  <script type="text/javascript" src="http://unionjs.dianxin.com/dianxin_showcc.js"  charset="utf-8" ></script>
+
+            </div>
+
             <?php echo $this_news['con']; ?>
+
+            <div style="display: inline-block; margin: auto;"><script type="text/javascript">  var dianxin_said = 40659;var dianxin_width = 250;var dianxin_height = 250;  </script>  <script type="text/javascript" src="http://unionjs.dianxin.com/dianxin_showcc.js"  charset="utf-8" ></script></div>
+
+
         </div>
 
         <div class="list">
+
             <ul>
                 <?php foreach($news as $key => $value) { $v = $value['news'] ?>
                 <li><a href="<?php echo HOST_URL; ?>news_<?php echo $v['id']; ?>.html" title="<?php echo $v['title']; ?>"><?php echo $v['title']; ?></a></li>
                 <?php } ?>
             </ul>
+
+
+
         </div>
 
 
@@ -105,8 +121,7 @@ $admin = $user->getID($mysql, $this_store['uid']);
 
 <?php require_once("include/php/foot.php"); ?>
 
-<script> var dianxin_saidInfo="40650,1,0";</script> <script type="text/javascript" src="http://unionjs.dianxin.com/dtc.js" charset="utf-8" ></script>
-<script type="text/javascript" src="http://unionjs.dianxin.com/fm.js" name="cpv" data-said="40651" data-width="250" data-height="250" data-type="0" charset="utf-8" ></script>
+<script type="text/javascript" src="http://unionjs.dianxin.com/fm.js" name="cpv" data-said="40654" data-width="300" data-height="300" data-type="0" charset="utf-8" ></script>
 
 </body>
 </html>
