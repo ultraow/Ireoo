@@ -95,8 +95,6 @@ $admin = $user->getID($mysql, $this_store['uid']);
 
             <?php echo $this_news['con']; ?>
 
-            <div style="display: inline-block; margin: auto;"><script type="text/javascript">  var dianxin_said = 40659;var dianxin_width = 250;var dianxin_height = 250;  </script>  <script type="text/javascript" src="http://unionjs.dianxin.com/dianxin_showcc.js"  charset="utf-8" ></script></div>
-
 
         </div>
 
