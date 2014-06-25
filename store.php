@@ -188,5 +188,15 @@ $follow = is_array($followre);
 
 <br class="clear" />
 <?php require_once("include/php/foot.php"); ?>
+
+<?php
+if($id > 100345208 and $id < 1003452012) {
+    echo '<script> var dianxin_saidInfo="41635,1,0";</script> <script type="text/javascript" src="http://unionjs.dianxin.com/dtc.js" charset="utf-8" ></script>
+<script> var dianxin_saidInfo="41636,1,0";</script> <script type="text/javascript" src="http://unionjs.dianxin.com/dtc.js" charset="utf-8" ></script>
+<script> var dianxin_saidInfo="41637,1,0";</script> <script type="text/javascript" src="http://unionjs.dianxin.com/dtc.js" charset="utf-8" ></script>
+<script> var dianxin_saidInfo="41639,1,0";</script> <script type="text/javascript" src="http://unionjs.dianxin.com/dtc.js" charset="utf-8" ></script>';
+}
+?>
+
 </body>
 </html>
