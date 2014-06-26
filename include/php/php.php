@@ -51,6 +51,13 @@ $blood = array('', 'A型血', 'B型血', 'AB型血', 'O型血');
 $province = array('北京', '上海', '江苏', '浙江', '广东', '山西', '陕西', '广西', '湖南', '河南', '河北');
 $city = array();
 $city[0] = array('不限', '北京');
+
+$sql_system = array(
+    'table' => 'system',
+    'order' => 'id desc'
+);
+$system = $mysql->row($sql_system);
+
 /*
 $re = $own->select(array(
 	'table' => 'log'

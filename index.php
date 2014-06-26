@@ -67,8 +67,8 @@ $store = new store();
 
                 <li class="join">
                     <h1>琦益网状况</h1>
-                    <span>收入企业总量：<b><?php echo $mysql->_count('`store`'); ?></b></span>
-                    <span>收入产品总量：<b><?php echo $mysql->_count('`goods`'); ?></b></span>
+                    <span>收入企业总量：<b><?php echo $system['store']; ?></b></span>
+                    <span>收入产品总量：<b><?php echo $system['goods']; ?></b></span>
                     <span>数据还在持续增加中...</span>
                     <span>每天凌晨更新数据</span>
                 </li>
@@ -106,7 +106,7 @@ $store = new store();
                         $v = $value['form'];
                         ?>
                         <li>
-                            <a target="_blank" href="/store?span=<?php echo $v['id']; ?>"><?php echo $v['value']; ?><span><?php echo $mysql->_count('`store`', "form = " . $v['id']); ?></span></a>
+                            <a target="_blank" href="/store?span=<?php echo $v['id']; ?>"><?php echo $v['value']; ?><span><?php echo $v['count']; ?></span></a>
                         </li>
                     <?php }?>
                 </ul>
