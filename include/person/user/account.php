@@ -89,30 +89,12 @@ if($token != '') {
             </select>
             日
         </li>
+
         <li>
             <label>城市：</label>
             <input type="text" readonly name="city" value="<?php echo $o['city']; ?>" />
         </li>
-        <?php
-        $sql = array(
-            'table' => 'location',
-            'condition' => "title = '{$o['city']}'"
-        );
-        $city = $mysql->row($sql);
-        $sql = array(
-            'table' => 'location',
-            'condition' => "lid = {$city['id']}"
-        );
-        $area = $mysql->select($sql);
-        ?>
-        <li>
-            <label>区域：</label>
-            <select name="area">
-                <?php foreach($area as $key => $value) {$v = $value['location']; ?>
-                    <option<?php if($v['title'] == $o['area']) {echo ' selected';} ?> value="<?php echo $v['title']; ?>"><?php echo $v['title']; ?></option>
-                <?php } ?>
-            </select>
-        </li>
+
         <li>
             <label>详细地址：</label>
             <input name="address" value="<?php echo $o['address']; ?>" />

@@ -14,7 +14,8 @@ if(isset($_SESSION['user'])) {
 	$o = $user->getID($own, $_SESSION['user']['id']);
     $s = array(
         'table' => 'store',
-        'condition' => 'uid = ' . $_SESSION['user']['id']
+        'condition' => 'uid = ' . $_SESSION['user']['id'],
+        'order' => 'id asc'
     );
     $os = $own->row($s);
 }else{
@@ -57,6 +58,8 @@ $sql_system = array(
     'order' => 'id desc'
 );
 $system = $mysql->row($sql_system);
+
+$goodsList = array('百货', '食品', '服装', '鞋包', '美妆', '母婴', '家居', '橡塑', '钢材', '化工', '纺织', '包装', '机械', '电工', '照明', '服务');
 
 /*
 $re = $own->select(array(

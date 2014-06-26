@@ -139,7 +139,7 @@ if($token != '') {
         <li>
             <label class="t">产品分类：</label>
             <select name="type">
-                <?php foreach($form as $k => $v) { ?>
+                <?php foreach($goodsList as $k => $v) { ?>
                 <option value="<?php echo $v; ?>"><?php echo $v; ?></option>
                 <?php } ?>
             </select>

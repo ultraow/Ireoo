@@ -105,7 +105,7 @@ if($token != '') {
             <li>
                 <label>产品：</label>
                 <input class="readonly" readonly type="text" value="<?php echo $rg['title']; ?>" />
-                <span><a target="_blank" href="http://ireoo.com/goods.<?php echo $r['gid']; ?>">产品链接</a></span>
+                <span><a target="_blank" href="http://ireoo.com/goods.<?php echo $r['gid']; ?>.html">产品链接</a></span>
             </li>
 
             <li>

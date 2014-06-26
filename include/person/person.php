@@ -11,18 +11,6 @@
 
     <?php
 
-    $store = new store;
-    $s = array(
-        'condition' => 'uid = ' . $o['id']
-    );
-    //print_r($s);
-    $quanquan = $store->show($mysql, $s);
-
-    $goods = new goods;
-    $baobei = $goods->getall($mysql, $o['id']);
-
-    $movie = new movie;
-    $dianying = $movie->getall($mysql, $o['id']);
 
     if(!isset($_GET['i'])) {
         $page = 'account';

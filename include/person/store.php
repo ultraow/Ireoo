@@ -12,6 +12,11 @@ if($o['show'] == 1 or $o['show'] == 2 or $o['show'] == 3 or $o['show'] == 10000)
 
     <?php
     $store = new store;
+    $s = array(
+        'condition' => 'id = ' . $os['id']
+    );
+    //print_r($s);
+    $quanquan = $store->show($mysql, $s);
 
     if(!isset($_GET['i'])) {
         if(count($quanquan) > 0) {
