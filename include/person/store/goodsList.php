@@ -36,8 +36,7 @@ if(isset($_GET['m']) and $_GET['m'] == 'del') {
             <td style="width: 100px;">标题</td>
             <td></td>
             <td>分类</td>
-            <td>原价</td>
-            <td>现价</td>
+            <td>价格</td>
             <td>售出/总</td>
             <td></td>
         </tr>
@@ -61,8 +60,7 @@ if(isset($_GET['m']) and $_GET['m'] == 'del') {
                 <td><img src="<?php echo $url; ?>" /></td>
                 <td><span><a target="_blank" href="goods.<?php echo $value['id']; ?>"><?php echo $value['title']; ?></a></span></td>
                 <td><span><?php echo $value['type']; ?></span></td>
-                <td><span><?php echo $value['money']; ?></span></td>
-                <td><span><?php echo $value['rebate']; ?></span></td>
+                <td><span><?php echo $value['rebate'] . '[现价]/' . $value['money'] . '[原价]/' . $value['price']; ?></span></td>
                 <td><span><?php echo $value['sell'].'/'.$value['top']; ?></span></td>
                 <td>
                     <a href="?s=store&i=goodsList&m=edit&id=<?php echo $value['id']; ?>">修改</a>

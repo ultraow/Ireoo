@@ -59,7 +59,26 @@ $sql_system = array(
 );
 $system = $mysql->row($sql_system);
 
-$goodsList = array('百货', '食品', '服装', '鞋包', '美妆', '母婴', '家居', '橡塑', '钢材', '化工', '纺织', '包装', '机械', '电工', '照明', '服务');
+$goodsList = array(
+    array('title' => '百货', 'price' => array('个', '套'))
+    , array('title' => '食品', 'price' => array('件', '瓶', '两'))
+    , array('title' => '服装', 'price' => array('件'))
+    , array('title' => '鞋包', 'price' => array('双', '个'))
+    , array('title' => '美妆', 'price' => array('片', '盒', '瓶', '支', '个'))
+    , array('title' => '母婴', 'price' => array('件', '条', '套'))
+    , array('title' => '家居', 'price' => array('套', '件', '条', '床', '个'))
+    , array('title' => '橡塑', 'price' => array('千克'))
+    , array('title' => '钢材', 'price' => array('吨', '千克', '条', '张', '片', '米', '种'))
+    , array('title' => '化工', 'price' => array('千克', '吨', '瓶'))
+    , array('title' => '纺织', 'price' => array('码', '米', '千克'))
+    , array('title' => '包装', 'price' => array('套', '件', '个', '卷'))
+    , array('title' => '机械', 'price' => array('件', '台', '片'))
+    , array('title' => '电工', 'price' => array('PCS'))
+    , array('title' => '照明', 'price' => array('件'))
+    , array('title' => '服务', 'price' => array('日', '月', '年'))
+);
+
+//$price = array('个', '套', '件', '瓶', '两', '双', '个', '片', '盒', '瓶', '支', '个', '件', '条', '套', '套', '件', '条', '床', '个', '千克', '吨', '千克', '条', '张', '片', '米', '种', '千克', '吨', '瓶', '码', '米', '千克', '套', '件', '个', '卷', '件', '台', '片');
 
 /*
 $re = $own->select(array(

@@ -7,6 +7,9 @@ if(isset($_GET['token'])) $token = $_GET['token'];
 
 if($token != '') {
     if($token != $_SESSION['token']) {
+
+        $_POST['brokerage'] = $_POST['rebate'] * 0.005;
+
         if($mysql->insert('goods', $_POST)) {
             header("Location: /i?s=store&i=goodsAdd");
         }else{
@@ -32,6 +35,10 @@ if($token != '') {
     div.mian ol li.imgs button img{width: 100px; height: 100px;}
 
     div.mian ol li button.choose{width: 100px; height: 100px;}
+
+    select{padding: 3px;}
+    select optgroup{color: #CCC; font-weight: normal;}
+    select optgroup option{color: #000; font-size: 16px; font-weight: bold;}
 
     button{padding: 5px 20px;}
 
@@ -140,7 +147,7 @@ if($token != '') {
             <label class="t">产品分类：</label>
             <select name="type">
                 <?php foreach($goodsList as $k => $v) { ?>
-                <option value="<?php echo $v; ?>"><?php echo $v; ?></option>
+                <option value="<?php echo $v['title']; ?>"><?php echo $v['title']; ?></option>
                 <?php } ?>
             </select>
         </li>
@@ -162,13 +169,21 @@ if($token != '') {
         <li>
             <label class="t">现价：</label>
             <input type="text" name="rebate" value="" />
+            /
+            <select name="price">
+                <?php
+                foreach($goodsList as $key => $value) {
+                ?>
+                <optgroup label="<?php echo $value['title']; ?>">
+                <?php
+                    foreach($value['price'] as $k => $v) {
+                ?>
+                    <option value="<?php echo $v; ?>"><?php echo $v; ?></option>
+                <?php } ?>
+                </optgroup>
+                <?php } ?>
+            </select>
             <span>必须低于市场价格，否则无法显示</span>
-        </li>
-
-        <li>
-            <label class="t">佣金：</label>
-            <input type="text" name="brokerage" value="1.00" />
-            <span>用户宣传获得的佣金，默认1元。</span>
         </li>
 
         <li>
