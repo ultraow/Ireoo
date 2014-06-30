@@ -99,7 +99,7 @@ $s = $s[0];
 
 
 <ol class="account">
-    <h1>上传修改头像<!--<span>( <b>*</b>必须填写项 )</span>--></h1>
+    <h1>上传修改LOGO<!--<span>( <b>*</b>必须填写项 )</span>--></h1>
     <span class="h2">可以上传自己喜欢的图片,然后用鼠标在图片上选择合适的大小.</span>
     <div id="avatar"></div>
 </ol>

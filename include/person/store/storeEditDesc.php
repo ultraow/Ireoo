@@ -68,7 +68,7 @@ $s = $s[0];
 </script>
 <ol>
     <h1>详细介绍</h1>
-    <h2>全方位的介绍，更容易让别人了解你的店面！</h2>
+    <h2>全方位的介绍，更容易让别人了解您的企业！</h2>
     <form action="?s=store&i=storeEditDesc&token=<?php echo md5(rand(0, 100000000)); ?>" method="post">
 
         <textarea id="editor" style="width: 100%;" name="desc"><?php echo $s['desc']; ?></textarea>

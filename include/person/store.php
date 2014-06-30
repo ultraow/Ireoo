@@ -35,9 +35,9 @@ if($o['show'] == 1 or $o['show'] == 2 or $o['show'] == 3 or $o['show'] == 10000)
 <!--            <a class="li--><?php //if($page == 'storeBid') {echo ' on';} ?><!--" href="?s=store&i=storeBid">竞价排名</a>-->
 <!--            <h4>系统设置</h4>-->
             <a class="li<?php if($page == 'storeEditBasic') {echo ' on';} ?>" href="?s=store&i=storeEditBasic">基本信息</a>
-            <a class="li<?php if($page == 'storeEditAvatar') {echo ' on';} ?>" href="?s=store&i=storeEditAvatar">头像设置</a>
+            <a class="li<?php if($page == 'storeEditAvatar') {echo ' on';} ?>" href="?s=store&i=storeEditAvatar">LOGO设置</a>
             <a class="li<?php if($page == 'storeEditBg') {echo ' on';} ?>" href="?s=store&i=storeEditBg">背景设置</a>
-            <a class="li<?php if($page == 'storeEditGPS') {echo ' on';} ?>" href="?s=store&i=storeEditGPS">地理位置</a>
+<!--            <a class="li--><?php //if($page == 'storeEditGPS') {echo ' on';} ?><!--" href="?s=store&i=storeEditGPS">地理位置</a>-->
             <a class="li<?php if($page == 'storeEditDesc') {echo ' on';} ?>" href="?s=store&i=storeEditDesc">企业简介</a>
 <!--            <a class="li--><?php //if($page == 'wxSetting') {echo ' on';} ?><!--" href="?s=store&i=wxSetting">微信设置</a>-->
             <h4>内容管理</h4>
