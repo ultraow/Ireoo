@@ -58,7 +58,7 @@ if(isset($_GET['m']) and $_GET['m'] == 'del') {
             ?>
             <tr>
                 <td><img src="<?php echo $url; ?>" /></td>
-                <td><span><a target="_blank" href="goods.<?php echo $value['id']; ?>"><?php echo $value['title']; ?></a></span></td>
+                <td><span><a target="_blank" href="goods.<?php echo $value['id']; ?>.html"><?php echo $value['title']; ?></a></span></td>
                 <td><span><?php echo $value['type']; ?></span></td>
                 <td><span><?php echo $value['rebate'] . '[现价]/' . $value['money'] . '[原价]/' . $value['price']; ?></span></td>
                 <td><span><?php echo $value['sell'].'/'.$value['top']; ?></span></td>
