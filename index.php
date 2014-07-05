@@ -25,6 +25,7 @@ $mysql = new mysql;
     <meta name="description" content="<?php echo DESCRIPTION; ?>" />
     <link href="include/css/head.css" rel="stylesheet" type="text/css">
     <link href="include/css/index.css" rel="stylesheet" type="text/css">
+    <link href="include/css/normalize.css" rel="stylesheet" type="text/css">
     <link href="include/css/foot.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="include/js/jquery.js"></script>
     <script type="text/javascript" src="<?php echo HOST_URL; ?>include/js/changeSize.js"></script>
@@ -119,7 +120,7 @@ $mysql = new mysql;
                                 <li>
                                     <a target="_blank" href="/store.<?php echo $v['id']; ?>.html">
                                         <img src="<?php echo $v['avatar_large']; ?>" />
-                                        <div><?php echo $v['sname']; ?></div>
+                                        <div><?php if($v['show'] == 1) {echo '<i class="Icon Icon--verified Icon--small"></i>';} ?><?php echo $v['sname']; ?></div>
                                     </a>
 
                                 </li>
@@ -138,6 +139,7 @@ $mysql = new mysql;
                             $store = new store();
                             $s = array(
                                 'order' => 'id desc',
+                                'condition' => '`show` = 1',
                                 'limit' => 'LIMIT 0, 16'
                             );
                             $r = $store->show($mysql, $s);
@@ -147,7 +149,7 @@ $mysql = new mysql;
                                 <li>
                                     <a target="_blank" href="/store.<?php echo $v['id']; ?>.html">
                                         <img src="<?php echo $v['avatar_large']; ?>" />
-                                        <div><?php echo $v['sname']; ?></div>
+                                        <div><?php echo $v['sname']; ?><?php if($v['show'] == 1) {echo '<i class="Icon Icon--verified Icon--small"></i>';} ?></div>
                                     </a>
 
                                 </li>
@@ -175,7 +177,7 @@ $mysql = new mysql;
                                 <li>
                                     <a target="_blank" href="/store.<?php echo $v['id']; ?>.html">
                                         <img src="<?php echo $v['avatar_large']; ?>" />
-                                        <div><?php echo $v['sname']; ?></div>
+                                        <div><?php echo $v['sname']; ?><?php if($v['show'] == 1) {echo '<i class="Icon Icon--verified Icon--small"></i>';} ?></div>
                                     </a>
 
                                 </li>
