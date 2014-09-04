@@ -58,8 +58,8 @@ require_once("../../lib/mysql.class.php");
         }
 
         echo "验证成功<br />";
-        $mysql = new mysql;
-        $mysql->update('cart', array('pay' => 2, 'trade_no' => $trade_no), "bar = '{$out_trade_no}'");
+//        $mysql = new mysql;
+//        $mysql->update('cart', array('pay' => 2, 'trade_no' => $trade_no), "bar = '{$out_trade_no}'");
 
         //——请根据您的业务逻辑来编写程序（以上代码仅作参考）——
 

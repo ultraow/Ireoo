@@ -70,6 +70,8 @@ switch($wechatObj->array['MSGTYPE'])
 
         if($wechatObj->array['CONTENT'] == '首页'){
             $wechatObj->news(news($mysql, $wechatObj->array, $storeId));
+        }elseif($wechatObj->array['CONTENT'] == 'ID'){
+            $wechatObj->text($wechatObj->array['FROMUSERNAME']);
         }else{
             $wechatObj->text('亲，很抱歉，小益刚开始学习哦。不过用不了多久，小益就能明白您的意思啦！');
         }

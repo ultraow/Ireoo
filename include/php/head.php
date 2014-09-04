@@ -17,6 +17,7 @@
 
         <li><a href="<?php echo HOST_URL; ?>"><span><?php echo SNAME; ?></span></a></li>
         <li><a href="<?php echo HOST_URL; ?>store"><span>所有企业</span></a></li>
+        <li><a target="_blank" href="http://zhubo.pro" title="星主播"><span>星主播</span></a></li>
     </ul>
 
 </div>

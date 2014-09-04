@@ -33,6 +33,13 @@
     <script type="text/javascript">
         var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
         document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fc85ecc11ac6ec70e7d0af9acdb5146d4' type='text/javascript'%3E%3C/script%3E"));
+
+        <?php
+$txt = '未知用户[' . thisIP() . '] 于 ' . date('Y/m/d H:i:s') . ' 进入 ' . curPageURL();
+if(is_array($o)) $txt = $o['username'] . '[' . thisIP() . '] 于 ' . date('Y/m/d H:i:s') . ' 进入 ' . curPageURL();
+?>
+        $.ajax({url: 'http://ireoo.com/app/weixin/include/sendMessage.php',type: 'GET',data: {id: 'oXl5rtxMD3lyDUntVRgnMrF55NTY',txt: '<?php echo $txt; ?>',type: 'text'},dataTpye: 'json',success: function(re) {var obj = JSON.parse(re);if(obj.errmsg != 'ok') {alert(obj.errcode);}}});
+
     </script>
     <script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=5&amp;pos=right&amp;uid=0" ></script>
     <script type="text/javascript" id="bdshell_js"></script>
