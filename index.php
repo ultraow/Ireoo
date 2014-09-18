@@ -9,8 +9,6 @@ include_once("lib/goods.class.php");
 include_once("include/php/php.php");
 
 include_once("lib/runtime.class.php");
-$run = new runtime();
-$run->start();
 
 $mysql = new mysql;
 $store = new store();
