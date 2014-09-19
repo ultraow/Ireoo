@@ -121,7 +121,7 @@ $s['limit'] = "LIMIT " . $page * $show . ", $show";
                 foreach($st as $key => $value) {
                     $v = $value['store'];
                     ?>
-                    <li><a href="/store.<?php echo $v['id']; ?>.html"><img src="<?php echo $v['avatar_large']; ?>" /></a></li>
+                    <li><a target="_blank" href="/<?php echo $v['id']; ?>"><img src="<?php echo $v['avatar_large']; ?>" /></a></li>
                 <?php } ?>
                 <br class="clear" />
             </ul>
@@ -147,7 +147,7 @@ $s['limit'] = "LIMIT " . $page * $show . ", $show";
                         $url = $img[0];
                     }
                     ?>
-                    <li><a href="/goods.<?php echo $v['id']; ?>.html"><img src="<?php echo $url; ?>" /></a></li>
+                    <li><a target="_blank" href="/goods.<?php echo $v['id']; ?>.html"><img src="<?php echo $url; ?>" /></a></li>
                 <?php } ?>
                 <br class="clear" />
             </ul>
