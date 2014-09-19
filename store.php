@@ -166,7 +166,7 @@ $follow = is_array($followre);
             $s = array(
                 'table' => 'store',
                 'condition' => 'id >' . ($this_store['id'] - 2) . ' and id != ' . $this_store['id'],
-                'limit' => 'LIMIT 0, 5',
+                'limit' => 'LIMIT 0, 20',
                 'order' => 'id asc'
             );
             $r = $mysql->select($s);
