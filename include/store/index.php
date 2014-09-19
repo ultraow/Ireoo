@@ -53,7 +53,7 @@
                     <h1>联系方式</h1>
                     <li class="phone first"><span class="type">管理者</span><span class="member"><?php echo $admin['username']; ?></span></li>
                     <li class="phone"><span class="type">联系QQ</span><span class="member"><?php echo $admin['qq']; ?></span></li>
-                    <li class="phone"><span class="type">联系电话</span><span class="member"><?php echo $this_store['beizhu']; ?></span></li>
+                    <li class="phone"><span class="type">联系电话</span><span class="member"><?php if($o != '') {echo $this_store['beizhu'];}else{echo '<b style="color: red; font-weight: bold;">登陆会员免费查看</b>';} ?></span></li>
                     <li class="phone"><span class="type">SKYPE</span><span class="member"><?php echo $admin['skype']; ?></span></li>
                     <li class="phone"><span class="type">E-mail</span><span class="member"><?php echo $admin['email']; ?></span></li>
                 </ul>
